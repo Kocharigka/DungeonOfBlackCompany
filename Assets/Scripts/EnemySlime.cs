@@ -18,6 +18,7 @@ public class EnemySlime : Enemy
         HealhBarOffset = new Vector3(0, 0.5f, 0);
         AttackRadius = 5;
         MoveSpeed = 2f;
+        ColDamage = 10;
     }
 
     private void FixedUpdate()
@@ -25,8 +26,7 @@ public class EnemySlime : Enemy
         if (!active)
             return;
         if(IsStunned)
-        {
-            Debug.Log("stun" + EnemyName);
+        {          
             StopCoroutine(jump);
             MoveSpeed = 2f;
             inJump = false;
@@ -61,7 +61,6 @@ public class EnemySlime : Enemy
         yield return new WaitForSeconds(2f);
         jumpPosition =getPlayerPosition();
         int distance = (int)Vector2.Distance(transform.position, jumpPosition)==0?1:(int)Vector2.Distance(transform.position, jumpPosition);
-        Debug.Log(distance);
         preparing = false;
         Animator.speed = 10 / distance > 1 ? 10 / distance : 1;
         if (!IsStunned){

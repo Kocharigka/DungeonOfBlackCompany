@@ -74,6 +74,12 @@ public class Enemy :MonoBehaviour
         get { return player; }
         set { player = value; }
     }
+    private int colDamage;
+    public int ColDamage
+    {
+        get { return colDamage; }
+        set { colDamage = value; }
+    }
 
     private void Start()
     {
@@ -132,5 +138,13 @@ public class Enemy :MonoBehaviour
     public Vector2 getPlayerPosition()
     {
         return player.GetComponent<Transform>().position;
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            player.GetDamage(colDamage);
+        }
     }
 }

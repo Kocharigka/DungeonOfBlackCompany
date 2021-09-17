@@ -7,10 +7,10 @@ public class EnemyDog : Enemy
     // Start is called before the first frame update
     void Start()
     {
-        EnemyName = "Slime";
+        EnemyName = "Dog";
         MaxHealth = 20;
         MoveSpeed = 2f;
-        HealhBarOffset = new Vector3(0, 0.5f, 0);
+        //HealhBarOffset = new Vector3(0, 0.5f, 0);
         AttackRadius = 5;
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }

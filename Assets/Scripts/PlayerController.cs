@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private float attackRange = 1f;
     public LayerMask enemyLayer;
+    private int maxHealth=100;
+    private int currentHealth;
 
     private Dictionary<string, (int, int)> attackSectors= new Dictionary<string, (int, int)>() 
     {
@@ -25,6 +27,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        currentHealth = maxHealth;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
@@ -60,13 +63,11 @@ public class PlayerController : MonoBehaviour
                 if (attackSectors[sector].Item1 <= angle && angle <= attackSectors[sector].Item2 && !enemy.IsDead)
                 {
                     enemy.GetDamage(2);
-                    Debug.Log(enemy.name);
                 }
             }
             else if(315<=angle && angle<360 || 0<angle&& angle< 45 && !enemy.IsDead)
             {
                 enemy.GetDamage(2);
-                Debug.Log(enemy.name);
             }
         }
     }
@@ -96,5 +97,10 @@ public class PlayerController : MonoBehaviour
             }
         }
         return "U";
+    }
+    public void GetDamage(int damage)
+    {
+        currentHealth -= damage;
+        Debug.Log(currentHealth);
     }
 }
