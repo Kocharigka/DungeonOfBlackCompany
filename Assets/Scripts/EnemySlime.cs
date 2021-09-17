@@ -60,7 +60,7 @@ public class EnemySlime : Enemy
         Animator.speed = 4;
         yield return new WaitForSeconds(2f);
         jumpPosition =getPlayerPosition();
-        int distance = (int)Vector2.Distance(transform.position, jumpPosition)==0?1:(int)Vector2.Distance(transform.position, jumpPosition);
+        int distance = (int)Vector2.Distance(transform.position, jumpPosition);
         preparing = false;
         Animator.speed = 10 / distance > 1 ? 10 / distance : 1;
         if (!IsStunned){
