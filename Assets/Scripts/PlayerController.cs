@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
     }
     private void OnDrawGizmosSelected()
     {
-        Gizmos.DrawWireSphere(transform.position, attackRange);
+        Gizmos.DrawWireSphere(new Vector2(transform.position.x+0.2f,transform.position.y+0.2f), attackRange);
     }
     private float getAngle(Vector3 point)
     {

@@ -32,6 +32,11 @@ public class Enemy :MonoBehaviour
 
     private SpriteRenderer sprite;
     private Animator animator;
+    public Animator Animator
+    {
+        get { return animator; }
+        set { animator = value; }
+    }
     [SerializeField] private Slider healthBar;
     public Slider HealthBar
     {
@@ -63,6 +68,12 @@ public class Enemy :MonoBehaviour
         set { IsDead = value; }
     }
     public bool active = false;
+    private PlayerController player;
+    public PlayerController Player
+    {
+        get { return player; }
+        set { player = value; }
+    }
 
     private void Start()
     {
@@ -71,6 +82,7 @@ public class Enemy :MonoBehaviour
         healthBar.value = healthBar.maxValue;
         sprite = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
     void Update()
     {
@@ -79,7 +91,9 @@ public class Enemy :MonoBehaviour
     public void GetStun()
     {
         isStunned = true;
+        animator.speed = 0;
         StartCoroutine(WaitForStunToEnd());
+        animator.speed = 1;
     }
     public void GetDamage(int damage)
     {
@@ -94,7 +108,7 @@ public class Enemy :MonoBehaviour
         if (currentHealth <= 0)
         {
             isDead = true;
-            animator.speed = 0;
+            animator.speed=0;
             enabled = false;
             StartCoroutine(WaitForDeath());
         }
@@ -110,14 +124,13 @@ public class Enemy :MonoBehaviour
     IEnumerator WaitForDeath()
     {
         sprite.color = Color.white;
-        healthBar.gameObject.transform.Find("Fill Area").Find("Fill").GetComponent<Image>().color = new Color(256, 256, 256, 0);
         healthBar.gameObject.SetActive(false);
         yield return new WaitForSeconds(1f);
         gameObject.SetActive(false);
 
     }
-    public void SetAnimatorSpeed(int speed)
+    public Vector2 getPlayerPosition()
     {
-        animator.speed = speed;
+        return player.GetComponent<Transform>().position;
     }
 }
