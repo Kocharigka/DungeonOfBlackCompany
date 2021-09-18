@@ -40,18 +40,18 @@ public class EnemySlime : Enemy
         {
             playerPosition = jumpPosition;
         }
-        if (Vector2.Distance(playerPosition, transform.position) <= 15 && !preparing)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, playerPosition, MoveSpeed * Time.deltaTime);
-        }
         if (Vector2.Distance(playerPosition, transform.position) <= AttackRadius)
         {
             if (!inJump)
             {
                 inJump = true;
                 preparing = true;
-                jump=StartCoroutine(WaitForJump());
+                jump = StartCoroutine(WaitForJump());
             }
+        }
+        if (Vector2.Distance(playerPosition, transform.position) <= 15 && !preparing)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, playerPosition, MoveSpeed * Time.deltaTime);
         }
     }
     IEnumerator WaitForJump()
@@ -64,7 +64,7 @@ public class EnemySlime : Enemy
         preparing = false;
         Animator.speed = 10 / distance > 1 ? 10 / distance : 1;
         if (!IsStunned){
-        Animator.SetTrigger("Jump");
+        Animator.SetTrigger("Attack");
         }
         MoveSpeed = 30f;
         yield return new WaitForSeconds(0.2f);

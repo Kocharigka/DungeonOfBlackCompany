@@ -67,7 +67,7 @@ public class Enemy :MonoBehaviour
         get { return isDead; }
         set { IsDead = value; }
     }
-    public bool active = false;
+    public bool active = true;
     private PlayerController player;
     public PlayerController Player
     {
@@ -89,6 +89,7 @@ public class Enemy :MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        animator.SetFloat("Speed", 1);
     }
     void Update()
     {
@@ -96,10 +97,7 @@ public class Enemy :MonoBehaviour
     }
     public void GetStun()
     {
-        isStunned = true;
-        animator.speed = 0;
         StartCoroutine(WaitForStunToEnd());
-        animator.speed = 1;
     }
     public void GetDamage(int damage)
     {
@@ -114,15 +112,20 @@ public class Enemy :MonoBehaviour
         if (currentHealth <= 0)
         {
             isDead = true;
-            animator.speed=0;
+            animator.SetTrigger("Die");
             enabled = false;
             StartCoroutine(WaitForDeath());
         }
     }
     IEnumerator WaitForStunToEnd()
     {
+        isStunned = true;
+        animator.SetBool("Stunned", true);
+        animator.SetFloat("Speed", 0);
         sprite.color = Color.black;
         yield return new WaitForSeconds(stunTime);
+        animator.SetBool("Stunned", false);
+        animator.SetFloat("Speed", 1);
         isStunned = false;
         sprite.color = Color.white;
 
