@@ -14,7 +14,7 @@ public class EnemyDog : Enemy
         MaxHealth = 20;
         MoveSpeed = 4f;
         HealhBarOffset = new Vector3(0, 1, 0);
-        AttackRadius = 2;
+        AttackRadius = 1;
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
     private void FixedUpdate()
