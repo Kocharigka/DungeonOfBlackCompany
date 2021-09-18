@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
             Enemy enemy = enemyCollider.GetComponent<Enemy>();
             if (chooser.targetInSector(sector, enemy, transform.position))
             {
-                enemy.GetDamage(10);
+                enemy.GetDamage(2);
             }
         }
     }
