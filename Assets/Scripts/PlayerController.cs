@@ -14,6 +14,9 @@ public class PlayerController : MonoBehaviour
     private int maxHealth=100;
     private int currentHealth;
     SectorChooser chooser = new SectorChooser();
+    Shooter shooter;
+    private GameObject arrow;
+    public Transform projectileHolder;
 
 
     // Start is called before the first frame update
@@ -22,6 +25,7 @@ public class PlayerController : MonoBehaviour
         currentHealth = maxHealth;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        shooter = GetComponent<Shooter>();
     }
 
     // Update is called once per frame
@@ -36,6 +40,10 @@ public class PlayerController : MonoBehaviour
         {
             performAttack();
         }
+        if (Input.GetMouseButtonDown(1))
+        {
+            shooter.Shoot(transform.position, chooser.getAngle(Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.position));
+        }
     }
     private void FixedUpdate()
     {
@@ -48,7 +56,7 @@ public class PlayerController : MonoBehaviour
         Collider2D[] hitEnemites = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyLayer);
         foreach (Collider2D enemyCollider in hitEnemites)
         {
-            Enemy enemy = enemyCollider.GetComponent<Enemy>();
+            HealthScript enemy = enemyCollider.GetComponent<HealthScript>();
             if (chooser.targetInSector(sector, enemy, transform.position))
             {
                 enemy.GetDamage(2);
