@@ -2,37 +2,53 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyDog : Enemy
+public class EnemyDog : MonoBehaviour
 {
     private bool inBite = false;
     Coroutine bite = null;
     SectorChooser chooser = new SectorChooser();
+    HealthScript health;
+    private PlayerController player;
+    public bool active = true;
+    private float attackRadius;
+    private string enemyName;
+    private float moveSpeed;
+    private Animator animator;
     // Start is called before the first frame update
     void Awake()
     {
-        EnemyName = "Dog";
-        MaxHealth = 20;
-        MoveSpeed = 4f;
-        HealhBarOffset = new Vector3(0, 1, 0);
-        AttackRadius = 1;
-        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        animator = GetComponent<Animator>();
+        health = GetComponent<HealthScript>();
+        enemyName = "Dog";
+        health.MaxHealth = 20;
+        moveSpeed = 4f;
+        health.HealhBarOffset = new Vector3(0, 1, 0);
+        attackRadius = 1;
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
     private void FixedUpdate()
     {
         if (!active)
+        {
+            animator.SetFloat("Speed", 0);
             return;
-        if (IsStunned)
+        }
+        else
+        {
+            animator.SetFloat("Speed", 1);
+        }
+        if (health.IsStunned)
         {
             StopCoroutine(bite);
             inBite = false;
-            MoveSpeed = 4f;
+            moveSpeed = 4f;
             return;
         }
-        Vector2 playerDir = chooser.sectorToVector(transform.position, Player.transform.position);
-        Animator.SetFloat("Horizontal", -playerDir.x);
-        Animator.SetFloat("Vertical", -playerDir.y);
+        Vector2 playerDir = chooser.sectorToVector(transform.position, player.transform.position);
+        animator.SetFloat("Horizontal", -playerDir.x);
+        animator.SetFloat("Vertical", -playerDir.y);
         Vector2 playerPosition = getPlayerPosition();
-        if (Vector2.Distance(playerPosition, transform.position) <= AttackRadius)
+        if (Vector2.Distance(playerPosition, transform.position) <= attackRadius)
         {
             if (!inBite)
             {                
@@ -45,23 +61,27 @@ public class EnemyDog : Enemy
         if (!inBite)
         {
 
-        Animator.SetFloat("Speed", 1);
+        animator.SetFloat("Speed", 1);
         }
 
         if (Vector2.Distance(playerPosition, transform.position) <= 15)
         {
-            transform.position = Vector2.MoveTowards(transform.position, playerPosition, MoveSpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, playerPosition, moveSpeed * Time.fixedDeltaTime);
         }
 
     }
     IEnumerator WaitForBite()
     {
-        Animator.SetFloat("Speed", 0);
-        MoveSpeed = 0;
-        Animator.SetTrigger("Attack");
+        animator.SetFloat("Speed", 0);
+        moveSpeed = 0;
+        animator.SetTrigger("Attack");
         yield return new WaitForSeconds(1.35f);
-        MoveSpeed = 4f;
+        moveSpeed = 4f;
         inBite = false;
        
+    }
+    public Vector2 getPlayerPosition()
+    {
+        return player.GetComponent<Transform>().position;
     }
 }
