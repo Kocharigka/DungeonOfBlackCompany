@@ -22,13 +22,13 @@ public class ArrowScript : MonoBehaviour
         }
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    public void OnTriggerEnter2D(Collider2D collider)
     {
-        Debug.Log(collision);
-        if (collision.gameObject.tag != "Player")
+        Debug.Log(collider);
+        if (collider.gameObject.tag != "Player")
         {            
-            collision.gameObject.GetComponent<HealthScript>().GetDamage(4);
-            Destroy(this);
+            collider.gameObject.GetComponent<HealthScript>().GetDamage(4);
+            Destroy(gameObject);
         }
 
     }

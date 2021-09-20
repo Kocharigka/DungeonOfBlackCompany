@@ -14,6 +14,18 @@ TextureImporter:
   - first:
       213: -8725087179505099808
     second: wizard_run_3
+  - first:
+      213: 1926339552046523282
+    second: Wizard_run_right_0
+  - first:
+      213: 8260470247357202548
+    second: Wizard_run_right_1
+  - first:
+      213: -1697985677665461850
+    second: Wizard_run_right_2
+  - first:
+      213: -8477593417066303688
+    second: Wizard_run_right_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -35,6 +47,7 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -44,8 +57,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -66,9 +79,12 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -111,7 +127,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wizard_run_0
+      name: Wizard_run_right_0
       rect:
         serializedVersion: 2
         x: 0
@@ -125,14 +141,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16288cae3d4495040800000000000000
-      internalID: 4636812968322433633
+      spriteID: 293a48ccd9bbbba10800000000000000
+      internalID: 1926339552046523282
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_run_1
+      name: Wizard_run_right_1
       rect:
         serializedVersion: 2
         x: 32
@@ -146,14 +162,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4cb95760beec599e0800000000000000
-      internalID: -1615157382521447484
+      spriteID: 470c8639ce513a270800000000000000
+      internalID: 8260470247357202548
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_run_2
+      name: Wizard_run_right_2
       rect:
         serializedVersion: 2
         x: 64
@@ -167,14 +183,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 410df66714fd75f20800000000000000
-      internalID: 3411440715009347604
+      spriteID: 6a99c01c50b8f68e0800000000000000
+      internalID: -1697985677665461850
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_run_3
+      name: Wizard_run_right_3
       rect:
         serializedVersion: 2
         x: 96
@@ -188,8 +204,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0eb984f00734ae680800000000000000
-      internalID: -8725087179505099808
+      spriteID: 83fa29114b9895a80800000000000000
+      internalID: -8477593417066303688
       vertices: []
       indices: 
       edges: []

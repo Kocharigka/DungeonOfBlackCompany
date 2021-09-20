@@ -1,7 +1,43 @@
 fileFormatVersion: 2
-guid: 36407a9c8290c444d8a9bf093854cef2
+guid: ee43024af0f7b9d43a7655eac8309b78
 TextureImporter:
   internalIDToNameTable:
+  - first:
+      213: 5970426004912029732
+    second: WolfBiteLeftt_0
+  - first:
+      213: -744733181506931334
+    second: WolfBiteLeftt_1
+  - first:
+      213: 1085364838652723222
+    second: WolfBiteLeftt_2
+  - first:
+      213: 8106008963309227050
+    second: WolfBiteLeftt_3
+  - first:
+      213: 6871361876212247242
+    second: WolfBiteLeftt_4
+  - first:
+      213: 5219730389992404484
+    second: WolfBiteLeftt_5
+  - first:
+      213: -5406967183266703559
+    second: WolfBiteLeftt_6
+  - first:
+      213: -842347406693562473
+    second: WolfBiteLeftt_7
+  - first:
+      213: -2377562213994818315
+    second: WolfBiteLeftt_8
+  - first:
+      213: 7052582365511930315
+    second: WolfBiteLeftt_9
+  - first:
+      213: -1934759190316350081
+    second: WolfBiteLeftt_10
+  - first:
+      213: 1502994896053534671
+    second: WolfBiteLeftt_11
   - first:
       213: -8210412917027279722
     second: WolfBiteLeft_0
@@ -68,7 +104,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -169,7 +205,7 @@ TextureImporter:
         x: 0
         y: 0
         width: 40
-        height: 25
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,10 +223,10 @@ TextureImporter:
       name: WolfBiteLeft_1
       rect:
         serializedVersion: 2
-        x: 45
+        x: 40
         y: 0
         width: 40
-        height: 23
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,10 +244,10 @@ TextureImporter:
       name: WolfBiteLeft_2
       rect:
         serializedVersion: 2
-        x: 90
+        x: 80
         y: 0
         width: 40
-        height: 25
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,10 +265,10 @@ TextureImporter:
       name: WolfBiteLeft_3
       rect:
         serializedVersion: 2
-        x: 135
+        x: 120
         y: 0
         width: 40
-        height: 23
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,10 +286,10 @@ TextureImporter:
       name: WolfBiteLeft_4
       rect:
         serializedVersion: 2
-        x: 180
+        x: 160
         y: 0
         width: 40
-        height: 22
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,10 +307,10 @@ TextureImporter:
       name: WolfBiteLeft_5
       rect:
         serializedVersion: 2
-        x: 225
+        x: 200
         y: 0
         width: 40
-        height: 22
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,10 +328,10 @@ TextureImporter:
       name: WolfBiteLeft_6
       rect:
         serializedVersion: 2
-        x: 270
+        x: 240
         y: 0
         width: 40
-        height: 22
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,10 +349,10 @@ TextureImporter:
       name: WolfBiteLeft_7
       rect:
         serializedVersion: 2
-        x: 315
+        x: 280
         y: 0
         width: 40
-        height: 22
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -334,10 +370,10 @@ TextureImporter:
       name: WolfBiteLeft_8
       rect:
         serializedVersion: 2
-        x: 360
+        x: 320
         y: 0
         width: 40
-        height: 22
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -355,10 +391,10 @@ TextureImporter:
       name: WolfBiteLeft_9
       rect:
         serializedVersion: 2
-        x: 405
+        x: 360
         y: 0
         width: 40
-        height: 21
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -376,10 +412,10 @@ TextureImporter:
       name: WolfBiteLeft_10
       rect:
         serializedVersion: 2
-        x: 450
+        x: 400
         y: 0
         width: 40
-        height: 25
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -397,10 +433,10 @@ TextureImporter:
       name: WolfBiteLeft_11
       rect:
         serializedVersion: 2
-        x: 495
+        x: 440
         y: 0
         width: 40
-        height: 27
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
