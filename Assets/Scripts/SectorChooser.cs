@@ -37,7 +37,7 @@ public class SectorChooser
         }
         return "U";
     }
-    public bool targetInSector(string sector, HealthScript enemy,Vector2 player)
+    public bool targetInSector(string sector, Enemy enemy,Vector2 player)
     {
         float angle = getAngle(enemy.transform.position,player);
         if (sector != "U")

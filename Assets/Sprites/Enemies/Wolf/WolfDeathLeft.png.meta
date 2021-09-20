@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a52a459da9f254647b518ab7a1a51a9f
+guid: d9c55e629d0ab2c4cbee8f9ee22a4d5f
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -59,7 +59,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -160,7 +160,7 @@ TextureImporter:
         x: 0
         y: 0
         width: 40
-        height: 9
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,10 +178,10 @@ TextureImporter:
       name: WolfDeathLeft_1
       rect:
         serializedVersion: 2
-        x: 45
+        x: 40
         y: 0
         width: 40
-        height: 9
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,10 +199,10 @@ TextureImporter:
       name: WolfDeathLeft_2
       rect:
         serializedVersion: 2
-        x: 90
+        x: 80
         y: 0
         width: 40
-        height: 7
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,10 +220,10 @@ TextureImporter:
       name: WolfDeathLeft_3
       rect:
         serializedVersion: 2
-        x: 135
+        x: 120
         y: 0
         width: 40
-        height: 27
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,10 +241,10 @@ TextureImporter:
       name: WolfDeathLeft_4
       rect:
         serializedVersion: 2
-        x: 180
+        x: 160
         y: 0
         width: 40
-        height: 28
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,10 +262,10 @@ TextureImporter:
       name: WolfDeathLeft_5
       rect:
         serializedVersion: 2
-        x: 225
+        x: 200
         y: 0
         width: 40
-        height: 31
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -283,10 +283,10 @@ TextureImporter:
       name: WolfDeathLeft_6
       rect:
         serializedVersion: 2
-        x: 270
+        x: 240
         y: 0
         width: 40
-        height: 29
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -304,10 +304,10 @@ TextureImporter:
       name: WolfDeathLeft_7
       rect:
         serializedVersion: 2
-        x: 315
+        x: 280
         y: 0
         width: 40
-        height: 37
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -325,10 +325,10 @@ TextureImporter:
       name: WolfDeathLeft_8
       rect:
         serializedVersion: 2
-        x: 360
+        x: 320
         y: 0
         width: 40
-        height: 30
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

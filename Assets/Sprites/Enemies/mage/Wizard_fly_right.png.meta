@@ -1139,6 +1139,21 @@ TextureImporter:
   - first:
       213: -4374816584733271626
     second: wizard_fly_4
+  - first:
+      213: -2831140035002971032
+    second: Wizard_fly_right_0
+  - first:
+      213: 1806450009936886895
+    second: Wizard_fly_right_1
+  - first:
+      213: 8696686672565234745
+    second: Wizard_fly_right_2
+  - first:
+      213: 7474136640528402561
+    second: Wizard_fly_right_3
+  - first:
+      213: -9002294859507303416
+    second: Wizard_fly_right_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1160,6 +1175,7 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -1169,8 +1185,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -1191,9 +1207,12 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -1236,7 +1255,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wizard_fly_0
+      name: Wizard_fly_right_0
       rect:
         serializedVersion: 2
         x: 0
@@ -1250,14 +1269,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7495a8bf59d458a0800000000000000
-      internalID: -6317185372150983554
+      spriteID: 86cc2406325c5b8d0800000000000000
+      internalID: -2831140035002971032
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_fly_1
+      name: Wizard_fly_right_1
       rect:
         serializedVersion: 2
         x: 32
@@ -1271,14 +1290,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b6b0055833dab990800000000000000
-      internalID: -7369345601340655947
+      spriteID: f6cf9ca86bcc11910800000000000000
+      internalID: 1806450009936886895
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_fly_2
+      name: Wizard_fly_right_2
       rect:
         serializedVersion: 2
         x: 64
@@ -1292,14 +1311,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 239f9c557fcf827d0800000000000000
-      internalID: -2942824217260197582
+      spriteID: 93cef11a376d0b870800000000000000
+      internalID: 8696686672565234745
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_fly_3
+      name: Wizard_fly_right_3
       rect:
         serializedVersion: 2
         x: 96
@@ -1313,14 +1332,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f33461d6e1f3f71c0800000000000000
-      internalID: -4503811702435462337
+      spriteID: 1884d65cca779b760800000000000000
+      internalID: 7474136640528402561
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_fly_4
+      name: Wizard_fly_right_4
       rect:
         serializedVersion: 2
         x: 128
@@ -1334,8 +1353,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b95c75be778943c0800000000000000
-      internalID: -4374816584733271626
+      spriteID: 80cfdbf758c611380800000000000000
+      internalID: -9002294859507303416
       vertices: []
       indices: 
       edges: []

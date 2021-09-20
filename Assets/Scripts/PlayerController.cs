@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
         Collider2D[] hitEnemites = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyLayer);
         foreach (Collider2D enemyCollider in hitEnemites)
         {
-            HealthScript enemy = enemyCollider.GetComponent<HealthScript>();
+            Enemy enemy = enemyCollider.GetComponent<Enemy>();
             if (chooser.targetInSector(sector, enemy, transform.position))
             {
                 enemy.GetDamage(2);

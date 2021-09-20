@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnemySlime : MonoBehaviour
+public class EnemySlime : Enemy
 {
     private bool inJump=false;
     private bool preparing=false;
     Vector2 jumpPosition;
     Coroutine jump = null;
-    HealthScript health;
     private int colDamage;
     private PlayerController player;
     public bool active = true;
@@ -21,11 +20,10 @@ public class EnemySlime : MonoBehaviour
     void Awake()
     {
         animator = GetComponent<Animator>();
-        health = GetComponent<HealthScript>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         enemyName = "Slime";
-        health.MaxHealth = 20;        
-        health.HealhBarOffset = new Vector3(0, 0.5f, 0);
+        MaxHealth = 20;        
+        HealhBarOffset = new Vector3(0, 0.5f, 0);
         attackRadius = 5;
         moveSpeed = 2f;
         colDamage = 10;
@@ -36,7 +34,7 @@ public class EnemySlime : MonoBehaviour
     {
         if (!active)
             return;
-        if(health.IsStunned)
+        if(IsStunned)
         {          
             StopCoroutine(jump);
             moveSpeed = 2f;
@@ -74,7 +72,7 @@ public class EnemySlime : MonoBehaviour
         int distance = (int)Vector2.Distance(transform.position, jumpPosition);
         preparing = false;
         animator.speed = 10 / distance > 1 ? 10 / distance : 1;
-        if (!health.IsStunned){
+        if (!IsStunned){
         animator.SetTrigger("Attack");
         }
         moveSpeed = 30f;
