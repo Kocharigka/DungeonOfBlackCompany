@@ -27,7 +27,7 @@ public class ArrowScript : MonoBehaviour
         Debug.Log(collider);
         if (collider.gameObject.tag != "Player")
         {            
-            collider.gameObject.GetComponent<HealthScript>().GetDamage(4);
+            collider.gameObject.GetComponent<Enemy>().GetDamage(4);
             Destroy(gameObject);
         }
 

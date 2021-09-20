@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyDog : MonoBehaviour
+public class EnemyDog : Enemy
 {
     private bool inBite = false;
     Coroutine bite = null;
     SectorChooser chooser = new SectorChooser();
-    HealthScript health;
     private PlayerController player;
     public bool active = true;
     private float attackRadius;
@@ -18,11 +17,10 @@ public class EnemyDog : MonoBehaviour
     void Awake()
     {
         animator = GetComponent<Animator>();
-        health = GetComponent<HealthScript>();
         enemyName = "Dog";
-        health.MaxHealth = 20;
+        MaxHealth = 20;
         moveSpeed = 4f;
-        health.HealhBarOffset = new Vector3(0, 1, 0);
+        HealhBarOffset = new Vector3(0, 1, 0);
         attackRadius = 1;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
@@ -33,11 +31,7 @@ public class EnemyDog : MonoBehaviour
             animator.SetFloat("Speed", 0);
             return;
         }
-        else
-        {
-            animator.SetFloat("Speed", 1);
-        }
-        if (health.IsStunned)
+        if (IsStunned)
         {
             StopCoroutine(bite);
             inBite = false;

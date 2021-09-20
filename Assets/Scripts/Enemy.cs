@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthScript : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     private float stunTime = 2f;
 
@@ -100,5 +100,4 @@ public class HealthScript : MonoBehaviour
         gameObject.SetActive(false);
 
     }
-
 }

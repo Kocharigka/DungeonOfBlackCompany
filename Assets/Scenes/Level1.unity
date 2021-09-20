@@ -424,7 +424,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.551, y: 0.009, z: -10}
+  m_LocalPosition: {x: -1.1, y: 0.105, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -479,7 +479,6 @@ GameObject:
   - component: {fileID: 863213036}
   - component: {fileID: 863213040}
   - component: {fileID: 863213039}
-  - component: {fileID: 863213041}
   m_Layer: 6
   m_Name: Slime
   m_TagString: Untagged
@@ -610,20 +609,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a60cae2d2f492d64589a3b7a43c15a8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
---- !u!114 &863213041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 863213035}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd57456a3f7aadb4a9584012ae47c88d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   healthBar: {fileID: 1678673725}
+  active: 0
 --- !u!1 &876817164
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,7 +918,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1166702974}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.551, y: 0.009, z: 0}
+  m_LocalPosition: {x: -1.1, y: 0.105, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -987,7 +974,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01773861, y: -0.15912855}
+  m_Offset: {x: -0.05696231, y: 0.1569586}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -998,7 +985,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6097514, y: 1.4817429}
+  m_Size: {x: 0.33820188, y: 0.6806047}
   m_EdgeRadius: 0
 --- !u!114 &1166702981
 MonoBehaviour:
@@ -1072,7 +1059,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1302662166}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.551, y: 0.009, z: -10}
+  m_LocalPosition: {x: -1.1, y: 0.105, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2120246879}
@@ -1518,7 +1505,6 @@ GameObject:
   - component: {fileID: 1873671269}
   - component: {fileID: 1873671268}
   - component: {fileID: 1873671272}
-  - component: {fileID: 1873671273}
   - component: {fileID: 1873671271}
   m_Layer: 6
   m_Name: Wolf
@@ -1651,20 +1637,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0becbf9009073574d95425ed8fef86f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 1
---- !u!114 &1873671273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1873671267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd57456a3f7aadb4a9584012ae47c88d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   healthBar: {fileID: 498772149}
+  active: 1
 --- !u!1 &1989693692
 GameObject:
   m_ObjectHideFlags: 0
