@@ -7,75 +7,60 @@ public class EnemyDog : Enemy
     private bool inBite = false;
     Coroutine bite = null;
     SectorChooser chooser = new SectorChooser();
-    private PlayerController player;
-    public bool active = true;
-    private float attackRadius;
-    private string enemyName;
-    private float moveSpeed;
-    private Animator animator;
     // Start is called before the first frame update
     void Awake()
     {
-        animator = GetComponent<Animator>();
-        enemyName = "Dog";
+        EnemyName = "Dog";
         MaxHealth = 20;
-        moveSpeed = 4f;
+        DefaultMoveSpeed = 4f;
         HealhBarOffset = new Vector3(0, 1, 0);
-        attackRadius = 1;
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
-    }
-    private void FixedUpdate()
-    {
-        if (!active)
-        {
-            animator.SetFloat("Speed", 0);
-            return;
-        }
-        if (IsStunned)
-        {
-            StopCoroutine(bite);
-            inBite = false;
-            moveSpeed = 4f;
-            return;
-        }
-        Vector2 playerDir = chooser.sectorToVector(transform.position, player.transform.position);
-        animator.SetFloat("Horizontal", -playerDir.x);
-        animator.SetFloat("Vertical", -playerDir.y);
-        Vector2 playerPosition = getPlayerPosition();
-        if (Vector2.Distance(playerPosition, transform.position) <= attackRadius)
-        {
-            if (!inBite)
-            {                
-                inBite = true;
-                bite = StartCoroutine(WaitForBite());
-                return;
-                
-            }
-        }
-        if (!inBite)
-        {
-
-        animator.SetFloat("Speed", 1);
-        }
-
-        if (Vector2.Distance(playerPosition, transform.position) <= 15)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, playerPosition, moveSpeed * Time.fixedDeltaTime);
-        }
-
+        AttackRadius = 1;
     }
     IEnumerator WaitForBite()
     {
-        animator.SetFloat("Speed", 0);
-        moveSpeed = 0;
-        animator.SetTrigger("Attack");
+        Animator.SetBool("CanMove", false);
+        MoveSpeed = 0;
+        Animator.SetTrigger("Attack");
         yield return new WaitForSeconds(1.35f);
-        moveSpeed = 4f;
+        MoveSpeed = 4f;
         inBite = false;
-       
+
     }
-    public Vector2 getPlayerPosition()
+    public override void PerformAttack(Vector2 playerPosition)
     {
-        return player.GetComponent<Transform>().position;
+        Vector2 playerDir = chooser.sectorToVector(transform.position, Player.transform.position);
+        Animator.SetFloat("Horizontal", -playerDir.x);
+        Animator.SetFloat("Vertical", -playerDir.y);
+        if (Vector2.Distance(playerPosition, transform.position) <= AttackRadius)
+        {
+            if (!inBite)
+            {
+                inBite = true;
+                bite = StartCoroutine(WaitForBite());
+                return;
+
+            }
+        }
+    }
+    public override void FollowPlayer(Vector2 playerPosition)
+    {
+        if (!inBite&&!IsStunned)
+        {
+            Animator.SetBool("CanMove", true);
+        }
+        if (Vector2.Distance(playerPosition, transform.position) <= 15)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, playerPosition, MoveSpeed * Time.deltaTime);
+        }
+    }
+
+    public override void SetDefault()
+    {
+        if (bite != null)
+        {
+            StopCoroutine(bite);
+        }
+        MoveSpeed = 4f;
+        inBite = false;
     }
 }
