@@ -10,46 +10,48 @@ public class EnemySlime : Enemy
     Vector2 jumpPosition;
     Coroutine jump = null;
     private int colDamage;
-    private PlayerController player;
-    public bool active = true;
-    private float attackRadius;
-    private string enemyName;
-    private float moveSpeed;
-    private Animator animator;
     // Start is called before the first frame update
     void Awake()
     {
-        animator = GetComponent<Animator>();
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
-        enemyName = "Slime";
+        EnemyName = "Slime";
         MaxHealth = 20;        
         HealhBarOffset = new Vector3(0, 0.5f, 0);
-        attackRadius = 5;
-        moveSpeed = 2f;
+        AttackRadius = 5;
+        DefaultMoveSpeed = 2f;
         colDamage = 10;
         
     }
 
-    private void FixedUpdate()
+    IEnumerator WaitForJump()
     {
-        if (!active)
-            return;
-        if(IsStunned)
-        {          
-            StopCoroutine(jump);
-            moveSpeed = 2f;
-            inJump = false;
-            preparing = false;
-            animator.speed = 1;
-            return;
+
+        Animator.speed = 4;
+        yield return new WaitForSeconds(2f);
+        jumpPosition =getPlayerPosition();
+        int distance = (int)Vector2.Distance(transform.position, jumpPosition);
+        preparing = false;
+        Animator.speed = 10 / distance > 1 ? 10 / distance : 1;
+        if (!IsStunned){
+        Animator.SetTrigger("Attack");
         }
-            
-        Vector2 playerPosition = getPlayerPosition();
-        if (inJump)
+        MoveSpeed = 30f;
+        yield return new WaitForSeconds(0.2f);
+        Animator.speed = 1;
+        yield return new WaitForSeconds(2f);
+        MoveSpeed = 2f;
+        inJump = false;
+
+    }
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
         {
-            playerPosition = jumpPosition;
+            Player.GetDamage(colDamage);
         }
-        if (Vector2.Distance(playerPosition, transform.position) <= attackRadius)
+    }
+    public override void PerformAttack(Vector2 playerPosition)
+    {
+        if (Vector2.Distance(playerPosition, transform.position) <= AttackRadius)
         {
             if (!inJump)
             {
@@ -58,40 +60,28 @@ public class EnemySlime : Enemy
                 jump = StartCoroutine(WaitForJump());
             }
         }
+    }
+    public override void FollowPlayer(Vector2 playerPosition)
+    {
+        if (inJump)
+        {
+            playerPosition = jumpPosition;
+        }
         if (Vector2.Distance(playerPosition, transform.position) <= 15 && !preparing)
         {
-            transform.position = Vector2.MoveTowards(transform.position, playerPosition, moveSpeed * Time.fixedDeltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, playerPosition, MoveSpeed * Time.deltaTime);
         }
     }
-    IEnumerator WaitForJump()
-    {
 
-        animator.speed = 4;
-        yield return new WaitForSeconds(2f);
-        jumpPosition =getPlayerPosition();
-        int distance = (int)Vector2.Distance(transform.position, jumpPosition);
-        preparing = false;
-        animator.speed = 10 / distance > 1 ? 10 / distance : 1;
-        if (!IsStunned){
-        animator.SetTrigger("Attack");
-        }
-        moveSpeed = 30f;
-        yield return new WaitForSeconds(0.2f);
-        animator.speed = 1;
-        yield return new WaitForSeconds(2f);
-        moveSpeed = 2f;
-        inJump = false;
-
-    }
-    public void OnCollisionEnter2D(Collision2D collision)
+    public override void SetDefault()
     {
-        if (collision.gameObject.tag == "Player")
+        if (jump != null)
         {
-            player.GetDamage(colDamage);
+            StopCoroutine(jump);
         }
-    }
-    public Vector2 getPlayerPosition()
-    {
-        return player.GetComponent<Transform>().position;
+        MoveSpeed = 2f;
+        inJump = false;
+        preparing = false;
+        Animator.speed = 1;
     }
 }

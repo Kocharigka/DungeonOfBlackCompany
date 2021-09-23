@@ -5,43 +5,83 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
+    #region privateStatic
+    private string enemyName;
+    private float moveSpeed;
+    private float defaultMoveSpeed;
     private float stunTime = 2f;
-
-    private bool isStunned = false;
+    private int maxHealth;
+    [SerializeField] private Slider healthBar;
+    private Vector3 healhBarOffset;
+    private Animator animator;
+    private SpriteRenderer sprite;
+    private PlayerController player;
+    private float attackRadius;
+    #endregion privateStatic
+    #region publicFields
+    public float DefaultMoveSpeed
+    {
+        get { return defaultMoveSpeed; }
+        set { defaultMoveSpeed = value; }
+    }
+    public string EnemyName
+    {
+        get { return enemyName; }
+        set { enemyName = value; }
+    }
+    public float MoveSpeed
+    {
+        get { return moveSpeed; }
+        set { moveSpeed = value; }
+    } 
     public bool IsStunned
     {
         get { return isStunned; }
         set { isStunned = value; }
     }
-
-    private int maxHealth;
     public int MaxHealth
     {
         get { return maxHealth; }
         set { maxHealth = value; }
     }
-    private int currentHealth;
-    [SerializeField] private Slider healthBar;
     public Slider HealthBar
     {
         get { return healthBar; }
         set { healthBar = value; }
     }
-    private Vector3 healhBarOffset;
     public Vector3 HealhBarOffset
     {
         get { return healhBarOffset; }
         set { healhBarOffset = value; }
     }
-    private bool isDead = false;
     public bool IsDead
     {
         get { return isDead; }
         set { IsDead = value; }
     }
-    Animator animator;
-    private SpriteRenderer sprite;
-    // Start is called before the first frame update
+    public Animator Animator
+    {
+        get { return animator; }
+        set { animator = value; }
+    }
+    public PlayerController Player
+    {
+        get { return player; }
+        set { player = value; }
+    }
+    public float AttackRadius
+    {
+        get { return attackRadius; }
+        set { attackRadius = value; }
+    }
+
+    #endregion publicFields
+    #region boolsAndVariables
+    private bool isDead = false;
+    private int currentHealth;
+    private bool isStunned = false;
+    #endregion boolsAndVariables
+    public bool active;
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
@@ -49,31 +89,58 @@ public class Enemy : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.maxValue = MaxHealth;
         healthBar.value = healthBar.maxValue;
+        moveSpeed = defaultMoveSpeed;
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
     void Update()
     {
         healthBar.transform.position = Camera.main.WorldToScreenPoint(transform.position + healhBarOffset);
+        if (!active)
+        {
+            return;
+        }
+        if (isStunned)
+        {
+            return;
+        }
+        PerformAttack(getPlayerPosition());
+        FollowPlayer(getPlayerPosition());
     }
+
+    #region utils
+    public Vector2 getPlayerPosition()
+    {
+        return player.GetComponent<Transform>().position;
+    }
+    #endregion utils
+
+    #region getStun
     public void GetStun()
     {
+        SetDefault();
         StartCoroutine(WaitForStunToEnd());
     }
 
     IEnumerator WaitForStunToEnd()
     {
+        moveSpeed = 0;
         isStunned = true;
         animator.SetBool("Stunned", true);
-        animator.SetFloat("Speed", 0);
+        animator.SetBool("CanMove", false);
         sprite.color = Color.black;
         yield return new WaitForSeconds(stunTime);
         animator.SetBool("Stunned", false);
-        animator.SetFloat("Speed", 1);
+        animator.SetBool("CanMove", true);
         isStunned = false;
         sprite.color = Color.white;
+        moveSpeed = defaultMoveSpeed;
 
     }
+    #endregion getStun
+
+    #region getDamage
     public void GetDamage(int damage)
     {
         healthBar.gameObject.SetActive(true);
@@ -98,6 +165,21 @@ public class Enemy : MonoBehaviour
         healthBar.gameObject.SetActive(false);
         yield return new WaitForSeconds(1f);
         gameObject.SetActive(false);
+        Destroy(gameObject);
 
     }
+    #endregion getDamage
+
+    #region overrides
+    public virtual void FollowPlayer(Vector2 x)
+    {
+    }
+    public virtual void PerformAttack(Vector2 x)
+    {
+    }
+    public virtual void SetDefault()
+    {
+
+    }
+    #endregion overrides
 }

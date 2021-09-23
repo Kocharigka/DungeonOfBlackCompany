@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class EnemyArcher : Enemy
 {
-    private string enemyName;
-    private float moveSpeed;
-    void Start()
+    void Awake()
     {
-        enemyName = "Sceleton-archer";
+        EnemyName = "Sceleton-archer";
         MaxHealth = 20;
         HealhBarOffset = new Vector3(0, 2f, 0);
-        moveSpeed = 2;
+        MoveSpeed = 2;
     }
 }

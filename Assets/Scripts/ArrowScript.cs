@@ -2,31 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArrowScript : MonoBehaviour
+public class ArrowScript : ProjectileScript
 {
-    private float moveSpeed = 20;
-    Vector3 direction;
-    private Vector2 start;
-    void Start()
+    void Awake()
     {
-        start = transform.position;
-        direction.y = Mathf.Cos((360 - transform.eulerAngles.z) * Mathf.Deg2Rad);
-        direction.x = Mathf.Sin((360 - transform.eulerAngles.z) * Mathf.Deg2Rad);
+        MoveSpeed = 20;
     }
-    void FixedUpdate()
-    {
-        transform.position += direction * Time.fixedDeltaTime * moveSpeed;
-        if (Vector2.Distance(start, transform.position) > 30)
-        {
-            Destroy(this);
-        }
-    }
-
+    // Start is called before the first frame update
     public void OnTriggerEnter2D(Collider2D collider)
     {
         Debug.Log(collider);
         if (collider.gameObject.tag != "Player")
-        {            
+        {
             collider.gameObject.GetComponent<Enemy>().GetDamage(4);
             Destroy(gameObject);
         }
