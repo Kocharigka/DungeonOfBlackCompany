@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
     private SpriteRenderer sprite;
     private PlayerController player;
     private float attackRadius;
+    private int currentHealth;
     #endregion privateStatic
     #region publicFields
     public float DefaultMoveSpeed
@@ -76,12 +77,12 @@ public class Enemy : MonoBehaviour
     }
 
     #endregion publicFields
-    #region boolsAndVariables
+    #region bools
     private bool isDead = false;
-    private int currentHealth;
     private bool isStunned = false;
-    #endregion boolsAndVariables
     public bool active;
+    #endregion bools
+
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
