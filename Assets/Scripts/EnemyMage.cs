@@ -8,6 +8,7 @@ public class EnemyMage : Enemy
     SectorChooser chooser = new SectorChooser();
     private float cooldown = 5f;
     private float timer;
+    public Transform SpawnTransform;
     void Awake()
     {
         EnemyName = "Wizard-arcane";
@@ -42,6 +43,6 @@ public class EnemyMage : Enemy
     }
     private void Shoot()
     {
-        shooter.Shoot(transform.position, chooser.getAngle(getPlayerPosition(), transform.position));
+        shooter.Shoot(SpawnTransform.position, chooser.getAngle(getPlayerPosition(), transform.position));
     }
 }
