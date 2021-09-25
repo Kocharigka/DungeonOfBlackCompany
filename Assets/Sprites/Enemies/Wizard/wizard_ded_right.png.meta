@@ -1,22 +1,22 @@
 fileFormatVersion: 2
-guid: 7e960a0a5c3452d43b25281b29669d7d
+guid: 6db43572d721aa44ea4741519d824aa9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 467259600595895630
-    second: wizard_fly_plus_shadow_0
+      213: 2925959903886577343
+    second: wizard_ded_0
   - first:
-      213: -8335038991809894445
-    second: wizard_fly_plus_shadow_1
+      213: 5321013707448727733
+    second: wizard_ded_1
   - first:
-      213: -7099833083438087632
-    second: wizard_fly_plus_shadow_2
+      213: 4923230558783350193
+    second: wizard_ded_2
   - first:
-      213: 8447780943614674425
-    second: wizard_fly_plus_shadow_3
+      213: 7818227645504699879
+    second: wizard_ded_3
   - first:
-      213: 4461419402832273970
-    second: wizard_fly_plus_shadow_4
+      213: -1595967125802915558
+    second: wizard_ded_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -38,6 +38,7 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -47,8 +48,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -69,9 +70,12 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -114,7 +118,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wizard_fly_plus_shadow_0
+      name: wizard_ded_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e45c86f812a0c7600800000000000000
-      internalID: 467259600595895630
+      spriteID: fbe023ab7091b9820800000000000000
+      internalID: 2925959903886577343
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_fly_plus_shadow_1
+      name: wizard_ded_1
       rect:
         serializedVersion: 2
         x: 32
@@ -149,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d72428a23ef35c80800000000000000
-      internalID: -8335038991809894445
+      spriteID: 5b8377566c908d940800000000000000
+      internalID: 5321013707448727733
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_fly_plus_shadow_2
+      name: wizard_ded_2
       rect:
         serializedVersion: 2
         x: 64
@@ -170,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0324b195d63587d90800000000000000
-      internalID: -7099833083438087632
+      spriteID: 1b521abdb14d25440800000000000000
+      internalID: 4923230558783350193
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_fly_plus_shadow_3
+      name: wizard_ded_3
       rect:
         serializedVersion: 2
         x: 96
@@ -191,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f5877c820c8c3570800000000000000
-      internalID: 8447780943614674425
+      spriteID: 7ed327fee9cef7c60800000000000000
+      internalID: 7818227645504699879
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_fly_plus_shadow_4
+      name: wizard_ded_4
       rect:
         serializedVersion: 2
         x: 128
@@ -212,8 +216,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2326adb2f452aed30800000000000000
-      internalID: 4461419402832273970
+      spriteID: a19e059da5cf9d9e0800000000000000
+      internalID: -1595967125802915558
       vertices: []
       indices: 
       edges: []
