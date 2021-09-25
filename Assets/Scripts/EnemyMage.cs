@@ -7,6 +7,7 @@ public class EnemyMage : Enemy
     private Shooter shooter;
     SectorChooser chooser = new SectorChooser();
     private float cooldown = 5f;
+
     private float cdTimer;
     private float dangerRadius=10f;
     private float tpCooldown=20;
@@ -58,6 +59,7 @@ public class EnemyMage : Enemy
         else
         {
             cdTimer -= Time.deltaTime;
+
         }
     }
     public override void SetDefault()
@@ -72,6 +74,5 @@ public class EnemyMage : Enemy
 
     private void Teleport()
     {
-
     }
 }
