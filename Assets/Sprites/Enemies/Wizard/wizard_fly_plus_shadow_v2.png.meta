@@ -1,37 +1,22 @@
 fileFormatVersion: 2
-guid: b0282fbb6fdc4f244b35a12f55121879
+guid: 02d2100adcd58cc49bdecabc5b5f79f2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1307916405908451478
-    second: wizard_attack_left_0
+      213: -6879264206868778427
+    second: wizard_fly_plus_shadow_v2_0
   - first:
-      213: 8955671319897408413
-    second: wizard_attack_left_1
+      213: -8385637294183426210
+    second: wizard_fly_plus_shadow_v2_1
   - first:
-      213: -5067810423464598127
-    second: wizard_attack_left_2
+      213: 4492822647029560328
+    second: wizard_fly_plus_shadow_v2_2
   - first:
-      213: -2592168759260683713
-    second: wizard_attack_left_3
+      213: 6548617102415360703
+    second: wizard_fly_plus_shadow_v2_3
   - first:
-      213: 1680892128688054854
-    second: wizard_attack_left_4
-  - first:
-      213: 2442087464669830656
-    second: wizard_attack_left_5
-  - first:
-      213: 6908582665594300139
-    second: wizard_attack_left_6
-  - first:
-      213: 2576375799101383874
-    second: wizard_attack_left_7
-  - first:
-      213: -4206640049505126489
-    second: wizard_attack_left_8
-  - first:
-      213: -3658389903802843766
-    second: wizard_attack_left_9
+      213: -2632827059364789475
+    second: wizard_fly_plus_shadow_v2_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -129,7 +114,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wizard_attack_left_0
+      name: wizard_fly_plus_shadow_v2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -143,14 +128,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6fcbed55f859dde0800000000000000
-      internalID: -1307916405908451478
+      spriteID: 542f689d6a1f780a0800000000000000
+      internalID: -6879264206868778427
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_attack_left_1
+      name: wizard_fly_plus_shadow_v2_1
       rect:
         serializedVersion: 2
         x: 32
@@ -164,14 +149,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9383a3cd9fe84c70800000000000000
-      internalID: 8955671319897408413
+      spriteID: e57dde85f4b30ab80800000000000000
+      internalID: -8385637294183426210
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_attack_left_2
+      name: wizard_fly_plus_shadow_v2_2
       rect:
         serializedVersion: 2
         x: 64
@@ -185,14 +170,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 195ee5035458ba9b0800000000000000
-      internalID: -5067810423464598127
+      spriteID: 804f60bb466b95e30800000000000000
+      internalID: 4492822647029560328
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_attack_left_3
+      name: wizard_fly_plus_shadow_v2_3
       rect:
         serializedVersion: 2
         x: 96
@@ -206,14 +191,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f32e6625f34c60cd0800000000000000
-      internalID: -2592168759260683713
+      spriteID: fb2f38ffe8c51ea50800000000000000
+      internalID: 6548617102415360703
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_attack_left_4
+      name: wizard_fly_plus_shadow_v2_4
       rect:
         serializedVersion: 2
         x: 128
@@ -227,113 +212,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 642a33c3c7ab35710800000000000000
-      internalID: 1680892128688054854
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wizard_attack_left_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 00e54124c9904e120800000000000000
-      internalID: 2442087464669830656
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wizard_attack_left_6
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: be66b24c45730ef50800000000000000
-      internalID: 6908582665594300139
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wizard_attack_left_7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2c4e959932021c320800000000000000
-      internalID: 2576375799101383874
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wizard_attack_left_8
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7a7b057a9230f95c0800000000000000
-      internalID: -4206640049505126489
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wizard_attack_left_9
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a8db4f5f3c9ca3dc0800000000000000
-      internalID: -3658389903802843766
+      spriteID: d1386832db1567bd0800000000000000
+      internalID: -2632827059364789475
       vertices: []
       indices: 
       edges: []
