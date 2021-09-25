@@ -172,10 +172,10 @@ public class Enemy : MonoBehaviour
     #endregion getDamage
 
     #region overrides
-    public virtual void FollowPlayer(Vector2 x)
+    public virtual void FollowPlayer(Vector2 playerPosition)
     {
     }
-    public virtual void PerformAttack(Vector2 x)
+    public virtual void PerformAttack(Vector2 playerPosition)
     {
     }
     public virtual void SetDefault()
