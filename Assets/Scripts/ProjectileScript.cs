@@ -12,7 +12,7 @@ public class ProjectileScript : MonoBehaviour
         set { moveSpeed = value; }
     }
 
-    void Start()
+    public void Start()
     {
         direction.y = Mathf.Cos((360 - transform.eulerAngles.z) * Mathf.Deg2Rad);
         direction.x = Mathf.Sin((360 - transform.eulerAngles.z) * Mathf.Deg2Rad);

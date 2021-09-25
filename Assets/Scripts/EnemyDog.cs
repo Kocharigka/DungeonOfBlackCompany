@@ -15,6 +15,7 @@ public class EnemyDog : Enemy
         DefaultMoveSpeed = 4f;
         HealhBarOffset = new Vector3(0, 1, 0);
         AttackRadius = 1;
+
     }
     IEnumerator WaitForBite()
     {
