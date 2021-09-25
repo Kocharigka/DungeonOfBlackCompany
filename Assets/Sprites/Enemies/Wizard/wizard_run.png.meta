@@ -1,37 +1,19 @@
 fileFormatVersion: 2
-guid: b0282fbb6fdc4f244b35a12f55121879
+guid: d51b3a383b5993d4789f6903c3fca032
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1307916405908451478
-    second: wizard_attack_left_0
+      213: 4636812968322433633
+    second: wizard_run_0
   - first:
-      213: 8955671319897408413
-    second: wizard_attack_left_1
+      213: -1615157382521447484
+    second: wizard_run_1
   - first:
-      213: -5067810423464598127
-    second: wizard_attack_left_2
+      213: 3411440715009347604
+    second: wizard_run_2
   - first:
-      213: -2592168759260683713
-    second: wizard_attack_left_3
-  - first:
-      213: 1680892128688054854
-    second: wizard_attack_left_4
-  - first:
-      213: 2442087464669830656
-    second: wizard_attack_left_5
-  - first:
-      213: 6908582665594300139
-    second: wizard_attack_left_6
-  - first:
-      213: 2576375799101383874
-    second: wizard_attack_left_7
-  - first:
-      213: -4206640049505126489
-    second: wizard_attack_left_8
-  - first:
-      213: -3658389903802843766
-    second: wizard_attack_left_9
+      213: -8725087179505099808
+    second: wizard_run_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -129,7 +111,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wizard_attack_left_0
+      name: wizard_run_0
       rect:
         serializedVersion: 2
         x: 0
@@ -143,14 +125,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6fcbed55f859dde0800000000000000
-      internalID: -1307916405908451478
+      spriteID: 16288cae3d4495040800000000000000
+      internalID: 4636812968322433633
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_attack_left_1
+      name: wizard_run_1
       rect:
         serializedVersion: 2
         x: 32
@@ -164,14 +146,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9383a3cd9fe84c70800000000000000
-      internalID: 8955671319897408413
+      spriteID: 4cb95760beec599e0800000000000000
+      internalID: -1615157382521447484
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_attack_left_2
+      name: wizard_run_2
       rect:
         serializedVersion: 2
         x: 64
@@ -185,14 +167,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 195ee5035458ba9b0800000000000000
-      internalID: -5067810423464598127
+      spriteID: 410df66714fd75f20800000000000000
+      internalID: 3411440715009347604
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_attack_left_3
+      name: wizard_run_3
       rect:
         serializedVersion: 2
         x: 96
@@ -206,134 +188,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f32e6625f34c60cd0800000000000000
-      internalID: -2592168759260683713
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wizard_attack_left_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 642a33c3c7ab35710800000000000000
-      internalID: 1680892128688054854
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wizard_attack_left_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 00e54124c9904e120800000000000000
-      internalID: 2442087464669830656
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wizard_attack_left_6
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: be66b24c45730ef50800000000000000
-      internalID: 6908582665594300139
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wizard_attack_left_7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2c4e959932021c320800000000000000
-      internalID: 2576375799101383874
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wizard_attack_left_8
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7a7b057a9230f95c0800000000000000
-      internalID: -4206640049505126489
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wizard_attack_left_9
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a8db4f5f3c9ca3dc0800000000000000
-      internalID: -3658389903802843766
+      spriteID: 0eb984f00734ae680800000000000000
+      internalID: -8725087179505099808
       vertices: []
       indices: 
       edges: []
