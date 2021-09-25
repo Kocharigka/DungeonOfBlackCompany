@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 7152f2cba88c5ba48ba3d61af2a1cf41
+guid: bd2d9624e18d55341843ae9670286fd8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1230654005170474110
-    second: wizard_run_left_0
+      213: -6337454245738838097
+    second: rasengan_0
   - first:
-      213: 8100517216867336341
-    second: wizard_run_left_1
+      213: -5389208130366042752
+    second: rasengan_1
   - first:
-      213: 178582193363278263
-    second: wizard_run_left_2
+      213: -6880310863396061912
+    second: rasengan_2
   - first:
-      213: 5418191940473040500
-    second: wizard_run_left_3
+      213: 8817469012336508126
+    second: rasengan_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -57,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -111,13 +111,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wizard_run_left_0
+      name: rasengan_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 28
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,20 +125,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 283f66cd3b6dbeee0800000000000000
-      internalID: -1230654005170474110
+      spriteID: fa70276d0f6dc08a0800000000000000
+      internalID: -6337454245738838097
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_run_left_1
+      name: rasengan_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08d82e832cfa535b0800000000000000
+      internalID: -5389208130366042752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rasengan_2
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 28
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,20 +167,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59040588d71da6070800000000000000
-      internalID: 8100517216867336341
+      spriteID: 82d340329b93480a0800000000000000
+      internalID: -6880310863396061912
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_run_left_2
+      name: rasengan_3
       rect:
         serializedVersion: 2
-        x: 63
+        x: 48
         y: 0
-        width: 29
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,29 +188,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b9d0a60f837a7200800000000000000
-      internalID: 178582193363278263
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wizard_run_left_3
-      rect:
-        serializedVersion: 2
-        x: 95
-        y: 0
-        width: 29
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 47ea7c0fcd8413b40800000000000000
-      internalID: 5418191940473040500
+      spriteID: edcf45a8951fd5a70800000000000000
+      internalID: 8817469012336508126
       vertices: []
       indices: 
       edges: []

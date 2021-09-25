@@ -1,37 +1,37 @@
 fileFormatVersion: 2
-guid: b0282fbb6fdc4f244b35a12f55121879
+guid: 0207889a9ae52c94c8e4ab88530c0139
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1307916405908451478
-    second: wizard_attack_left_0
+      213: -6880310659693213655
+    second: wizard_attack_0
   - first:
-      213: 8955671319897408413
-    second: wizard_attack_left_1
+      213: 3278329665020189846
+    second: wizard_attack_1
   - first:
-      213: -5067810423464598127
-    second: wizard_attack_left_2
+      213: -47342698401208679
+    second: wizard_attack_2
   - first:
-      213: -2592168759260683713
-    second: wizard_attack_left_3
+      213: -7578994886625322534
+    second: wizard_attack_3
   - first:
-      213: 1680892128688054854
-    second: wizard_attack_left_4
+      213: -993809848525831485
+    second: wizard_attack_4
   - first:
-      213: 2442087464669830656
-    second: wizard_attack_left_5
+      213: 4702026357225678263
+    second: wizard_attack_5
   - first:
-      213: 6908582665594300139
-    second: wizard_attack_left_6
+      213: -3840120130263956158
+    second: wizard_attack_6
   - first:
-      213: 2576375799101383874
-    second: wizard_attack_left_7
+      213: 8997105713912849078
+    second: wizard_attack_7
   - first:
-      213: -4206640049505126489
-    second: wizard_attack_left_8
+      213: 7759880012442529237
+    second: wizard_attack_8
   - first:
-      213: -3658389903802843766
-    second: wizard_attack_left_9
+      213: -4466615572108067278
+    second: wizard_attack_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -129,7 +129,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wizard_attack_left_0
+      name: wizard_attack_0
       rect:
         serializedVersion: 2
         x: 0
@@ -143,14 +143,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6fcbed55f859dde0800000000000000
-      internalID: -1307916405908451478
+      spriteID: 92807a098e93480a0800000000000000
+      internalID: -6880310659693213655
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_attack_left_1
+      name: wizard_attack_1
       rect:
         serializedVersion: 2
         x: 32
@@ -164,14 +164,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9383a3cd9fe84c70800000000000000
-      internalID: 8955671319897408413
+      spriteID: 69c57240677fe7d20800000000000000
+      internalID: 3278329665020189846
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_attack_left_2
+      name: wizard_attack_2
       rect:
         serializedVersion: 2
         x: 64
@@ -185,14 +185,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 195ee5035458ba9b0800000000000000
-      internalID: -5067810423464598127
+      spriteID: 996661f011ec75ff0800000000000000
+      internalID: -47342698401208679
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_attack_left_3
+      name: wizard_attack_3
       rect:
         serializedVersion: 2
         x: 96
@@ -206,14 +206,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f32e6625f34c60cd0800000000000000
-      internalID: -2592168759260683713
+      spriteID: ad9123c4e4002d690800000000000000
+      internalID: -7578994886625322534
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_attack_left_4
+      name: wizard_attack_4
       rect:
         serializedVersion: 2
         x: 128
@@ -227,14 +227,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 642a33c3c7ab35710800000000000000
-      internalID: 1680892128688054854
+      spriteID: 3c2455c45374532f0800000000000000
+      internalID: -993809848525831485
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_attack_left_5
+      name: wizard_attack_5
       rect:
         serializedVersion: 2
         x: 160
@@ -248,14 +248,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00e54124c9904e120800000000000000
-      internalID: 2442087464669830656
+      spriteID: 7b5e5fa3f04f04140800000000000000
+      internalID: 4702026357225678263
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_attack_left_6
+      name: wizard_attack_6
       rect:
         serializedVersion: 2
         x: 192
@@ -269,14 +269,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be66b24c45730ef50800000000000000
-      internalID: 6908582665594300139
+      spriteID: 2454acc561725bac0800000000000000
+      internalID: -3840120130263956158
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_attack_left_7
+      name: wizard_attack_7
       rect:
         serializedVersion: 2
         x: 224
@@ -290,14 +290,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c4e959932021c320800000000000000
-      internalID: 2576375799101383874
+      spriteID: 6b2a9646af32cdc70800000000000000
+      internalID: 8997105713912849078
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_attack_left_8
+      name: wizard_attack_8
       rect:
         serializedVersion: 2
         x: 256
@@ -311,14 +311,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a7b057a9230f95c0800000000000000
-      internalID: -4206640049505126489
+      spriteID: 5dd6a49f1c1a0bb60800000000000000
+      internalID: 7759880012442529237
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_attack_left_9
+      name: wizard_attack_9
       rect:
         serializedVersion: 2
         x: 288
@@ -332,8 +332,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8db4f5f3c9ca3dc0800000000000000
-      internalID: -3658389903802843766
+      spriteID: 23e35446dc46302c0800000000000000
+      internalID: -4466615572108067278
       vertices: []
       indices: 
       edges: []
