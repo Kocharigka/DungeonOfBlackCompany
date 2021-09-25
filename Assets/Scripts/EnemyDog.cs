@@ -45,7 +45,7 @@ public class EnemyDog : Enemy
     }
     public override void FollowPlayer(Vector2 playerPosition)
     {
-        if (!inBite&&!IsStunned)
+        if (!inBite&&!IsStunned&&active)
         {
             Animator.SetBool("CanMove", true);
         }

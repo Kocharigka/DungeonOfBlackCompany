@@ -7,42 +7,72 @@ public class EnemyMage : Enemy
     private Shooter shooter;
     SectorChooser chooser = new SectorChooser();
     private float cooldown = 5f;
-    private float timer;
-    public Transform SpawnTransform;
+
+    private float cdTimer;
+    private float dangerRadius=10f;
+    private float tpCooldown=20;
+    private float tpTimer;
     void Awake()
     {
         EnemyName = "Wizard-arcane";
         MaxHealth = 20;
         HealhBarOffset = new Vector3(0, 1.3f, 0);
-        MoveSpeed = 1;
+        DefaultMoveSpeed = 2;
         shooter = GetComponent<Shooter>();
         shooter.Cooldown = 2    ;
-        shooter.ProjectileName = "fireball";
+        shooter.ProjectileName = "arcaneBolt";
         shooter.Delay = 0;
+        tpTimer = tpCooldown;
     }
 
-    public override void FollowPlayer(Vector2 x)
+    public override void FollowPlayer(Vector2 playerPosition)
     {
-        base.FollowPlayer(x);
+        if (!IsStunned&&active)
+        {
+            Animator.SetBool("CanMove", true);
+        }
+        Vector2 playerDir = chooser.sectorToVector(transform.position, Player.transform.position);
+        Animator.SetFloat("Horizontal", playerDir.x);
+        Animator.SetFloat("Vertical", playerDir.y);
+        if (Vector2.Distance(transform.position,playerPosition)<=dangerRadius)
+        {
+            if (tpTimer >= tpCooldown)
+            {
+                Teleport();
+                tpTimer = 0;
+            }
+            else
+            {
+                Vector2 run = (Vector2)transform.position - playerPosition;
+                transform.position = Vector2.MoveTowards(transform.position,(Vector2)transform.position+run, MoveSpeed * Time.deltaTime);
+            }
+        }
+        tpTimer += Time.deltaTime;
     }
     public override void PerformAttack(Vector2 playerPosition)
     {
-        if (timer <= 0)
+        if (cdTimer <= 0)
         {
             Animator.SetTrigger("Attack");
-            timer = cooldown;
+            cdTimer = cooldown;
         }
         else
         {
-            timer -= Time.deltaTime;
+            cdTimer -= Time.deltaTime;
+
         }
     }
     public override void SetDefault()
     {
-        base.SetDefault();
+        MoveSpeed = DefaultMoveSpeed;
     }
-    private void Shoot()
+
+    public void ShootProjectile()
     {
-        shooter.Shoot(SpawnTransform.position, chooser.getAngle(getPlayerPosition(), transform.position));
+        shooter.Shoot(transform.position, chooser.getAngle(getPlayerPosition(), transform.position));
+    }
+
+    private void Teleport()
+    {
     }
 }
