@@ -26,8 +26,7 @@ public class EnemyMage : Enemy
 
     public override void FollowPlayer(Vector2 playerPosition)
     {
-        Debug.Log(MoveSpeed);
-        if (!IsStunned)
+        if (!IsStunned&&active)
         {
             Animator.SetBool("CanMove", true);
         }
@@ -63,7 +62,7 @@ public class EnemyMage : Enemy
     }
     public override void SetDefault()
     {
-        MoveSpeed = 1;
+        MoveSpeed = DefaultMoveSpeed;
     }
 
     public void ShootProjectile()

@@ -144,7 +144,9 @@ public class Enemy : MonoBehaviour
     #region getDamage
     public void GetDamage(int damage)
     {
-        healthBar.gameObject.SetActive(true);
+        if (!isDead)
+        {
+            healthBar.gameObject.SetActive(true);
         if (!isStunned)
         {
             GetStun();
@@ -152,12 +154,14 @@ public class Enemy : MonoBehaviour
 
         currentHealth -= damage;
         healthBar.value = currentHealth;
-        if (currentHealth <= 0)
-        {
-            isDead = true;
-            animator.SetTrigger("Die");
-            enabled = false;
-            StartCoroutine(WaitForDeath());
+        
+            if (currentHealth <= 0)
+            {
+                isDead = true;
+                animator.SetTrigger("Die");
+                enabled = false;
+                StartCoroutine(WaitForDeath());
+            }
         }
     }
     IEnumerator WaitForDeath()
