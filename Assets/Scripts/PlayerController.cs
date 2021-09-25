@@ -26,6 +26,9 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         shooter = GetComponent<Shooter>();
+        shooter.Cooldown = 0;
+        shooter.ProjectileName = "arrow";
+        shooter.Delay = 0.5f;
     }
 
     // Update is called once per frame
