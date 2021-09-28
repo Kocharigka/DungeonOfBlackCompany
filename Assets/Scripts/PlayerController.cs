@@ -9,14 +9,15 @@ public class PlayerController : MonoBehaviour
     private Vector2 direction;
     private float moveSpeed = 5f;
     private Animator animator;
-    private float attackRange = 1f;
-    public LayerMask enemyLayer;
+    private float attackRange = 1f;  
     private int maxHealth=100;
     private int currentHealth;
-    SectorChooser chooser = new SectorChooser();
-    Shooter shooter;
-    private GameObject arrow;
     public Transform projectileHolder;
+    public float AttackRange
+    {
+        get { return attackRange; }
+        set { attackRange = value; }
+    }
 
 
     // Start is called before the first frame update
@@ -25,10 +26,6 @@ public class PlayerController : MonoBehaviour
         currentHealth = maxHealth;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        shooter = GetComponent<Shooter>();
-        shooter.Cooldown = 0;
-        shooter.ProjectileName = "arrow";
-        shooter.Delay = 0.5f;
     }
 
     // Update is called once per frame
@@ -39,37 +36,14 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("Horizontal", direction.x);
         animator.SetFloat("Vertical", direction.y);
         animator.SetFloat("Speed", direction.sqrMagnitude);
-        if (Input.GetMouseButtonDown(0))
-        {
-            performAttack();
-        }
-        if (Input.GetMouseButtonDown(1))
-        {
-            shooter.Shoot(transform.position, chooser.getAngle(Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.position));
-        }
+
+
     }
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
     }
-    private void performAttack()
-    {        
-        string sector = chooser.getSector(chooser.getAngle(Camera.main.ScreenToWorldPoint(Input.mousePosition),transform.position));
-        //play Animation
-        Collider2D[] hitEnemites = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyLayer);
-        foreach (Collider2D enemyCollider in hitEnemites)
-        {
-            Enemy enemy = enemyCollider.GetComponent<Enemy>();
-            if (chooser.targetInSector(sector, enemy, transform.position))
-            {
-                enemy.GetDamage(2);
-            }
-        }
-    }
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.DrawWireSphere(new Vector2(transform.position.x+0.2f,transform.position.y+0.2f), attackRange);
-    }
+
     
     public void GetDamage(int damage)
     {
