@@ -117,7 +117,6 @@ public class Enemy : MonoBehaviour
     }
     public void setDefaultSpeed()
     {
-        Debug.Log("setSpeed");
         moveSpeed = defaultMoveSpeed;
     }
     #endregion utils

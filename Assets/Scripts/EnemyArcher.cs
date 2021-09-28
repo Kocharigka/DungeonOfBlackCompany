@@ -23,7 +23,6 @@ public class EnemyArcher : Enemy
 
     public override void FollowPlayer(Vector2 playerPosition)
     {
-        Debug.Log(MoveSpeed);
         if (!IsStunned && active && Vector2.Distance(transform.position, playerPosition) <= dangerRadius)
         {
             Animator.SetBool("CanMove", true);
