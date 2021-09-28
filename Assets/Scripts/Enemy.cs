@@ -115,6 +115,11 @@ public class Enemy : MonoBehaviour
     {
         return player.GetComponent<Transform>().position;
     }
+    public void setDefaultSpeed()
+    {
+        Debug.Log("setSpeed");
+        moveSpeed = defaultMoveSpeed;
+    }
     #endregion utils
 
     #region getStun
