@@ -69,7 +69,7 @@ public class EnemyMage : Enemy
 
     public void ShootProjectile()
     {
-        shooter.Shoot(transform.position, chooser.getAngle(getPlayerPosition(), transform.position));
+        shooter.Shoot(transform.position, chooser.getAngle(getPlayerPosition(), transform.position),"None");
     }
 
     private void Teleport()

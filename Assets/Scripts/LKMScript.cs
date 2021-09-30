@@ -28,7 +28,7 @@ public class LKMScript : MonoBehaviour
             Enemy enemy = enemyCollider.GetComponent<Enemy>();
             if (chooser.targetInSector(sector, enemy,player.transform.position))
             {
-                enemy.GetDamage(2);
+                enemy.GetDamage(2,"None");
             }
         }
     }

@@ -14,7 +14,8 @@ public class ArrowScript : ProjectileScript
         Debug.Log(collider);
         if (collider.gameObject.tag != "Player")
         {
-            collider.gameObject.GetComponent<Enemy>().GetDamage(4);
+            Debug.Log(Effect);
+            collider.gameObject.GetComponent<Enemy>().GetDamage(4,Effect);
             Destroy(gameObject);
         }
 
