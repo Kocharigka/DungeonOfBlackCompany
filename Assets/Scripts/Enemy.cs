@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
     private PlayerController player;
     private float attackRadius;
     private int currentHealth;
+    private MagicController magic;
     #endregion privateStatic
     #region publicFields
     public float DefaultMoveSpeed
@@ -92,6 +93,7 @@ public class Enemy : MonoBehaviour
         healthBar.value = healthBar.maxValue;
         moveSpeed = defaultMoveSpeed;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        magic = GetComponent<MagicController>();
     }
 
     // Update is called once per frame
@@ -132,6 +134,7 @@ public class Enemy : MonoBehaviour
     {
         moveSpeed = 0;
         isStunned = true;
+        animator.Rebind();
         animator.SetBool("Stunned", true);
         animator.SetBool("CanMove", false);
         sprite.color = Color.black;
@@ -146,7 +149,7 @@ public class Enemy : MonoBehaviour
     #endregion getStun
 
     #region getDamage
-    public void GetDamage(int damage)
+    public void GetDamage(int damage,string effect)
     {
         if (!isDead)
         {
@@ -157,6 +160,7 @@ public class Enemy : MonoBehaviour
         }
 
         currentHealth -= damage;
+        magic.ApplyEffect(damage,effect);
         healthBar.value = currentHealth;
         
             if (currentHealth <= 0)
@@ -172,6 +176,7 @@ public class Enemy : MonoBehaviour
     {
         sprite.color = Color.white;
         healthBar.gameObject.SetActive(false);
+        magic.effectHolder.gameObject.SetActive(false);
         yield return new WaitForSeconds(1f);
         gameObject.SetActive(false);
         Destroy(gameObject);

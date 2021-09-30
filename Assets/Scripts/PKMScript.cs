@@ -14,6 +14,7 @@ public class PKMScript : MonoBehaviour
         shooter.Cooldown = 0;
         shooter.ProjectileName = "arrow";
         shooter.Delay = 0.5f;
+        shooter.ProjectileEffect = "Fire";
 
     }
 
@@ -22,8 +23,9 @@ public class PKMScript : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1))
         {
-           Debug.Log("shoot");
-           shooter.Shoot(player.transform.position, chooser.getAngle(Camera.main.ScreenToWorldPoint(Input.mousePosition), player.transform.position));
+           shooter.Shoot(player.transform.position,
+               chooser.getAngle(Camera.main.ScreenToWorldPoint(Input.mousePosition), player.transform.position),
+               "None");
         }
     }
 }
