@@ -4354,7 +4354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 1294944647}
-  active: 0
+  active: 1
 --- !u!61 &2020382260
 BoxCollider2D:
   m_ObjectHideFlags: 0
