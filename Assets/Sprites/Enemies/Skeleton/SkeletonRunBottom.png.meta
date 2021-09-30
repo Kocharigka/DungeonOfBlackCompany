@@ -1,37 +1,34 @@
 fileFormatVersion: 2
-guid: c6da793f27059674dab9d2171a7971af
+guid: 72dc7c9d2ae64c748a2bc9634903f020
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6808763742646307886
-    second: SkeletonAttackLeft 1_0
+      213: -5898704698205188107
+    second: SkeletonRunBottom_0
   - first:
-      213: 8868870811935823796
-    second: SkeletonAttackLeft 1_1
+      213: 2511648084368087835
+    second: SkeletonRunBottom_1
   - first:
-      213: -7985862732954283432
-    second: SkeletonAttackLeft 1_2
+      213: 4930021255239765754
+    second: SkeletonRunBottom_2
   - first:
-      213: -9184670377229999103
-    second: SkeletonAttackLeft 1_3
+      213: 3610321518170463402
+    second: SkeletonRunBottom_3
   - first:
-      213: 3781824947338526253
-    second: SkeletonAttackLeft 1_4
+      213: -7430716287800703458
+    second: SkeletonRunBottom_4
   - first:
-      213: 4699908106628453132
-    second: SkeletonAttackLeft 1_5
+      213: -4486958715425031851
+    second: SkeletonRunBottom_5
   - first:
-      213: 4240500715405994267
-    second: SkeletonAttackLeft 1_6
+      213: 7478514944428612594
+    second: SkeletonRunBottom_6
   - first:
-      213: -1296390300297611603
-    second: SkeletonAttackLeft 1_7
+      213: 7436296451877230476
+    second: SkeletonRunBottom_7
   - first:
-      213: 8342703838883650084
-    second: SkeletonAttackLeft 1_8
-  - first:
-      213: -19044897352720924
-    second: SkeletonAttackLeft 1_9
+      213: -3971854549372297749
+    second: SkeletonRunBottom_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -157,7 +154,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SkeletonAttackLeft 1_0
+      name: SkeletonRunBottom_0
       rect:
         serializedVersion: 2
         x: 0
@@ -171,14 +168,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2c0effac869d7e50800000000000000
-      internalID: 6808763742646307886
+      spriteID: 5ff4d846457932ea0800000000000000
+      internalID: -5898704698205188107
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SkeletonAttackLeft 1_1
+      name: SkeletonRunBottom_1
       rect:
         serializedVersion: 2
         x: 64
@@ -192,14 +189,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b7d340a30f841b70800000000000000
-      internalID: 8868870811935823796
+      spriteID: b1bdc8d10aa2bd220800000000000000
+      internalID: 2511648084368087835
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SkeletonAttackLeft 1_2
+      name: SkeletonRunBottom_2
       rect:
         serializedVersion: 2
         x: 128
@@ -213,14 +210,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 852da31c7248c2190800000000000000
-      internalID: -7985862732954283432
+      spriteID: afe01b51634fa6440800000000000000
+      internalID: 4930021255239765754
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SkeletonAttackLeft 1_3
+      name: SkeletonRunBottom_3
       rect:
         serializedVersion: 2
         x: 192
@@ -234,14 +231,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 104272254fe798080800000000000000
-      internalID: -9184670377229999103
+      spriteID: aacdf7fda407a1230800000000000000
+      internalID: 3610321518170463402
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SkeletonAttackLeft 1_4
+      name: SkeletonRunBottom_4
       rect:
         serializedVersion: 2
         x: 256
@@ -255,14 +252,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2eb2dca0cdbb7430800000000000000
-      internalID: 3781824947338526253
+      spriteID: e160ee6e7eac0e890800000000000000
+      internalID: -7430716287800703458
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SkeletonAttackLeft 1_5
+      name: SkeletonRunBottom_5
       rect:
         serializedVersion: 2
         x: 320
@@ -276,14 +273,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c035194958d693140800000000000000
-      internalID: 4699908106628453132
+      spriteID: 5597f3d32de1bb1c0800000000000000
+      internalID: -4486958715425031851
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SkeletonAttackLeft 1_6
+      name: SkeletonRunBottom_6
       rect:
         serializedVersion: 2
         x: 384
@@ -297,14 +294,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b19609bfee849da30800000000000000
-      internalID: 4240500715405994267
+      spriteID: 2fb1e1618b509c760800000000000000
+      internalID: 7478514944428612594
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SkeletonAttackLeft 1_7
+      name: SkeletonRunBottom_7
       rect:
         serializedVersion: 2
         x: 448
@@ -318,14 +315,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da6bf74f3eb420ee0800000000000000
-      internalID: -1296390300297611603
+      spriteID: c87d3aa4938033760800000000000000
+      internalID: 7436296451877230476
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SkeletonAttackLeft 1_8
+      name: SkeletonRunBottom_8
       rect:
         serializedVersion: 2
         x: 512
@@ -339,29 +336,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42a92fe90fc37c370800000000000000
-      internalID: 8342703838883650084
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SkeletonAttackLeft 1_9
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4edd18a44c65cbff0800000000000000
-      internalID: -19044897352720924
+      spriteID: bed1525c45321e8c0800000000000000
+      internalID: -3971854549372297749
       vertices: []
       indices: 
       edges: []
