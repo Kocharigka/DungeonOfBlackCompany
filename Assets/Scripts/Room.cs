@@ -13,9 +13,9 @@ public class Room : MonoBehaviour
     {
         waves = enemiesToSpawn.Keys.Count;
     }
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player" && !passed && currentWave==0 && InBounds(collision.transform))
+        if (collision.tag == "Player" && !passed && currentWave == 0 && InBounds(collision.transform))
         {
             barsControl(false);
             spawnNextWave();
