@@ -11,8 +11,8 @@ public class ArrowScript : ProjectileScript
     // Start is called before the first frame update
     public void OnTriggerEnter2D(Collider2D collider)
     {
-        Debug.Log(collider);
-        if (collider.gameObject.tag != "Player")
+        
+        if (collider.gameObject.layer==LayerMask.NameToLayer("Enemy"))
         {
             Debug.Log(Effect);
             collider.gameObject.GetComponent<Enemy>().GetDamage(4,Effect);
