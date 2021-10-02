@@ -110,6 +110,10 @@ public class Enemy : MonoBehaviour
         }
         PerformAttack(getPlayerPosition());
         FollowPlayer(getPlayerPosition());
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            GetDamage(100,"none");
+        }
     }
 
     #region utils
@@ -196,4 +200,9 @@ public class Enemy : MonoBehaviour
 
     }
     #endregion overrides
+    private void OnDestroy()
+    {
+        GetComponentInParent<Room>().Killed(gameObject);
+    }
 }
+
