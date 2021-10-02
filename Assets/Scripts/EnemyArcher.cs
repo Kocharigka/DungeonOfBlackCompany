@@ -9,6 +9,7 @@ public class EnemyArcher : Enemy
     private float cooldown = 3f;
     private float cdTimer;
     private float dangerRadius = 10f;
+    Rigidbody2D rb;
     void Awake()
     {
         EnemyName = "Sceleton-archer";
@@ -19,6 +20,7 @@ public class EnemyArcher : Enemy
         shooter.Cooldown = 2;
         shooter.ProjectileName = "enemyArrow";
         shooter.Delay = 0;
+        rb = GetComponent<Rigidbody2D>();
     }
 
     public override void FollowPlayer(Vector2 playerPosition)
@@ -33,7 +35,9 @@ public class EnemyArcher : Enemy
         if (Vector2.Distance(transform.position, playerPosition) <= dangerRadius)
         {            
                 Vector2 run = (Vector2)transform.position - playerPosition;
-                transform.position = Vector2.MoveTowards(transform.position, (Vector2)transform.position + run, MoveSpeed * Time.deltaTime);
+            //transform.position = Vector2.MoveTowards(transform.position, (Vector2)transform.position + run, MoveSpeed * Time.deltaTime);
+            rb.MovePosition( (Vector2)transform.position + run * MoveSpeed * Time.deltaTime);
+
         }
         else
         {

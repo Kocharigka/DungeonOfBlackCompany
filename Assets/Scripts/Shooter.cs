@@ -34,8 +34,7 @@ public class Shooter : MonoBehaviour
     {      
         if (!isShooting)
         {
-            Debug.Log(effect);
-            projectile = (GameObject)Resources.Load(projectileName);
+            projectile = (GameObject)Resources.Load("Projectiles/"+projectileName);
             holder = GameObject.Find("ProjectileHolder").GetComponent<Transform>();
             isShooting = true;
             StartCoroutine(WaitForShot(source, angle));
