@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class Room : MonoBehaviour
 {
@@ -9,13 +10,15 @@ public class Room : MonoBehaviour
     public List<GameObject> enemiesCurrent= new List<GameObject>();
     public Dictionary<int,Dictionary<string,int>> enemiesToSpawn;
     public bool passed=false;
+    Bounds bounds;
     private void Start()
     {
         waves = enemiesToSpawn.Keys.Count;
+        bounds=transform.Find("Floor").GetComponent<Tilemap>().localBounds;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player" && !passed && currentWave == 0 && InBounds(collision.transform))
+        if (collision.tag == "Player" && !passed && currentWave == 0 && InBounds(collision.transform.position))
         {
             barsControl(false);
             spawnNextWave();
@@ -35,10 +38,14 @@ public class Room : MonoBehaviour
         }
     }
 
-    public bool InBounds(Transform obj)
-    {
-        return true;
-        //return GetComponent<Collider2D>().bounds.Contains(obj.position);
+    public bool InBounds(Vector3 obj)
+    {       
+        if (bounds.max.x>obj.x && bounds.max.y > obj.y &&
+            bounds.min.x< obj.x & bounds.min.y<obj.y)
+        {
+            return true;
+        }
+        return false;
     }
     public void checkEnemies()
     {
@@ -61,12 +68,10 @@ public class Room : MonoBehaviour
     }
     void barsControl(bool state)
     {
-        Debug.Log(state);
         foreach (Transform child in transform)
         {
             foreach (Transform childChild in child)
             {
-                Debug.Log(childChild.name);
                 if (childChild.name=="Bars")
                 {
 

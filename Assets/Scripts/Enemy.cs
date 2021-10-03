@@ -19,6 +19,8 @@ public class Enemy : MonoBehaviour
     private float attackRadius;
     private int currentHealth;
     private MagicController magic;
+    private float offset=0;
+    private float spawnDuration=10;
     #endregion privateStatic
     #region publicFields
     public float DefaultMoveSpeed
@@ -94,12 +96,23 @@ public class Enemy : MonoBehaviour
         moveSpeed = defaultMoveSpeed;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         magic = GetComponent<MagicController>();
+        animator.SetTrigger("Spawn");
+        Invoke("setSpawnDuration", 0.2f);
     }
 
     // Update is called once per frame
     void Update()
     {
+        offset += Time.deltaTime;
         healthBar.transform.position = Camera.main.WorldToScreenPoint(transform.position + healhBarOffset);
+        if (offset <= spawnDuration)
+        {
+            return;
+        }
+        else
+        {
+            Debug.Log(spawnDuration);
+        }
         if (!active)
         {
             return;
@@ -203,6 +216,11 @@ public class Enemy : MonoBehaviour
     private void OnDestroy()
     {
         GetComponentInParent<Room>().Killed(gameObject);
+    }
+    void setSpawnDuration()
+    {
+        spawnDuration = animator.GetCurrentAnimatorClipInfo(0)[0].clip.length;
+        Debug.Log(animator.GetCurrentAnimatorClipInfo(0)[0].clip.name);
     }
 }
 

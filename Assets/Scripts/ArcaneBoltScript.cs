@@ -11,7 +11,6 @@ public class ArcaneBoltScript : ProjectileScript
     // Start is called before the first frame update
     public void OnTriggerEnter2D(Collider2D collider)
     {
-        Debug.Log(collider);
         if (collider.gameObject.tag == "Player")
         {
             collider.gameObject.GetComponent<PlayerController>().GetDamage(10);
