@@ -1,22 +1,25 @@
 fileFormatVersion: 2
-guid: 3175be5028d277e4788a4e1a39558d8d
+guid: b821c4ba454d85a40bf8c70e209099c2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8105560202311982947
-    second: Thunder_0
+      213: -856085545168688419
+    second: ice_0
   - first:
-      213: 6004246453574341425
-    second: Thunder_1
+      213: -1054573163461033994
+    second: ice_1
   - first:
-      213: -6931400272290298348
-    second: Thunder_2
+      213: -4747277866943198223
+    second: ice_2
   - first:
-      213: -190768770967579635
-    second: Thunder_3
+      213: -4621826098645276579
+    second: ice_3
   - first:
-      213: -8380717354252690839
-    second: Thunder_4
+      213: 6655876435703727693
+    second: ice_4
+  - first:
+      213: -5679005837793796318
+    second: ice_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -114,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Thunder_0
+      name: ice_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d90a6abe0f3438f80800000000000000
-      internalID: -8105560202311982947
+      spriteID: ddaafde7bb29e14f0800000000000000
+      internalID: -856085545168688419
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Thunder_1
+      name: ice_1
       rect:
         serializedVersion: 2
         x: 32
@@ -149,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1339231765e535350800000000000000
-      internalID: 6004246453574341425
+      spriteID: 6ffbe329b476d51f0800000000000000
+      internalID: -1054573163461033994
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Thunder_2
+      name: ice_2
       rect:
         serializedVersion: 2
         x: 64
@@ -170,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 416471e2d28becf90800000000000000
-      internalID: -6931400272290298348
+      spriteID: 1fbc6c2aee74e1eb0800000000000000
+      internalID: -4747277866943198223
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Thunder_3
+      name: ice_3
       rect:
         serializedVersion: 2
         x: 96
@@ -191,14 +194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d045d3440d04a5df0800000000000000
-      internalID: -190768770967579635
+      spriteID: d586e9896a9fbdfb0800000000000000
+      internalID: -4621826098645276579
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Thunder_4
+      name: ice_4
       rect:
         serializedVersion: 2
         x: 128
@@ -212,8 +215,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96a11d028f5b1bb80800000000000000
-      internalID: -8380717354252690839
+      spriteID: d46830b9a5c6e5c50800000000000000
+      internalID: 6655876435703727693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22f5ee8774e1031b0800000000000000
+      internalID: -5679005837793796318
       vertices: []
       indices: 
       edges: []

@@ -1,25 +1,22 @@
 fileFormatVersion: 2
-guid: 9217c5681ba18244dbf273e75145125d
+guid: 79acc0b078bc4d0498fb1aee333246d8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6919651834892928641
-    second: ise_wave_0
+      213: 2978667823193084807
+    second: Thunder2_0
   - first:
-      213: -9000577936022134814
-    second: ise_wave_1
+      213: 3743157627160225819
+    second: Thunder2_1
   - first:
-      213: 1549124142895117172
-    second: ise_wave_2
+      213: 627853851674496310
+    second: Thunder2_2
   - first:
-      213: -5022011950705671369
-    second: ise_wave_3
+      213: 3862741066941786468
+    second: Thunder2_3
   - first:
-      213: 4466819556249394630
-    second: ise_wave_4
-  - first:
-      213: -3186176321738823799
-    second: ise_wave_5
+      213: 6457431419503524814
+    second: Thunder2_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -117,7 +114,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ise_wave_0
+      name: Thunder2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +128,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1864c249eaa870060800000000000000
-      internalID: 6919651834892928641
+      spriteID: 7835f418a9a565920800000000000000
+      internalID: 2978667823193084807
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ise_wave_1
+      name: Thunder2_1
       rect:
         serializedVersion: 2
         x: 32
@@ -152,14 +149,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ef9e26ed06871380800000000000000
-      internalID: -9000577936022134814
+      spriteID: b18ed21a70e52f330800000000000000
+      internalID: 3743157627160225819
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ise_wave_2
+      name: Thunder2_2
       rect:
         serializedVersion: 2
         x: 64
@@ -173,14 +170,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 473be3a43389f7510800000000000000
-      internalID: 1549124142895117172
+      spriteID: 63d4be760c596b800800000000000000
+      internalID: 627853851674496310
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ise_wave_3
+      name: Thunder2_3
       rect:
         serializedVersion: 2
         x: 96
@@ -194,14 +191,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7330c641dba3e4ab0800000000000000
-      internalID: -5022011950705671369
+      spriteID: 469e062e8863b9530800000000000000
+      internalID: 3862741066941786468
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ise_wave_4
+      name: Thunder2_4
       rect:
         serializedVersion: 2
         x: 128
@@ -215,29 +212,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6cd530e58b45dfd30800000000000000
-      internalID: 4466819556249394630
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ise_wave_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9872ff6348d68c3d0800000000000000
-      internalID: -3186176321738823799
+      spriteID: ecb34f0c9a76d9950800000000000000
+      internalID: 6457431419503524814
       vertices: []
       indices: 
       edges: []
