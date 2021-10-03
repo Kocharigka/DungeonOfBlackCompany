@@ -1990,6 +1990,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7216790397004167043, guid: ed48b19dfa8877148969f982a057f01d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 7216790397004167043, guid: ed48b19dfa8877148969f982a057f01d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.24
+      objectReference: {fileID: 0}
     - target: {fileID: 8541472062742549025, guid: ed48b19dfa8877148969f982a057f01d, type: 3}
       propertyPath: m_IsActive
       value: 0
