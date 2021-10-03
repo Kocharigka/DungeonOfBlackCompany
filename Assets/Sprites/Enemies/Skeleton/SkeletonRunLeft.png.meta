@@ -154,10 +154,10 @@ TextureImporter:
       name: SkeletonRunLeft_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 29
         y: 0
-        width: 64
-        height: 64
+        width: 35
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,10 +175,10 @@ TextureImporter:
       name: SkeletonRunLeft_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 87
         y: 0
-        width: 64
-        height: 64
+        width: 41
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,10 +196,10 @@ TextureImporter:
       name: SkeletonRunLeft_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 152
         y: 0
-        width: 64
-        height: 64
+        width: 40
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,10 +217,10 @@ TextureImporter:
       name: SkeletonRunLeft_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 219
         y: 0
-        width: 64
-        height: 64
+        width: 37
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,10 +238,10 @@ TextureImporter:
       name: SkeletonRunLeft_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 279
         y: 0
-        width: 64
-        height: 64
+        width: 41
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,10 +259,10 @@ TextureImporter:
       name: SkeletonRunLeft_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 340
         y: 0
-        width: 64
-        height: 64
+        width: 44
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -280,10 +280,10 @@ TextureImporter:
       name: SkeletonRunLeft_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 414
         y: 0
-        width: 64
-        height: 64
+        width: 34
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -301,10 +301,10 @@ TextureImporter:
       name: SkeletonRunLeft_7
       rect:
         serializedVersion: 2
-        x: 448
+        x: 474
         y: 0
-        width: 64
-        height: 64
+        width: 38
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

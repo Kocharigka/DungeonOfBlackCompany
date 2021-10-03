@@ -157,10 +157,10 @@ TextureImporter:
       name: SkeletonRunBottom_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 14
         y: 0
-        width: 64
-        height: 64
+        width: 43
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,10 +178,10 @@ TextureImporter:
       name: SkeletonRunBottom_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 80
         y: 0
-        width: 64
-        height: 64
+        width: 34
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,10 +199,10 @@ TextureImporter:
       name: SkeletonRunBottom_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 143
         y: 0
-        width: 64
-        height: 64
+        width: 26
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,10 +220,10 @@ TextureImporter:
       name: SkeletonRunBottom_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 207
         y: 0
-        width: 64
-        height: 64
+        width: 26
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,10 +241,10 @@ TextureImporter:
       name: SkeletonRunBottom_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 269
         y: 0
-        width: 64
-        height: 64
+        width: 28
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,10 +262,10 @@ TextureImporter:
       name: SkeletonRunBottom_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 335
         y: 0
-        width: 64
-        height: 64
+        width: 26
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -283,10 +283,10 @@ TextureImporter:
       name: SkeletonRunBottom_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 399
         y: 0
-        width: 64
-        height: 64
+        width: 26
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -304,10 +304,10 @@ TextureImporter:
       name: SkeletonRunBottom_7
       rect:
         serializedVersion: 2
-        x: 448
+        x: 464
         y: 0
-        width: 64
-        height: 64
+        width: 25
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -325,10 +325,10 @@ TextureImporter:
       name: SkeletonRunBottom_8
       rect:
         serializedVersion: 2
-        x: 512
+        x: 528
         y: 0
-        width: 64
-        height: 64
+        width: 25
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

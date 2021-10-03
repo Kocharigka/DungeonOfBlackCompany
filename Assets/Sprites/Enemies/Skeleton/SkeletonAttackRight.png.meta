@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 89b370da57917e5419b8047c2e1c791e
+guid: ec460963f164fd6459fbe14a5c03a18f
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -32,6 +32,18 @@ TextureImporter:
   - first:
       213: -545209672429258465
     second: SkeletonAttackRight 1_9
+  - first:
+      213: 2912660199568338562
+    second: SkeletonAttackRight 1_10
+  - first:
+      213: -8126324054393740105
+    second: SkeletonAttackRight 1_11
+  - first:
+      213: -8046538940074515750
+    second: SkeletonAttackRight 1_12
+  - first:
+      213: -5357810442011628397
+    second: SkeletonAttackRight 1_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -62,7 +74,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -362,6 +374,90 @@ TextureImporter:
       bones: []
       spriteID: f193fba01b60f68f0800000000000000
       internalID: -545209672429258465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkeletonAttackRight 1_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28e60b20509db6820800000000000000
+      internalID: 2912660199568338562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkeletonAttackRight 1_11
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b42620e35f793f80800000000000000
+      internalID: -8126324054393740105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkeletonAttackRight 1_12
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad2a2856773f45090800000000000000
+      internalID: -8046538940074515750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkeletonAttackRight 1_13
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39ca4063acb35a5b0800000000000000
+      internalID: -5357810442011628397
       vertices: []
       indices: 
       edges: []

@@ -154,10 +154,10 @@ TextureImporter:
       name: SkeletonDeathLeft_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 17
         y: 0
-        width: 64
-        height: 64
+        width: 47
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,10 +175,10 @@ TextureImporter:
       name: SkeletonDeathLeft_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 81
         y: 0
-        width: 64
-        height: 64
+        width: 47
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,10 +196,10 @@ TextureImporter:
       name: SkeletonDeathLeft_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 145
         y: 0
-        width: 64
-        height: 64
+        width: 47
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,10 +217,10 @@ TextureImporter:
       name: SkeletonDeathLeft_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 209
         y: 0
-        width: 64
-        height: 64
+        width: 47
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,10 +238,10 @@ TextureImporter:
       name: SkeletonDeathLeft_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 286
         y: 0
-        width: 64
-        height: 64
+        width: 34
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,10 +259,10 @@ TextureImporter:
       name: SkeletonDeathLeft_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 350
         y: 0
-        width: 64
-        height: 64
+        width: 34
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -280,10 +280,10 @@ TextureImporter:
       name: SkeletonDeathLeft_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 414
         y: 0
-        width: 64
-        height: 64
+        width: 34
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -301,10 +301,10 @@ TextureImporter:
       name: SkeletonDeathLeft_7
       rect:
         serializedVersion: 2
-        x: 448
+        x: 478
         y: 0
-        width: 64
-        height: 64
+        width: 34
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
