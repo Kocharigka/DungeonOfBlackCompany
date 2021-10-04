@@ -8,10 +8,11 @@ public class MagicEffect
     public int damage;
     public int power;
     public int resonancePower;
-    public MagicEffect(string name="None",int power=1, int resonancePower=1)
+    public MagicEffect(string name="None",int power=1, int resonancePower=1,int damage=10)
     {
         EffectName = name;
         this.power = power;
         this.resonancePower = resonancePower;
+        this.damage = damage;
     }
 }

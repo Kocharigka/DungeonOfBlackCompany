@@ -176,7 +176,6 @@ public class Enemy : MonoBehaviour
     #region getDamage
     public void GetDamage(int damage)
     {
-        Debug.Log(damage);
         if (!isDead)
         {
             healthBar.gameObject.SetActive(true);
@@ -231,7 +230,6 @@ public class Enemy : MonoBehaviour
     void setSpawnDuration()
     {
         spawnDuration = animator.GetCurrentAnimatorClipInfo(0)[0].clip.length-0.2f;
-        Debug.Log(animator.GetCurrentAnimatorClipInfo(0)[0].clip.name);
     }
 
 }

@@ -7,7 +7,6 @@ public class ProjectileScript : MonoBehaviour
     private float moveSpeed;
     private Vector3 direction;
     private MagicEffect effect;
-    public int damage=10;
     public float MoveSpeed
     {
         get { return moveSpeed; }
@@ -16,11 +15,7 @@ public class ProjectileScript : MonoBehaviour
     public MagicEffect Effect
     {
         get { return effect; }
-        set 
-        {
-            effect.damage = damage;
-            effect = value;
-        }
+        set { effect = value; }
     }
 
     public void Start()
