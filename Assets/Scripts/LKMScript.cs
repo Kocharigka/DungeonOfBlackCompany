@@ -29,6 +29,7 @@ public class LKMScript : MonoBehaviour
             if (chooser.targetInSector(sector, enemy,player.transform.position))
             {
                 enemy.GetDamage(2);
+                enemy.ApplyEffect(new MagicEffect("Fire",2,2,2));
             }
         }
     }

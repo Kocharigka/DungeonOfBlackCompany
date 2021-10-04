@@ -16,7 +16,7 @@ public class EnemyMage : Enemy
     void Awake()
     {
         EnemyName = "Wizard-arcane";
-        MaxHealth = 20;
+        MaxHealth = 40;
         HealhBarOffset = new Vector3(0, 1.3f, 0);
         DefaultMoveSpeed = 2;
         shooter = GetComponent<Shooter>();

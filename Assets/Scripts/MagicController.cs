@@ -40,13 +40,12 @@ public class MagicController : MonoBehaviour
     {
         if (currentStatus==null)
         {
-            StartCoroutine(effect.EffectName,effect);
+            currentStatus=StartCoroutine(effect.EffectName,effect);
         }
         else
         {
             StopCoroutine(currentStatus);
-            currentStatus = null;
-            StartCoroutine(lastStatusName+effect.EffectName, effect);
+            currentStatus=StartCoroutine(lastStatusName+effect.EffectName, effect);
         }
     }
 

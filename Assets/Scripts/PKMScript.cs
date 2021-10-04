@@ -7,7 +7,7 @@ public class PKMScript : MonoBehaviour
     private PlayerController player;
     private SectorChooser chooser = new SectorChooser();
     private Shooter shooter;
-    MagicEffect effect = new MagicEffect("Water",2,2);
+    MagicEffect effect = new MagicEffect("Ice",2,2,2);
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
