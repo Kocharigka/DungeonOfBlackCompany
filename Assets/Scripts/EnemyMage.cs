@@ -12,6 +12,7 @@ public class EnemyMage : Enemy
     private float dangerRadius=10f;
     private float tpCooldown=20;
     private float tpTimer;
+    private MagicEffect effect = new MagicEffect();
     void Awake()
     {
         EnemyName = "Wizard-arcane";
@@ -69,7 +70,7 @@ public class EnemyMage : Enemy
 
     public void ShootProjectile()
     {
-        shooter.Shoot(transform.position, chooser.getAngle(getPlayerPosition(), transform.position),"None");
+        shooter.Shoot(transform.position, chooser.getAngle(getPlayerPosition(), transform.position),effect);
     }
 
     private void Teleport()

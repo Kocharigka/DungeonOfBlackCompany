@@ -5,21 +5,21 @@ using UnityEngine.UI;
 
 public class MagicController : MonoBehaviour
 {
-    private Component target;
+    public Component target;
     public Image effectHolder;
     private Dictionary<string, Sprite> statuses=new Dictionary<string,Sprite>();
     private Vector3 effectHolderOffcet;
     private Coroutine currentStatus;
-    private string currentStatusName;
+    private string lastStatusName;
     void Start()
     {
         if (gameObject.tag == "Player")
         {
-            target = GetComponent<PlayerController>();
+           target = GetComponent<PlayerController>();
         }
         else
         {
-            target = GetComponent<Enemy>();
+           target = GetComponent<Enemy>();
         }
         GameObject tmp = (GameObject)Resources.Load("fireEffect");
         statuses.Add("Fire", tmp.GetComponent<SpriteRenderer>().sprite);
@@ -36,65 +36,63 @@ public class MagicController : MonoBehaviour
         effectHolder.transform.position = Camera.main.WorldToScreenPoint(transform.position + effectHolderOffcet);
     }
 
-    public void ApplyEffect(int damage,string effect)
+    public void ApplyEffect(MagicEffect effect)
     {
-        Invoke(effect, 0);
+        if (currentStatus==null)
+        {
+            StartCoroutine(effect.EffectName,effect);
+        }
+        else
+        {
+            StopCoroutine(currentStatus);
+            currentStatus = null;
+            StartCoroutine(lastStatusName+effect.EffectName, effect);
+        }
     }
 
-    public void Fire()
+    IEnumerator Fire(MagicEffect effect)
     {
-        //dot
         effectHolder.sprite = statuses["Fire"];
-        currentStatus=StartCoroutine(fire());
+
+        effectHolder.gameObject.SetActive(true);
+        for (int i = 0; i < effect.power; i++)
+        {
+            target.BroadcastMessage("GetDamage", 2*effect.power);
+            yield return new WaitForSeconds(1);
+        }
+        effectHolder.gameObject.SetActive(false);
+
     }
-    public void Water()
+    IEnumerator Ice(MagicEffect effect)
     {
-        //???
-        effectHolder.sprite = statuses["Water"];
-        currentStatus = StartCoroutine(water());
-    }
-    public void Ice()
-    {
-        //slow
         effectHolder.sprite = statuses["Ice"];
-        currentStatus=StartCoroutine(ice());
+
+        effectHolder.gameObject.SetActive(true);
+        target.BroadcastMessage("Slow");
+        yield return new WaitForSeconds(effect.power);
+        target.BroadcastMessage("SetDefaultSpeed");
+        effectHolder.gameObject.SetActive(false);
+
     }
-    public void Elec()
+    IEnumerator Water(MagicEffect effect)
     {
-        //stun over time
+        effectHolder.sprite = statuses["Water"];
+        effectHolder.gameObject.SetActive(true);
+        yield return new WaitForSeconds(3);
+        effectHolder.gameObject.SetActive(false);
+
+
+    }
+    IEnumerator Elec(MagicEffect effect)
+    {
         effectHolder.sprite = statuses["Elec"];
-        currentStatus=StartCoroutine(elec());
-    }
-    IEnumerator fire()
-    {
         effectHolder.gameObject.SetActive(true);
-        yield return new WaitForSeconds(1);
+        for (int i = 0; i <= effect.power; i++)
+        {
+            target.BroadcastMessage("GetStun", 0.5f);
+            yield return new WaitForSeconds(1);
+        }
         effectHolder.gameObject.SetActive(false);
-        currentStatusName = "";
-
-    }
-    IEnumerator ice()
-    {
-        effectHolder.gameObject.SetActive(true);
-        yield return new WaitForSeconds(1);
-        effectHolder.gameObject.SetActive(false);
-        currentStatusName = "";
-
-    }
-    IEnumerator water()
-    {
-        effectHolder.gameObject.SetActive(true);
-        yield return new WaitForSeconds(1);
-        effectHolder.gameObject.SetActive(false);
-        currentStatusName = "";
-
-    }
-    IEnumerator elec()
-    {
-        effectHolder.gameObject.SetActive(true);
-        yield return new WaitForSeconds(1);
-        effectHolder.gameObject.SetActive(false);
-        currentStatusName = "";
 
     }
 }

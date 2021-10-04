@@ -13,7 +13,7 @@ public class ArcaneBoltScript : ProjectileScript
     {
         if (collider.gameObject.tag == "Player")
         {
-            collider.gameObject.GetComponent<PlayerController>().GetDamage(10);
+            collider.gameObject.GetComponent<PlayerController>().GetDamage(damage);
             Destroy(gameObject);
         }
 

@@ -8,7 +8,6 @@ public class Shooter : MonoBehaviour
     private Transform holder;
     private bool isShooting=false;
     private float cooldown=0.5f;
-    private string projectileEffect;
     public float Cooldown
     {
         set { cooldown = value; }
@@ -23,30 +22,25 @@ public class Shooter : MonoBehaviour
         set { delay = value; }
     }
     private GameObject projectile;
-    public string ProjectileEffect
-    {
-        set { projectileEffect = value; }
-        get { return projectileEffect; }
-    }
 
     
-  public void Shoot(Vector3 source,float angle,string effect)
-    {      
+  public void Shoot(Vector3 source,float angle,MagicEffect effect)
+    {
         if (!isShooting)
         {
             projectile = (GameObject)Resources.Load("Projectiles/"+projectileName);
             holder = GameObject.Find("ProjectileHolder").GetComponent<Transform>();
             isShooting = true;
-            StartCoroutine(WaitForShot(source, angle));
+            StartCoroutine(WaitForShot(source, angle,effect));
         }
        
     }
-    IEnumerator WaitForShot(Vector3 source, float angle)
+    IEnumerator WaitForShot(Vector3 source, float angle,MagicEffect effect)
     {
 
         yield return new WaitForSeconds(delay);
         GameObject projectileGO = Instantiate(projectile, position: source, Quaternion.Euler(0, 0, 360 - angle), holder);
-        projectileGO.GetComponent<ProjectileScript>().Effect = projectileEffect;
+        projectileGO.GetComponent<ProjectileScript>().Effect = effect;
         yield return new WaitForSeconds(cooldown);
         isShooting = false;
     }

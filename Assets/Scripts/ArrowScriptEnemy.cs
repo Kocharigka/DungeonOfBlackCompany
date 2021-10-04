@@ -13,7 +13,7 @@ public class ArrowScriptEnemy : ProjectileScript
     {
         if (collider.gameObject.tag == "Player")
         {
-            collider.gameObject.GetComponent<PlayerController>().GetDamage(4);
+            collider.gameObject.GetComponent<PlayerController>().GetDamage(damage);
             Destroy(gameObject);
         }
 

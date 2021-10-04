@@ -64,6 +64,6 @@ public class EnemyArcher : Enemy
 
     public void ShootProjectile()
     {
-        shooter.Shoot(transform.position, chooser.getAngle(getPlayerPosition(), transform.position),"None");
+        shooter.Shoot(transform.position, chooser.getAngle(getPlayerPosition(), transform.position), new MagicEffect());
     }
 }

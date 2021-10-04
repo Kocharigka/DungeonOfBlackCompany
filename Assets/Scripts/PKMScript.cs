@@ -7,6 +7,7 @@ public class PKMScript : MonoBehaviour
     private PlayerController player;
     private SectorChooser chooser = new SectorChooser();
     private Shooter shooter;
+    MagicEffect effect = new MagicEffect("Water",2,2);
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
@@ -14,8 +15,6 @@ public class PKMScript : MonoBehaviour
         shooter.Cooldown = 0;
         shooter.ProjectileName = "arrow";
         shooter.Delay = 0.5f;
-        shooter.ProjectileEffect = "Fire";
-
     }
 
     // Update is called once per frame
@@ -25,7 +24,7 @@ public class PKMScript : MonoBehaviour
         {
            shooter.Shoot(player.transform.position,
                chooser.getAngle(Camera.main.ScreenToWorldPoint(Input.mousePosition), player.transform.position),
-               "None");
+               effect);
         }
     }
 }

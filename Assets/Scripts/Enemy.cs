@@ -9,7 +9,6 @@ public class Enemy : MonoBehaviour
     private string enemyName;
     private float moveSpeed;
     private float defaultMoveSpeed;
-    private float stunTime = 2f;
     private int maxHealth;
     [SerializeField] private Slider healthBar;
     private Vector3 healhBarOffset;
@@ -21,8 +20,14 @@ public class Enemy : MonoBehaviour
     private MagicController magic;
     private float offset=0;
     private float spawnDuration=10;
+    private string effectName;
     #endregion privateStatic
     #region publicFields
+    public string EffectName
+    {
+        get { return effectName; }
+        set { effectName = value; }
+    }
     public float DefaultMoveSpeed
     {
         get { return defaultMoveSpeed; }
@@ -111,7 +116,6 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            Debug.Log(spawnDuration);
         }
         if (!active)
         {
@@ -125,7 +129,7 @@ public class Enemy : MonoBehaviour
         FollowPlayer(getPlayerPosition());
         if (Input.GetKeyDown(KeyCode.K))
         {
-            GetDamage(100,"none");
+            GetDamage(100);
         }
     }
 
@@ -138,16 +142,20 @@ public class Enemy : MonoBehaviour
     {
         moveSpeed = defaultMoveSpeed;
     }
+    private void OnDestroy()
+    {
+        GetComponentInParent<Room>().Killed(gameObject);
+    }
     #endregion utils
 
     #region getStun
-    public void GetStun()
+    public void GetStun(float duration=0.5f)
     {
         SetDefault();
-        StartCoroutine(WaitForStunToEnd());
+        StartCoroutine(WaitForStunToEnd(duration));
     }
 
-    IEnumerator WaitForStunToEnd()
+    IEnumerator WaitForStunToEnd(float duration)
     {
         moveSpeed = 0;
         isStunned = true;
@@ -155,7 +163,7 @@ public class Enemy : MonoBehaviour
         animator.SetBool("Stunned", true);
         animator.SetBool("CanMove", false);
         sprite.color = Color.black;
-        yield return new WaitForSeconds(stunTime);
+        yield return new WaitForSeconds(duration);
         animator.SetBool("Stunned", false);
         animator.SetBool("CanMove", true);
         isStunned = false;
@@ -166,19 +174,14 @@ public class Enemy : MonoBehaviour
     #endregion getStun
 
     #region getDamage
-    public void GetDamage(int damage,string effect)
+    public void GetDamage(int damage)
     {
+        Debug.Log(damage);
         if (!isDead)
         {
             healthBar.gameObject.SetActive(true);
-        if (!isStunned)
-        {
-            GetStun();
-        }
-
-        currentHealth -= damage;
-        magic.ApplyEffect(damage,effect);
-        healthBar.value = currentHealth;
+            currentHealth -= damage;
+            healthBar.value = currentHealth;
         
             if (currentHealth <= 0)
             {
@@ -201,6 +204,17 @@ public class Enemy : MonoBehaviour
     }
     #endregion getDamage
 
+    #region magic
+    public void ApplyEffect(MagicEffect effect)
+    {
+        magic.ApplyEffect(effect);
+    }
+    public void Slow()
+    {
+        moveSpeed = defaultMoveSpeed / 2;
+    }
+    #endregion magic
+
     #region overrides
     public virtual void FollowPlayer(Vector2 playerPosition)
     {
@@ -213,14 +227,12 @@ public class Enemy : MonoBehaviour
 
     }
     #endregion overrides
-    private void OnDestroy()
-    {
-        GetComponentInParent<Room>().Killed(gameObject);
-    }
+
     void setSpawnDuration()
     {
-        spawnDuration = animator.GetCurrentAnimatorClipInfo(0)[0].clip.length;
+        spawnDuration = animator.GetCurrentAnimatorClipInfo(0)[0].clip.length-0.2f;
         Debug.Log(animator.GetCurrentAnimatorClipInfo(0)[0].clip.name);
     }
+
 }
 

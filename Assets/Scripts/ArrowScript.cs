@@ -14,8 +14,10 @@ public class ArrowScript : ProjectileScript
         
         if (collider.gameObject.layer==LayerMask.NameToLayer("Enemy"))
         {
-            Debug.Log(Effect);
-            collider.gameObject.GetComponent<Enemy>().GetDamage(4,Effect);
+            Debug.Log(damage);
+            Debug.Log(Effect.damage);
+            collider.gameObject.GetComponent<Enemy>().GetDamage(damage);
+            collider.gameObject.GetComponent<Enemy>().ApplyEffect(Effect);
             Destroy(gameObject);
         }
 
