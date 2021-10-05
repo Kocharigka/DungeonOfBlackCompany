@@ -9,7 +9,7 @@ public class EnemyArcher : Enemy
     private float cooldown = 3f;
     private float cdTimer;
     private float dangerRadius = 10f;
-    Rigidbody2D rb;
+    private string projectileName;
     void Awake()
     {
         EnemyName = "Sceleton-archer";
@@ -18,9 +18,8 @@ public class EnemyArcher : Enemy
         DefaultMoveSpeed = 3;
         shooter = GetComponent<Shooter>();
         shooter.Cooldown = 2;
-        shooter.ProjectileName = "enemyArrow";
+        projectileName = "enemyArrow";
         shooter.Delay = 0;
-        rb = GetComponent<Rigidbody2D>();
     }
 
     public override void FollowPlayer(Vector2 playerPosition)
@@ -64,6 +63,6 @@ public class EnemyArcher : Enemy
 
     public void ShootProjectile()
     {
-        shooter.Shoot(transform.position, chooser.getAngle(getPlayerPosition(), transform.position), new MagicEffect());
+        shooter.Shoot(transform.position, chooser.getAngle(getPlayerPosition(), transform.position), new MagicEffect(),projectileName);
     }
 }

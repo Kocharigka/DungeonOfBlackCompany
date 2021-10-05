@@ -208,6 +208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 59549559}
   - component: {fileID: 59549560}
+  - component: {fileID: 59549561}
   m_Layer: 5
   m_Name: FSlider
   m_TagString: Untagged
@@ -287,6 +288,18 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &59549561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59549558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34d30c15c05d6bd4782f756101b34632, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &61809998
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,8 +532,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 2978667823193084807, guid: 79acc0b078bc4d0498fb1aee333246d8, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -594,8 +607,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -5125016487584988340, guid: 14b41658a70f8214c84b05ecfade8698, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -919,7 +932,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.0001
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -1100,7 +1113,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &921427091
 GameObject:
@@ -1259,6 +1272,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1243159857}
   - component: {fileID: 1243159858}
+  - component: {fileID: 1243159859}
   m_Layer: 5
   m_Name: QSlider
   m_TagString: Untagged
@@ -1338,6 +1352,18 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1243159859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243159856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 800edbdc22530664685462f1c0a2fd65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1302662166
 GameObject:
   m_ObjectHideFlags: 0
@@ -1966,8 +1992,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -856085545168688419, guid: b821c4ba454d85a40bf8c70e209099c2, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1994,6 +2020,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1910948399}
   - component: {fileID: 1910948400}
+  - component: {fileID: 1910948401}
   m_Layer: 5
   m_Name: Eslider
   m_TagString: Untagged
@@ -2073,6 +2100,18 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1910948401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910948398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2522f277817ef746beed5af1599a89e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2029906847
 GameObject:
   m_ObjectHideFlags: 0
@@ -2130,8 +2169,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 2309467427480378863, guid: 513b64fd84bb239419069f8f1944bffa, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2245,7 +2284,7 @@ RectTransform:
   - {fileID: 1910948399}
   - {fileID: 59549559}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -10462,7 +10501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7590492436406149295, guid: 6a7060ff83cb27f4b986b0f1c6120f6d, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7590492436406149295, guid: 6a7060ff83cb27f4b986b0f1c6120f6d, type: 3}
       propertyPath: m_LocalPosition.x

@@ -13,6 +13,7 @@ public class EnemyMage : Enemy
     private float tpCooldown=20;
     private float tpTimer;
     private MagicEffect effect = new MagicEffect();
+    private string projectileName;
     void Awake()
     {
         EnemyName = "Wizard-arcane";
@@ -21,7 +22,7 @@ public class EnemyMage : Enemy
         DefaultMoveSpeed = 2;
         shooter = GetComponent<Shooter>();
         shooter.Cooldown = 2    ;
-        shooter.ProjectileName = "arcaneBolt";
+        projectileName = "arcaneBolt";
         shooter.Delay = 0;
         tpTimer = tpCooldown;
     }
@@ -45,6 +46,7 @@ public class EnemyMage : Enemy
             else
             {
                 Vector2 run = (Vector2)transform.position - playerPosition;
+                //rb.MovePosition(rb.position + run * MoveSpeed * Time.deltaTime);
                 transform.position = Vector2.MoveTowards(transform.position,(Vector2)transform.position+run, MoveSpeed * Time.deltaTime);
             }
         }
@@ -70,7 +72,7 @@ public class EnemyMage : Enemy
 
     public void ShootProjectile()
     {
-        shooter.Shoot(transform.position, chooser.getAngle(getPlayerPosition(), transform.position),effect);
+        shooter.Shoot(transform.position, chooser.getAngle(getPlayerPosition(), transform.position),effect,projectileName);
     }
 
     private void Teleport()

@@ -4,17 +4,12 @@ using UnityEngine;
 
 public class Shooter : MonoBehaviour
 {
-    private string projectileName;
     private Transform holder;
     private bool isShooting=false;
     private float cooldown=0.5f;
     public float Cooldown
     {
         set { cooldown = value; }
-    }
-    public string ProjectileName
-    {
-        set { projectileName = value; }
     }
     private float delay;
     public float Delay
@@ -24,7 +19,7 @@ public class Shooter : MonoBehaviour
     private GameObject projectile;
 
     
-  public void Shoot(Vector3 source,float angle,MagicEffect effect)
+  public void Shoot(Vector3 source,float angle,MagicEffect effect,string projectileName)
     {
         if (!isShooting)
         {

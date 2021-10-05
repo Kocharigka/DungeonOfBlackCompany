@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour
     private float offset=0;
     private float spawnDuration=10;
     private string effectName;
+    public Rigidbody2D rb;
     #endregion privateStatic
     #region publicFields
     public string EffectName
@@ -93,6 +94,7 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         currentHealth = maxHealth;
@@ -131,6 +133,14 @@ public class Enemy : MonoBehaviour
         {
             GetDamage(100);
         }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            rb.AddForce(-getPlayerPosition(),ForceMode2D.Impulse);
+        }
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            rb.velocity = new Vector2(0, 0);
+        }
     }
 
     #region utils
@@ -140,11 +150,18 @@ public class Enemy : MonoBehaviour
     }
     public void setDefaultSpeed()
     {
-        moveSpeed = defaultMoveSpeed;
+        if (magic.canMove())
+        {
+            moveSpeed = defaultMoveSpeed;
+        }
     }
     private void OnDestroy()
     {
         GetComponentInParent<Room>().Killed(gameObject);
+    }
+    void setSpawnDuration()
+    {
+        spawnDuration = animator.GetCurrentAnimatorClipInfo(0)[0].clip.length - 0.2f;
     }
     #endregion utils
 
@@ -176,6 +193,7 @@ public class Enemy : MonoBehaviour
     #region getDamage
     public void GetDamage(int damage)
     {
+        Debug.Log(damage);
         if (!isDead)
         {
             healthBar.gameObject.SetActive(true);
@@ -227,10 +245,7 @@ public class Enemy : MonoBehaviour
     }
     #endregion overrides
 
-    void setSpawnDuration()
-    {
-        spawnDuration = animator.GetCurrentAnimatorClipInfo(0)[0].clip.length-0.2f;
-    }
+
 
 }
 
