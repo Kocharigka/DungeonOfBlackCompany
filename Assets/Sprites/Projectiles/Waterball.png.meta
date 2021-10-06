@@ -1,43 +1,49 @@
 fileFormatVersion: 2
-guid: be5bb43d07f351f42a00cd85cb89da15
+guid: d5c5c39d64228404d90c956c6f54d736
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3119783512315037269
-    second: Firebol_2t_0
+      213: 2852731659727047461
+    second: water_strike_2_0
   - first:
-      213: 8100464104296375797
-    second: Firebol_2t_1
+      213: -8385060795235793503
+    second: water_strike_2_1
   - first:
-      213: -5223898361854525887
-    second: Firebol_2t_2
+      213: -1308480914845184034
+    second: water_strike_2_2
   - first:
-      213: -4857497345627851051
-    second: Firebol_2t_3
+      213: 4565688474356336562
+    second: water_strike_2_3
   - first:
-      213: 8271935661184699061
-    second: Firebol_2t_4
+      213: 4252560362076262555
+    second: water_strike_2_4
   - first:
-      213: 2775438763626066339
-    second: Firebol_2t_5
+      213: -6606759396727230269
+    second: water_strike_2_5
   - first:
-      213: -6607481912129624618
-    second: Fireball_0
+      213: -5443466767100800977
+    second: water_strike_2_6
   - first:
-      213: -7250195882505504687
-    second: Fireball_1
+      213: -3122085898744274324
+    second: Waterball_0
   - first:
-      213: 4403933487624526528
-    second: Fireball_2
+      213: 4911195380809476470
+    second: Waterball_1
   - first:
-      213: 8927358698389672400
-    second: Fireball_3
+      213: -595903334299325764
+    second: Waterball_2
   - first:
-      213: 2250600637640065238
-    second: Fireball_4
+      213: -6429100284566278023
+    second: Waterball_3
   - first:
-      213: -4701697456131926120
-    second: Fireball_5
+      213: -1685653653088272026
+    second: Waterball_4
+  - first:
+      213: 7736047885628946323
+    second: Waterball_5
+  - first:
+      213: 5590237180849909786
+    second: Waterball_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -139,7 +145,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fireball_0
+      name: Waterball_0
       rect:
         serializedVersion: 2
         x: 0
@@ -153,14 +159,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d5e1b775328d44a0800000000000000
-      internalID: -6607481912129624618
+      spriteID: c626717aa6f1ca4d0800000000000000
+      internalID: -3122085898744274324
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fireball_1
+      name: Waterball_1
       rect:
         serializedVersion: 2
         x: 32
@@ -174,14 +180,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 158724f0241226b90800000000000000
-      internalID: -7250195882505504687
+      spriteID: 67920bf9d22182440800000000000000
+      internalID: 4911195380809476470
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fireball_2
+      name: Waterball_2
       rect:
         serializedVersion: 2
         x: 64
@@ -195,14 +201,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ca9e488c2aed1d30800000000000000
-      internalID: 4403933487624526528
+      spriteID: cba2e9e131deab7f0800000000000000
+      internalID: -595903334299325764
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fireball_3
+      name: Waterball_3
       rect:
         serializedVersion: 2
         x: 96
@@ -216,14 +222,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d19200ef6954eb70800000000000000
-      internalID: 8927358698389672400
+      spriteID: 9707011aa5f37c6a0800000000000000
+      internalID: -6429100284566278023
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fireball_4
+      name: Waterball_4
       rect:
         serializedVersion: 2
         x: 128
@@ -237,14 +243,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d0cdc11b5dbb3f10800000000000000
-      internalID: 2250600637640065238
+      spriteID: 6618559feea5b98e0800000000000000
+      internalID: -1685653653088272026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fireball_5
+      name: Waterball_5
       rect:
         serializedVersion: 2
         x: 160
@@ -258,8 +264,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89716e5031730ceb0800000000000000
-      internalID: -4701697456131926120
+      spriteID: 397335c8096fb5b60800000000000000
+      internalID: 7736047885628946323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waterball_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a107dbef813849d40800000000000000
+      internalID: 5590237180849909786
       vertices: []
       indices: 
       edges: []
