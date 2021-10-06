@@ -1,43 +1,37 @@
 fileFormatVersion: 2
-guid: be5bb43d07f351f42a00cd85cb89da15
+guid: 414d0e1f53d4dbc4390e51f0a483050d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3119783512315037269
-    second: Firebol_2t_0
+      213: 3611494561920592077
+    second: Thunder_3_0
   - first:
-      213: 8100464104296375797
-    second: Firebol_2t_1
+      213: -1466005080039312427
+    second: Thunder_3_1
   - first:
-      213: -5223898361854525887
-    second: Firebol_2t_2
+      213: -8306754357582780491
+    second: Thunder_3_2
   - first:
-      213: -4857497345627851051
-    second: Firebol_2t_3
+      213: 2405801478719379776
+    second: Thunder_3_3
   - first:
-      213: 8271935661184699061
-    second: Firebol_2t_4
+      213: 5375229909245655042
+    second: Thunder_3_4
   - first:
-      213: 2775438763626066339
-    second: Firebol_2t_5
+      213: -6278663978556736651
+    second: LightningBolt_0
   - first:
-      213: -6607481912129624618
-    second: Fireball_0
+      213: -3367161271319429426
+    second: LightningBolt_1
   - first:
-      213: -7250195882505504687
-    second: Fireball_1
+      213: -4856906298093138296
+    second: LightningBolt_2
   - first:
-      213: 4403933487624526528
-    second: Fireball_2
+      213: -1531476392709230814
+    second: LightningBolt_3
   - first:
-      213: 8927358698389672400
-    second: Fireball_3
-  - first:
-      213: 2250600637640065238
-    second: Fireball_4
-  - first:
-      213: -4701697456131926120
-    second: Fireball_5
+      213: -2266621665907121011
+    second: LightningBolt_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -139,7 +133,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fireball_0
+      name: LightningBolt_0
       rect:
         serializedVersion: 2
         x: 0
@@ -153,14 +147,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d5e1b775328d44a0800000000000000
-      internalID: -6607481912129624618
+      spriteID: 57bb5169064bdd8a0800000000000000
+      internalID: -6278663978556736651
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fireball_1
+      name: LightningBolt_1
       rect:
         serializedVersion: 2
         x: 32
@@ -174,14 +168,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 158724f0241226b90800000000000000
-      internalID: -7250195882505504687
+      spriteID: ece7d89e9a07541d0800000000000000
+      internalID: -3367161271319429426
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fireball_2
+      name: LightningBolt_2
       rect:
         serializedVersion: 2
         x: 64
@@ -195,14 +189,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ca9e488c2aed1d30800000000000000
-      internalID: 4403933487624526528
+      spriteID: 88e0dc2747dc89cb0800000000000000
+      internalID: -4856906298093138296
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fireball_3
+      name: LightningBolt_3
       rect:
         serializedVersion: 2
         x: 96
@@ -216,14 +210,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d19200ef6954eb70800000000000000
-      internalID: 8927358698389672400
+      spriteID: 22f6baeb55a1fbae0800000000000000
+      internalID: -1531476392709230814
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fireball_4
+      name: LightningBolt_4
       rect:
         serializedVersion: 2
         x: 128
@@ -237,29 +231,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d0cdc11b5dbb3f10800000000000000
-      internalID: 2250600637640065238
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fireball_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 89716e5031730ceb0800000000000000
-      internalID: -4701697456131926120
+      spriteID: d84e66b9a975b80e0800000000000000
+      internalID: -2266621665907121011
       vertices: []
       indices: 
       edges: []

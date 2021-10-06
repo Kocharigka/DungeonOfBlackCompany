@@ -1,43 +1,43 @@
 fileFormatVersion: 2
-guid: be5bb43d07f351f42a00cd85cb89da15
+guid: 7682eba80c1a8ac4ebfa00631f0cbd0f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3119783512315037269
-    second: Firebol_2t_0
+      213: -3132805644681308441
+    second: ice_2_0
   - first:
-      213: 8100464104296375797
-    second: Firebol_2t_1
+      213: 7474751684516536950
+    second: ice_2_1
   - first:
-      213: -5223898361854525887
-    second: Firebol_2t_2
+      213: -7913079441606577664
+    second: ice_2_2
   - first:
-      213: -4857497345627851051
-    second: Firebol_2t_3
+      213: 2022068011308627764
+    second: ice_2_3
   - first:
-      213: 8271935661184699061
-    second: Firebol_2t_4
+      213: 7092714818834868549
+    second: ice_2_4
   - first:
-      213: 2775438763626066339
-    second: Firebol_2t_5
+      213: -7398961931274594709
+    second: ice_2_5
   - first:
-      213: -6607481912129624618
-    second: Fireball_0
+      213: 4123103378551783917
+    second: IceLance_0
   - first:
-      213: -7250195882505504687
-    second: Fireball_1
+      213: 4376715288624769534
+    second: IceLance_1
   - first:
-      213: 4403933487624526528
-    second: Fireball_2
+      213: 3413369840729408069
+    second: IceLance_2
   - first:
-      213: 8927358698389672400
-    second: Fireball_3
+      213: 6452018992483803369
+    second: IceLance_3
   - first:
-      213: 2250600637640065238
-    second: Fireball_4
+      213: 7151318591382470165
+    second: IceLance_4
   - first:
-      213: -4701697456131926120
-    second: Fireball_5
+      213: -6739122617608746638
+    second: IceLance_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -139,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fireball_0
+      name: IceLance_0
       rect:
         serializedVersion: 2
         x: 0
@@ -153,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d5e1b775328d44a0800000000000000
-      internalID: -6607481912129624618
+      spriteID: de1caca7da4383930800000000000000
+      internalID: 4123103378551783917
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fireball_1
+      name: IceLance_1
       rect:
         serializedVersion: 2
         x: 32
@@ -174,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 158724f0241226b90800000000000000
-      internalID: -7250195882505504687
+      spriteID: ef9208dbd573dbc30800000000000000
+      internalID: 4376715288624769534
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fireball_2
+      name: IceLance_2
       rect:
         serializedVersion: 2
         x: 64
@@ -195,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ca9e488c2aed1d30800000000000000
-      internalID: 4403933487624526528
+      spriteID: 54245bb09c9be5f20800000000000000
+      internalID: 3413369840729408069
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fireball_3
+      name: IceLance_3
       rect:
         serializedVersion: 2
         x: 96
@@ -216,14 +216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d19200ef6954eb70800000000000000
-      internalID: 8927358698389672400
+      spriteID: 9e02213e61d2a8950800000000000000
+      internalID: 6452018992483803369
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fireball_4
+      name: IceLance_4
       rect:
         serializedVersion: 2
         x: 128
@@ -237,14 +237,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d0cdc11b5dbb3f10800000000000000
-      internalID: 2250600637640065238
+      spriteID: 51ebffa9e569e3360800000000000000
+      internalID: 7151318591382470165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fireball_5
+      name: IceLance_5
       rect:
         serializedVersion: 2
         x: 160
@@ -258,8 +258,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89716e5031730ceb0800000000000000
-      internalID: -4701697456131926120
+      spriteID: 27941a74fa3d972a0800000000000000
+      internalID: -6739122617608746638
       vertices: []
       indices: 
       edges: []

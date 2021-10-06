@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 3318740467457461341}
   m_Layer: 6
   m_Name: Wolf
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -270,6 +270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 3318740468297322625}
+  rb: {fileID: 0}
   active: 1
 --- !u!61 &3318740467457461331
 BoxCollider2D:
@@ -309,6 +310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6665db92e846d3249af40e09b01f7ef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
   effectHolder: {fileID: 3318740468920941875}
 --- !u!1 &3318740467536147785
 GameObject:

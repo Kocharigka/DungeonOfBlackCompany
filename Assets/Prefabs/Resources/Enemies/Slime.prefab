@@ -467,7 +467,7 @@ GameObject:
   - component: {fileID: 2902670588370328983}
   m_Layer: 6
   m_Name: Slime
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -570,6 +570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 2902670587446202203}
+  rb: {fileID: 0}
   active: 1
 --- !u!61 &2902670588370328969
 BoxCollider2D:
@@ -609,4 +610,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6665db92e846d3249af40e09b01f7ef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
   effectHolder: {fileID: 2902670587411719478}

@@ -5,10 +5,10 @@ using UnityEngine;
 public class MagicEffect
 {
     public string name;
-    public int damage;
-    public int power;
-    public int resonancePower;
-    public MagicEffect(string name="None",int power=1, int resonancePower=1,int damage=10)
+    public float damage;
+    public float power;
+    public float resonancePower;
+    public MagicEffect(string name="None",float power=1, float resonancePower=1,float damage=10)
     {
         this.name = name;
         this.power = power;
