@@ -6,7 +6,6 @@ public class EnemyDog : Enemy
 {
     private bool inBite = false;
     Coroutine bite = null;
-    SectorChooser chooser = new SectorChooser();
     // Start is called before the first frame update
     void Awake()
     {
@@ -29,9 +28,6 @@ public class EnemyDog : Enemy
     }
     public override void PerformAttack(Vector2 playerPosition)
     {
-        Vector2 playerDir = chooser.sectorToVector(transform.position, Player.transform.position);
-        Animator.SetFloat("Horizontal", -playerDir.x);
-        Animator.SetFloat("Vertical", -playerDir.y);
         if (Vector2.Distance(playerPosition, transform.position) <= AttackRadius)
         {
             if (!inBite)

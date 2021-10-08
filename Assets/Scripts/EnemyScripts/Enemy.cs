@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour
     private float spawnDuration=10;
     private string effectName;
     public Rigidbody2D rb;
+    public SectorChooser chooser = new SectorChooser();
     #endregion privateStatic
     #region publicFields
     public string EffectName
@@ -112,6 +113,9 @@ public class Enemy : MonoBehaviour
     {
         offset += Time.deltaTime;
         healthBar.transform.position = Camera.main.WorldToScreenPoint(transform.position + healhBarOffset);
+        Vector2 playerDir = chooser.sectorToVector(transform.position, Player.transform.position);
+        Animator.SetFloat("Horizontal", -playerDir.x);
+        Animator.SetFloat("Vertical", -playerDir.y);
         if (offset <= spawnDuration)
         {
             return;
@@ -204,6 +208,8 @@ public class Enemy : MonoBehaviour
             {
                 isDead = true;
                 animator.SetTrigger("Die");
+                magic.effectHolder.gameObject.SetActive(false);
+                magic.enabled = false;
                 enabled = false;
                 StartCoroutine(WaitForDeath());
             }
@@ -222,10 +228,6 @@ public class Enemy : MonoBehaviour
     #endregion getDamage
 
     #region magic
-    public void ApplyEffect(MagicEffect effect)
-    {
-        magic.ApplyEffect(effect);
-    }
     public void Slow()
     {
         moveSpeed = defaultMoveSpeed / 2;

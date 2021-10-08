@@ -38,6 +38,10 @@ public class MagicController : MonoBehaviour
 
     public void ApplyEffect(MagicEffect effect)
     {
+        if (effect.name=="None"|| enabled==false)
+        {
+            return;
+        }
         if (currentStatus==null)
         {
             lastStatusName = effect.name;
@@ -54,6 +58,7 @@ public class MagicController : MonoBehaviour
             currentStatus=StartCoroutine(lastStatusName+effect.name, effect);
         }
     }
+
     #region simpleEffects
     IEnumerator Fire(MagicEffect effect)
     {
@@ -98,7 +103,6 @@ public class MagicController : MonoBehaviour
         }
         effectHolder.gameObject.SetActive(false);
         currentStatus = null;
-        Debug.Log("null");
     }
     #endregion simpleEffects
 
@@ -133,7 +137,15 @@ public class MagicController : MonoBehaviour
     }
     IEnumerator WaterElec(MagicEffect effect)
     {
-        yield return new WaitForSeconds(1);
+        effectHolder.sprite = statuses["Elec"];
+        effectHolder.gameObject.SetActive(true);
+        for (int i = 0; i <= effect.power*2; i++)
+        {
+            target.BroadcastMessage("GetStun", 1f);
+            yield return new WaitForSeconds(2);
+        }
+        effectHolder.gameObject.SetActive(false);
+        currentStatus = null;
     }
     #endregion waterResonance
 
@@ -147,6 +159,7 @@ public class MagicController : MonoBehaviour
     {
         freeze(effect);
         yield return new WaitForSeconds(2 + effect.resonancePower);
+        currentStatus = null;
         effectHolder.gameObject.SetActive(false);
     }
     IEnumerator IceElec(MagicEffect effect)
@@ -168,26 +181,36 @@ public class MagicController : MonoBehaviour
     }
     IEnumerator ElectWater(MagicEffect effect)
     {
-        yield return new WaitForSeconds(1);
+        effectHolder.sprite = statuses["Elec"];
+        effectHolder.gameObject.SetActive(true);
+        for (int i = 0; i <= effect.power * 2; i++)
+        {
+            target.BroadcastMessage("GetStun", 1f);
+            yield return new WaitForSeconds(2);
+        }
+        effectHolder.gameObject.SetActive(false);
+        currentStatus = null;
     }
     #endregion elecResonance
 
     #region freezeResonance
     IEnumerator FreezeFire(MagicEffect effect)
     {
-        yield return new WaitForSeconds(1);
+        steam(effect);
+        return null;
     }
     IEnumerator FreezeIce(MagicEffect effect)
     {
-        yield return new WaitForSeconds(1);
+        return null;
     }
     IEnumerator FreezeWater(MagicEffect effect)
     {
-        yield return new WaitForSeconds(1);
+        return null;
     }
     IEnumerator FreezeElec(MagicEffect effect)
     {
-        yield return new WaitForSeconds(1);
+        conductor(effect);
+        yield return null;
     }
     #endregion freezeResonance
 

@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d2fa79c2568c1c4385bfa5bb95d878e, type: 3}
-  m_Name: Fireball
+  m_Name: Arrow
   m_EditorClassIdentifier: 
-  sprite: {fileID: -6607481912129624618, guid: be5bb43d07f351f42a00cd85cb89da15, type: 3}
-  speed: 20
-  animator: {fileID: 9100000, guid: 8d94aa4aa10a42a40a43577b51920d25, type: 2}
-  damage: 5
-  element: Fire
-  effectPower: 2
-  resonancePower: 2
+  sprite: {fileID: 0}
+  speed: 0
+  animator: {fileID: 0}
+  damage: 0
+  element: 
+  effectPower: 0
+  resonancePower: 0
   inGameSprite: {fileID: 0}
   triggerName: 
   moneyCost: 0
-  cooldown: 3
-  target: Enemy
+  cooldown: 0
+  target: 

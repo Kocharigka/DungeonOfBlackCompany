@@ -16,4 +16,5 @@ public class SpellData : ScriptableObject
     public string triggerName;
     public int moneyCost;
     public float cooldown;
+    public string target;
 }

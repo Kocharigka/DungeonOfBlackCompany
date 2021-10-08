@@ -16,10 +16,11 @@ MonoBehaviour:
   speed: 20
   animator: {fileID: 9100000, guid: 8d30b9ec2674be843bc1f36065d3b951, type: 2}
   damage: 5
-  element: Elect
+  element: Elec
   effectPower: 2
   resonancePower: 2
   inGameSprite: {fileID: 0}
   triggerName: 
   moneyCost: 0
   cooldown: 3
+  target: Enemy

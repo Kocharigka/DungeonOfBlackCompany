@@ -22,6 +22,7 @@ public class PKMScript : MonoBehaviour
         shooter = player.GetComponent<Shooter>();
         slider.maxValue = cooldown;
         spellImage.sprite = spell.sprite;
+        cooldown = spell.cooldown;
         
     }
 

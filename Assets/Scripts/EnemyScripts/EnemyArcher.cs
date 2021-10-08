@@ -5,11 +5,10 @@ using UnityEngine;
 public class EnemyArcher : Enemy
 {
     private Shooter shooter;
-    SectorChooser chooser = new SectorChooser();
     private float cooldown = 3f;
     private float cdTimer;
     private float dangerRadius = 10f;
-    private string projectileName;
+    private SpellData spell;
     void Awake()
     {
         EnemyName = "Sceleton-archer";
@@ -17,7 +16,8 @@ public class EnemyArcher : Enemy
         HealhBarOffset = new Vector3(0, 2f, 0);
         DefaultMoveSpeed = 3;
         shooter = GetComponent<Shooter>();
-        projectileName = "enemyArrow";
+        spell = Resources.Load<SpellData>("Spells/Arrow");
+        cooldown = spell.cooldown;
     }
 
     public override void FollowPlayer(Vector2 playerPosition)
@@ -26,14 +26,11 @@ public class EnemyArcher : Enemy
         {
             Animator.SetBool("CanMove", true);
         }
-        Vector2 playerDir = chooser.sectorToVector(transform.position, Player.transform.position);
-        Animator.SetFloat("Horizontal", playerDir.x);
-        Animator.SetFloat("Vertical", playerDir.y);
         if (Vector2.Distance(transform.position, playerPosition) <= dangerRadius)
         {            
                 Vector2 run = (Vector2)transform.position - playerPosition;
             //transform.position = Vector2.MoveTowards(transform.position, (Vector2)transform.position + run, MoveSpeed * Time.deltaTime);
-            rb.MovePosition( (Vector2)transform.position + run * MoveSpeed * Time.deltaTime);
+            rb.MovePosition( (Vector2)transform.position + run.normalized * MoveSpeed * Time.deltaTime);
 
         }
         else
@@ -61,6 +58,6 @@ public class EnemyArcher : Enemy
 
     public void ShootProjectile()
     {
-       // shooter.Shoot(transform.position, chooser.getAngle(getPlayerPosition(), transform.position), new MagicEffect(),projectileName);
+       shooter.Shoot(transform.position, chooser.getAngle(getPlayerPosition(), transform.position), spell);
     }
 }
