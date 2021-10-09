@@ -23,8 +23,15 @@ public class Enemy : MonoBehaviour
     private string effectName;
     public Rigidbody2D rb;
     public SectorChooser chooser = new SectorChooser();
+    private bool isImpulse = false;
     #endregion privateStatic
     #region publicFields
+
+    public bool IsImpulse
+    {
+        get { return isImpulse; }
+        set { isImpulse = value; }
+    }
     public string EffectName
     {
         get { return effectName; }
@@ -125,6 +132,13 @@ public class Enemy : MonoBehaviour
         }
         if (!active)
         {
+            return;
+        }
+
+        if (isImpulse)
+        {
+            GetStun(0.2f);
+            rb.AddForce(((Vector2)transform.position - getPlayerPosition()).normalized*25, ForceMode2D.Force);
             return;
         }
         if (isStunned)

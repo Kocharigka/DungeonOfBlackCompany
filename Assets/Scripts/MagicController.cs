@@ -49,11 +49,13 @@ public class MagicController : MonoBehaviour
         }
         else if (lastStatusName==effect.name)
         {
+            effectHolder.gameObject.SetActive(false);
             StopCoroutine(currentStatus);
             currentStatus = StartCoroutine(effect.name, effect);
         }
         else
         {
+            effectHolder.gameObject.SetActive(false);
             StopCoroutine(currentStatus);
             currentStatus=StartCoroutine(lastStatusName+effect.name, effect);
         }
@@ -119,7 +121,12 @@ public class MagicController : MonoBehaviour
     }
     IEnumerator FireElec(MagicEffect effect)
     {
-        yield return null;
+        target.BroadcastMessage("set_IsImpulse", true);
+        yield return new WaitForSeconds(0.1f);
+        effectHolder.gameObject.SetActive(false);
+        currentStatus = null;
+        target.BroadcastMessage("set_IsImpulse", false);
+
     }
     #endregion fireResonance
 
@@ -172,7 +179,11 @@ public class MagicController : MonoBehaviour
     #region elecResonance
     IEnumerator ElecFire(MagicEffect effect)
     {
-        yield return null;
+        target.BroadcastMessage("set_IsImpulse", true);
+        yield return new WaitForSeconds(0.1f);
+        effectHolder.gameObject.SetActive(false);
+        currentStatus = null;
+        target.BroadcastMessage("set_IsImpulse", false);
     }
     IEnumerator ElecIce(MagicEffect effect)
     {
@@ -231,6 +242,7 @@ public class MagicController : MonoBehaviour
     {
         //effectHolder.sprite = statuses["Freeze"];
         effectHolder.sprite = statuses["Ice"];
+        lastStatusName = "Freeze";
         target.BroadcastMessage("GetStun", 2 + effect.resonancePower);
     }
     #endregion shared
@@ -242,7 +254,7 @@ public class MagicController : MonoBehaviour
         {
             return true;
         }
-        if (currentStatus != null && (lastStatusName == "Freeze" || lastStatusName == "Ice"))
+        if (currentStatus != null && !(lastStatusName == "Freeze" || lastStatusName == "Ice"))
         {
             return true;
         }
