@@ -11,6 +11,7 @@ public class MagicController : MonoBehaviour
     private Vector3 effectHolderOffcet;
     private Coroutine currentStatus;
     private string lastStatusName;
+    private float waterPower;
     void Start()
     {
         if (gameObject.tag == "Player")
@@ -90,6 +91,7 @@ public class MagicController : MonoBehaviour
     {
         effectHolder.sprite = statuses["Water"];
         effectHolder.gameObject.SetActive(true);
+        waterPower = effect.power;
         yield return new WaitForSeconds(3);
         effectHolder.gameObject.SetActive(false);
         currentStatus = null;
@@ -259,6 +261,15 @@ public class MagicController : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    public float WaterStatus()
+    {
+        if (currentStatus != null && lastStatusName=="Water")
+        {
+            return waterPower;
+        }
+        return 0;
     }
     #endregion utils
 }

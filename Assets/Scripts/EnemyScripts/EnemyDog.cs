@@ -19,10 +19,8 @@ public class EnemyDog : Enemy
     IEnumerator WaitForBite()
     {
         Animator.SetBool("CanMove", false);
-        MoveSpeed = 0;
         Animator.SetTrigger("Attack");
         yield return new WaitForSeconds(1.35f);
-        MoveSpeed = 4f;
         inBite = false;
 
     }
@@ -35,7 +33,6 @@ public class EnemyDog : Enemy
                 inBite = true;
                 bite = StartCoroutine(WaitForBite());
                 return;
-
             }
         }
     }
@@ -47,7 +44,9 @@ public class EnemyDog : Enemy
         }
         if (Vector2.Distance(playerPosition, transform.position) <= 15)
         {
-            transform.position = Vector2.MoveTowards(transform.position, playerPosition, MoveSpeed * Time.deltaTime);
+            Vector2 run = playerPosition-rb.position;
+            rb.MovePosition(rb.position + run.normalized * MoveSpeed * Time.deltaTime * 10);
+            //transform.position = Vector2.MoveTowards(transform.position, playerPosition, MoveSpeed * Time.deltaTime);
         }
     }
 

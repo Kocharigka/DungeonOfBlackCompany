@@ -22,5 +22,5 @@ MonoBehaviour:
   inGameSprite: {fileID: 0}
   triggerName: 
   moneyCost: 0
-  cooldown: 3
+  cooldown: 1
   target: Enemy

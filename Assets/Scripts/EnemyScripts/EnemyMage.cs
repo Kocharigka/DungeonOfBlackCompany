@@ -40,7 +40,7 @@ public class EnemyMage : Enemy
             }
             else
             {
-                Vector2 run = (Vector2)transform.position - playerPosition;
+                Vector2 run = rb.position - playerPosition;
                 rb.MovePosition(rb.position + run.normalized * MoveSpeed * Time.deltaTime*10);
                 //transform.position = Vector2.MoveTowards(transform.position,(Vector2)transform.position+run, MoveSpeed * Time.deltaTime);
             }

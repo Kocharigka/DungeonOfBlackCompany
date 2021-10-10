@@ -283,7 +283,7 @@ GameObject:
   m_Component:
   - component: {fileID: 59549559}
   - component: {fileID: 59549560}
-  - component: {fileID: 59549561}
+  - component: {fileID: 59549562}
   m_Layer: 5
   m_Name: FSlider
   m_TagString: Untagged
@@ -364,7 +364,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &59549561
+--- !u!114 &59549562
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -373,12 +373,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 59549558}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34d30c15c05d6bd4782f756101b34632, type: 3}
+  m_Script: {fileID: 11500000, guid: 800edbdc22530664685462f1c0a2fd65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spell: {fileID: 11400000, guid: dbf497251807f2941bc5413d5b2c8af1, type: 2}
   fill: {fileID: 1378026380}
   spellImage: {fileID: 1773947077}
+  key: 102
 --- !u!1 &61809998
 GameObject:
   m_ObjectHideFlags: 0
@@ -1186,7 +1187,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eefa0f8a07894e419b97fff5f859d9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 7522732050837131875, guid: c82750bcbe4922f46976145bee7ee9ed, type: 3}
 --- !u!61 &554194943
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1827,6 +1827,7 @@ MonoBehaviour:
   spell: {fileID: 11400000, guid: 133add012fe431547b8e1d6fd16c3a92, type: 2}
   fill: {fileID: 185466770}
   spellImage: {fileID: 139422354}
+  key: 113
 --- !u!1 &1302662166
 GameObject:
   m_ObjectHideFlags: 0
@@ -2469,7 +2470,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1910948399}
   - component: {fileID: 1910948400}
-  - component: {fileID: 1910948401}
+  - component: {fileID: 1910948402}
   m_Layer: 5
   m_Name: Eslider
   m_TagString: Untagged
@@ -2550,7 +2551,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1910948401
+--- !u!114 &1910948402
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2559,12 +2560,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1910948398}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2522f277817ef746beed5af1599a89e, type: 3}
+  m_Script: {fileID: 11500000, guid: 800edbdc22530664685462f1c0a2fd65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spell: {fileID: 11400000, guid: 81d9d8ae2865c7642b4a79abc154cea6, type: 2}
   fill: {fileID: 1649189516}
   spellImage: {fileID: 831038580}
+  key: 101
 --- !u!1 &2029906847
 GameObject:
   m_ObjectHideFlags: 0
@@ -2770,7 +2772,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2071207874}
   - component: {fileID: 2071207875}
-  - component: {fileID: 2071207876}
+  - component: {fileID: 2071207877}
   m_Layer: 5
   m_Name: PKMSlider
   m_TagString: Untagged
@@ -2851,7 +2853,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2071207876
+--- !u!114 &2071207877
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2860,12 +2862,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2071207873}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c9b88a404c0a1c4b8843612034321a9, type: 3}
+  m_Script: {fileID: 11500000, guid: 800edbdc22530664685462f1c0a2fd65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spell: {fileID: 11400000, guid: 91676da92f847634baecdd8b8a1713ef, type: 2}
   fill: {fileID: 39330542}
   spellImage: {fileID: 560094547}
+  key: 324
 --- !u!1 &2120246878
 GameObject:
   m_ObjectHideFlags: 3
