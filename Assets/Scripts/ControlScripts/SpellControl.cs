@@ -34,7 +34,6 @@ public class SpellControl : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        Debug.Log(timer);
         if (timer < cooldown)
         {
             slider.value = timer-cooldown+nextIter;

@@ -27,10 +27,10 @@ public class EnemyArcher : Enemy
             Animator.SetBool("CanMove", true);
         }
         if (Vector2.Distance(transform.position, playerPosition) <= dangerRadius)
-        {            
-                Vector2 run = (Vector2)transform.position - playerPosition;
+        {
+            Vector2 run = (Vector2)transform.position - playerPosition;
             //transform.position = Vector2.MoveTowards(transform.position, (Vector2)transform.position + run, MoveSpeed * Time.deltaTime);
-            rb.MovePosition( (Vector2)transform.position + run.normalized * MoveSpeed * Time.deltaTime);
+            rb.MovePosition(rb.position + run.normalized * MoveSpeed * Time.deltaTime * 10);
 
         }
         else
