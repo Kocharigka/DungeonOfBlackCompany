@@ -145,7 +145,10 @@ public class Enemy : MonoBehaviour
         {
             return;
         }
-        PerformAttack(getPlayerPosition());
+        if (magic.WaterStatus() == 0)
+        {
+            PerformAttack(getPlayerPosition());
+        }
         FollowPlayer(getPlayerPosition());
         if (Input.GetKeyDown(KeyCode.K))
         {
