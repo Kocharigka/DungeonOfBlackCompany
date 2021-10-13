@@ -9,8 +9,12 @@ public class TestRoom : Room
     {
         Dictionary<string, int> tmp1 = new Dictionary<string, int>()
         {
-            {"Wizard",3 },
-            
+            {"Wizard",1 },
+            {"Slime",1 },
+            {"Wolf",1 },
+            { "Skeleton",1 },
+
+
         };
         enemiesToSpawn = new Dictionary<int, Dictionary<string, int>>()
         {

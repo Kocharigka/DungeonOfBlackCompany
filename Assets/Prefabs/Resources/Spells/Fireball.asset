@@ -15,11 +15,12 @@ MonoBehaviour:
   sprite: {fileID: -6607481912129624618, guid: be5bb43d07f351f42a00cd85cb89da15, type: 3}
   speed: 20
   animator: {fileID: 9100000, guid: 8d94aa4aa10a42a40a43577b51920d25, type: 2}
-  damage: 10
+  damage: 5
   element: Fire
   effectPower: 2
   resonancePower: 2
   inGameSprite: {fileID: 0}
   triggerName: 
   moneyCost: 0
-  cooldown: 3
+  cooldown: 0
+  target: Enemy

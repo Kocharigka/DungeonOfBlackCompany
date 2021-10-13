@@ -22,8 +22,16 @@ public class Enemy : MonoBehaviour
     private float spawnDuration=10;
     private string effectName;
     public Rigidbody2D rb;
+    public SectorChooser chooser = new SectorChooser();
+    private bool isImpulse = false;
     #endregion privateStatic
     #region publicFields
+
+    public bool IsImpulse
+    {
+        get { return isImpulse; }
+        set { isImpulse = value; }
+    }
     public string EffectName
     {
         get { return effectName; }
@@ -112,6 +120,9 @@ public class Enemy : MonoBehaviour
     {
         offset += Time.deltaTime;
         healthBar.transform.position = Camera.main.WorldToScreenPoint(transform.position + healhBarOffset);
+        Vector2 playerDir = chooser.sectorToVector(transform.position, Player.transform.position);
+        Animator.SetFloat("Horizontal", -playerDir.x);
+        Animator.SetFloat("Vertical", -playerDir.y);
         if (offset <= spawnDuration)
         {
             return;
@@ -123,11 +134,21 @@ public class Enemy : MonoBehaviour
         {
             return;
         }
+
+        if (isImpulse)
+        {
+            GetStun(0.2f);
+            rb.AddForce(((Vector2)transform.position - getPlayerPosition()).normalized*25, ForceMode2D.Force);
+            return;
+        }
         if (isStunned)
         {
             return;
         }
-        PerformAttack(getPlayerPosition());
+        if (magic.WaterStatus() == 0)
+        {
+            PerformAttack(getPlayerPosition());
+        }
         FollowPlayer(getPlayerPosition());
         if (Input.GetKeyDown(KeyCode.K))
         {
@@ -204,6 +225,8 @@ public class Enemy : MonoBehaviour
             {
                 isDead = true;
                 animator.SetTrigger("Die");
+                magic.effectHolder.gameObject.SetActive(false);
+                magic.enabled = false;
                 enabled = false;
                 StartCoroutine(WaitForDeath());
             }
@@ -222,10 +245,6 @@ public class Enemy : MonoBehaviour
     #endregion getDamage
 
     #region magic
-    public void ApplyEffect(MagicEffect effect)
-    {
-        magic.ApplyEffect(effect);
-    }
     public void Slow()
     {
         moveSpeed = defaultMoveSpeed / 2;

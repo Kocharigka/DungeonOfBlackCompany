@@ -5,15 +5,13 @@ using UnityEngine;
 public class EnemyMage : Enemy
 {
     private Shooter shooter;
-    SectorChooser chooser = new SectorChooser();
     private float cooldown = 5f;
 
     private float cdTimer;
     private float dangerRadius=10f;
     private float tpCooldown=20;
     private float tpTimer;
-    private MagicEffect effect = new MagicEffect();
-    private string projectileName;
+    private SpellData spell;
     void Awake()
     {
         EnemyName = "Wizard-arcane";
@@ -21,8 +19,10 @@ public class EnemyMage : Enemy
         HealhBarOffset = new Vector3(0, 1.3f, 0);
         DefaultMoveSpeed = 2;
         shooter = GetComponent<Shooter>();
-        projectileName = "arcaneBolt";
         tpTimer = tpCooldown;
+        spell = Resources.Load<SpellData>("Spells/ArcaneBolt");
+        cooldown = spell.cooldown;
+ 
     }
 
     public override void FollowPlayer(Vector2 playerPosition)
@@ -31,9 +31,6 @@ public class EnemyMage : Enemy
         {
             Animator.SetBool("CanMove", true);
         }
-        Vector2 playerDir = chooser.sectorToVector(transform.position, Player.transform.position);
-        Animator.SetFloat("Horizontal", playerDir.x);
-        Animator.SetFloat("Vertical", playerDir.y);
         if (Vector2.Distance(transform.position,playerPosition)<=dangerRadius)
         {
             if (tpTimer >= tpCooldown)
@@ -43,9 +40,9 @@ public class EnemyMage : Enemy
             }
             else
             {
-                Vector2 run = (Vector2)transform.position - playerPosition;
-                //rb.MovePosition(rb.position + run * MoveSpeed * Time.deltaTime);
-                transform.position = Vector2.MoveTowards(transform.position,(Vector2)transform.position+run, MoveSpeed * Time.deltaTime);
+                Vector2 run = rb.position - playerPosition;
+                rb.MovePosition(rb.position + run.normalized * MoveSpeed * Time.deltaTime*10);
+                //transform.position = Vector2.MoveTowards(transform.position,(Vector2)transform.position+run, MoveSpeed * Time.deltaTime);
             }
         }
         tpTimer += Time.deltaTime;
@@ -54,6 +51,7 @@ public class EnemyMage : Enemy
     {
         if (cdTimer <= 0)
         {
+            rb.velocity = Vector2.zero;
             Animator.SetTrigger("Attack");
             cdTimer = cooldown;
         }
@@ -70,7 +68,7 @@ public class EnemyMage : Enemy
 
     public void ShootProjectile()
     {
-       // shooter.Shoot(transform.position, chooser.getAngle(getPlayerPosition(), transform.position),effect,projectileName);
+       shooter.Shoot(transform.position, chooser.getAngle(getPlayerPosition(), transform.position),spell);
     }
 
     private void Teleport()
