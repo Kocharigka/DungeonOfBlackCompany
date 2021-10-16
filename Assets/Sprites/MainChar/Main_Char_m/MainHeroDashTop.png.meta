@@ -1,31 +1,16 @@
 fileFormatVersion: 2
-guid: 6edfc94a59910564e985563939deec0c
+guid: 31f038881ade4954ab802aee6df6d667
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -751878697121068043
-    second: MainHeroRunRight_0
+      213: -7718584515664058256
+    second: MainHeroDashTop_0
   - first:
-      213: -8225999114110315148
-    second: MainHeroRunRight_1
+      213: 6756615313598869064
+    second: MainHeroDashTop_1
   - first:
-      213: -6540772974918841789
-    second: MainHeroRunRight_2
-  - first:
-      213: -1948675129781480390
-    second: MainHeroRunRight_3
-  - first:
-      213: 3778956946659563716
-    second: MainHeroRunRight_4
-  - first:
-      213: 7215124538562498855
-    second: MainHeroRunRight_5
-  - first:
-      213: 831397729030511022
-    second: MainHeroRunRight_6
-  - first:
-      213: -8576060292407761027
-    second: MainHeroRunRight_7
+      213: 6707781991693576047
+    second: MainHeroDashTop_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -151,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MainHeroRunRight_0
+      name: MainHeroDashTop_0
       rect:
         serializedVersion: 2
         x: 11
         y: 0
-        width: 28
-        height: 39
+        width: 27
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5fb4aeffe4ac095f0800000000000000
-      internalID: -751878697121068043
+      spriteID: 078630f174412e490800000000000000
+      internalID: -7718584515664058256
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainHeroRunRight_1
+      name: MainHeroDashTop_1
       rect:
         serializedVersion: 2
         x: 75
         y: 0
-        width: 36
-        height: 36
+        width: 27
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,41 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 475d6c0936167dd80800000000000000
-      internalID: -8225999114110315148
+      spriteID: 84e660364d154cd50800000000000000
+      internalID: 6756615313598869064
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainHeroRunRight_2
+      name: MainHeroDashTop_2
       rect:
         serializedVersion: 2
         x: 139
         y: 0
-        width: 34
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 34acc7142a18a35a0800000000000000
-      internalID: -6540772974918841789
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MainHeroRunRight_3
-      rect:
-        serializedVersion: 2
-        x: 210
-        y: 0
         width: 27
-        height: 39
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,92 +192,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a349cb24b4ae4f4e0800000000000000
-      internalID: -1948675129781480390
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MainHeroRunRight_4
-      rect:
-        serializedVersion: 2
-        x: 267
-        y: 0
-        width: 34
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4c8532b325d817430800000000000000
-      internalID: 3778956946659563716
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MainHeroRunRight_5
-      rect:
-        serializedVersion: 2
-        x: 331
-        y: 0
-        width: 39
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 721d83b5a85412460800000000000000
-      internalID: 7215124538562498855
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MainHeroRunRight_6
-      rect:
-        serializedVersion: 2
-        x: 395
-        y: 0
-        width: 39
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ea91ee164d7b98b00800000000000000
-      internalID: 831397729030511022
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MainHeroRunRight_7
-      rect:
-        serializedVersion: 2
-        x: 466
-        y: 0
-        width: 27
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d77e3ba1a96bbf880800000000000000
-      internalID: -8576060292407761027
+      spriteID: f6768ad9e24d61d50800000000000000
+      internalID: 6707781991693576047
       vertices: []
       indices: 
       edges: []
