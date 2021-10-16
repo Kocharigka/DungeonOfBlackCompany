@@ -1,31 +1,28 @@
 fileFormatVersion: 2
-guid: 6edfc94a59910564e985563939deec0c
+guid: e515ecec77816b24ea9605ad1ae2955c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -751878697121068043
-    second: MainHeroRunRight_0
+      213: -4393812043658551933
+    second: MainHeroAttackTop2_0
   - first:
-      213: -8225999114110315148
-    second: MainHeroRunRight_1
+      213: -5892243665875618015
+    second: MainHeroAttackTop2_2
   - first:
-      213: -6540772974918841789
-    second: MainHeroRunRight_2
+      213: 1030515401100242787
+    second: MainHeroAttackTop2_3
   - first:
-      213: -1948675129781480390
-    second: MainHeroRunRight_3
+      213: 1656662829690322474
+    second: MainHeroAttackTop2_4
   - first:
-      213: 3778956946659563716
-    second: MainHeroRunRight_4
+      213: 169945465171436411
+    second: MainHeroAttackTop2_5
   - first:
-      213: 7215124538562498855
-    second: MainHeroRunRight_5
+      213: -4346226734846825414
+    second: MainHeroAttackTop2_6
   - first:
-      213: 831397729030511022
-    second: MainHeroRunRight_6
-  - first:
-      213: -8576060292407761027
-    second: MainHeroRunRight_7
+      213: -3190678602222918900
+    second: MainHeroAttackTop2_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -70,7 +67,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -151,13 +148,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MainHeroRunRight_0
+      name: MainHeroAttackTop2_0
       rect:
         serializedVersion: 2
-        x: 11
+        x: 174
         y: 0
-        width: 28
-        height: 39
+        width: 51
+        height: 69
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,62 +162,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5fb4aeffe4ac095f0800000000000000
-      internalID: -751878697121068043
+      spriteID: 38d16e7c93b0603c0800000000000000
+      internalID: -4393812043658551933
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainHeroRunRight_1
+      name: MainHeroAttackTop2_3
       rect:
         serializedVersion: 2
-        x: 75
-        y: 0
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 475d6c0936167dd80800000000000000
-      internalID: -8225999114110315148
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MainHeroRunRight_2
-      rect:
-        serializedVersion: 2
-        x: 139
-        y: 0
-        width: 34
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 34acc7142a18a35a0800000000000000
-      internalID: -6540772974918841789
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MainHeroRunRight_3
-      rect:
-        serializedVersion: 2
-        x: 210
+        x: 46
         y: 0
         width: 27
-        height: 39
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,20 +183,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a349cb24b4ae4f4e0800000000000000
-      internalID: -1948675129781480390
+      spriteID: 36f26222c402d4e00800000000000000
+      internalID: 1030515401100242787
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainHeroRunRight_4
+      name: MainHeroAttackTop2_4
       rect:
         serializedVersion: 2
-        x: 267
+        x: 280
         y: 0
-        width: 34
-        height: 38
+        width: 73
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -249,20 +204,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c8532b325d817430800000000000000
-      internalID: 3778956946659563716
+      spriteID: a2ef844f016adf610800000000000000
+      internalID: 1656662829690322474
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainHeroRunRight_5
+      name: MainHeroAttackTop2_5
       rect:
         serializedVersion: 2
-        x: 331
+        x: 430
         y: 0
-        width: 39
-        height: 34
+        width: 51
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -270,20 +225,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 721d83b5a85412460800000000000000
-      internalID: 7215124538562498855
+      spriteID: b736bba0084cb5200800000000000000
+      internalID: 169945465171436411
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainHeroRunRight_6
+      name: MainHeroAttackTop2_6
       rect:
         serializedVersion: 2
-        x: 395
+        x: 558
         y: 0
-        width: 39
-        height: 37
+        width: 51
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -291,20 +246,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea91ee164d7b98b00800000000000000
-      internalID: 831397729030511022
+      spriteID: a3c262cdfc91fa3c0800000000000000
+      internalID: -4346226734846825414
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainHeroRunRight_7
+      name: MainHeroAttackTop2_7
       rect:
         serializedVersion: 2
-        x: 466
+        x: 686
         y: 0
-        width: 27
-        height: 37
+        width: 51
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -312,8 +267,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d77e3ba1a96bbf880800000000000000
-      internalID: -8576060292407761027
+      spriteID: c03201a57be68b3d0800000000000000
+      internalID: -3190678602222918900
       vertices: []
       indices: 
       edges: []

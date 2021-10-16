@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: 6edfc94a59910564e985563939deec0c
+guid: 1f77bff73627eeb43b1a2feb10ecaa5f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -751878697121068043
-    second: MainHeroRunRight_0
+      213: -4549935215567004025
+    second: MainHeroRunTop_0
   - first:
-      213: -8225999114110315148
-    second: MainHeroRunRight_1
+      213: -8716145321783413028
+    second: MainHeroRunTop_1
   - first:
-      213: -6540772974918841789
-    second: MainHeroRunRight_2
+      213: 1874028735262413223
+    second: MainHeroRunTop_2
   - first:
-      213: -1948675129781480390
-    second: MainHeroRunRight_3
+      213: -578775772418472320
+    second: MainHeroRunTop_3
   - first:
-      213: 3778956946659563716
-    second: MainHeroRunRight_4
+      213: 6963419089644691953
+    second: MainHeroRunTop_4
   - first:
-      213: 7215124538562498855
-    second: MainHeroRunRight_5
+      213: 6845866582931215369
+    second: MainHeroRunTop_5
   - first:
-      213: 831397729030511022
-    second: MainHeroRunRight_6
+      213: 8903469410307725857
+    second: MainHeroRunTop_6
   - first:
-      213: -8576060292407761027
-    second: MainHeroRunRight_7
+      213: -2654648724473849837
+    second: MainHeroRunTop_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -151,13 +151,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MainHeroRunRight_0
+      name: MainHeroRunTop_0
       rect:
         serializedVersion: 2
         x: 11
         y: 0
-        width: 28
-        height: 39
+        width: 27
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,20 +165,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5fb4aeffe4ac095f0800000000000000
-      internalID: -751878697121068043
+      spriteID: 78e961d27026bd0c0800000000000000
+      internalID: -4549935215567004025
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainHeroRunRight_1
+      name: MainHeroRunTop_1
       rect:
         serializedVersion: 2
         x: 75
         y: 0
-        width: 36
-        height: 36
+        width: 27
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,20 +186,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 475d6c0936167dd80800000000000000
-      internalID: -8225999114110315148
+      spriteID: cd6ba6c82080a0780800000000000000
+      internalID: -8716145321783413028
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainHeroRunRight_2
+      name: MainHeroRunTop_2
       rect:
         serializedVersion: 2
         x: 139
         y: 0
-        width: 34
-        height: 38
+        width: 27
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,20 +207,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34acc7142a18a35a0800000000000000
-      internalID: -6540772974918841789
+      spriteID: 7a1d038a433e10a10800000000000000
+      internalID: 1874028735262413223
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainHeroRunRight_3
+      name: MainHeroRunTop_3
       rect:
         serializedVersion: 2
-        x: 210
+        x: 203
         y: 0
         width: 27
-        height: 39
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,20 +228,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a349cb24b4ae4f4e0800000000000000
-      internalID: -1948675129781480390
+      spriteID: 08605606086c7f7f0800000000000000
+      internalID: -578775772418472320
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainHeroRunRight_4
+      name: MainHeroRunTop_4
       rect:
         serializedVersion: 2
         x: 267
         y: 0
-        width: 34
-        height: 38
+        width: 27
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -249,20 +249,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c8532b325d817430800000000000000
-      internalID: 3778956946659563716
+      spriteID: 1f1227ca4c803a060800000000000000
+      internalID: 6963419089644691953
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainHeroRunRight_5
+      name: MainHeroRunTop_5
       rect:
         serializedVersion: 2
         x: 331
         y: 0
-        width: 39
-        height: 34
+        width: 27
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -270,20 +270,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 721d83b5a85412460800000000000000
-      internalID: 7215124538562498855
+      spriteID: 904155fd267610f50800000000000000
+      internalID: 6845866582931215369
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainHeroRunRight_6
+      name: MainHeroRunTop_6
       rect:
         serializedVersion: 2
         x: 395
         y: 0
-        width: 39
-        height: 37
+        width: 27
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -291,20 +291,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea91ee164d7b98b00800000000000000
-      internalID: 831397729030511022
+      spriteID: 12ad2fd814a7f8b70800000000000000
+      internalID: 8903469410307725857
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainHeroRunRight_7
+      name: MainHeroRunTop_7
       rect:
         serializedVersion: 2
-        x: 466
+        x: 459
         y: 0
         width: 27
-        height: 37
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -312,8 +312,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d77e3ba1a96bbf880800000000000000
-      internalID: -8576060292407761027
+      spriteID: 318da4ecc0bc82bd0800000000000000
+      internalID: -2654648724473849837
       vertices: []
       indices: 
       edges: []
