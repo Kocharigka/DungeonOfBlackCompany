@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackBehaviour : StateMachineBehaviour
+public class DashBehaviour : StateMachineBehaviour
 {
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        PlayerController.instance.FlipToDirection();
-        PlayerController.instance.moveSpeed = 0;
-        PlayerController.instance.canFlip = false;
+        PlayerController.instance.moveSpeed = 30;
+        
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -22,7 +21,6 @@ public class AttackBehaviour : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         PlayerController.instance.moveSpeed = PlayerController.instance.defaultMoveSpeed;
-        PlayerController.instance.canFlip = true;
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

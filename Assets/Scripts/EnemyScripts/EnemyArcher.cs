@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyArcher : Enemy
 {
     private Shooter shooter;
-    private float cooldown = 3f;
+    private float cooldown;
     private float cdTimer;
     private float dangerRadius = 10f;
     private SpellData spell;
@@ -16,7 +16,7 @@ public class EnemyArcher : Enemy
         HealhBarOffset = new Vector3(0, 2f, 0);
         DefaultMoveSpeed = 3;
         shooter = GetComponent<Shooter>();
-        spell = Resources.Load<SpellData>("Spells/Arrow");
+        spell = Resources.Load<SpellData>("Spells/ArrowEnemy");
         cooldown = spell.cooldown;
     }
 

@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    SectorChooser chooser = new SectorChooser();
     private Rigidbody2D rb;
-    private Vector2 direction;
+    public Vector2 direction;
     public float moveSpeed;
     public Animator animator;
     private float attackRange = 1f;  
@@ -15,15 +16,12 @@ public class PlayerController : MonoBehaviour
     public Transform projectileHolder;
     public bool isAttacking = false;
     public static PlayerController instance;
-    public float defaultMoveSpeed=5f;
+    public float defaultMoveSpeed;
     public bool canFlip;
+    public bool isCast = false;
+    public MagicController magic;
 
-    private void Awake()
-    {
-        instance = this;
-        moveSpeed = defaultMoveSpeed;
-        canFlip = true;
-    }
+
     public float AttackRange
     {
         get { return attackRange; }
@@ -34,6 +32,10 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        magic = GetComponent<MagicController>();
+        instance = this;
+        moveSpeed = defaultMoveSpeed;
+        canFlip = true;
         currentHealth = maxHealth;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -51,7 +53,6 @@ public class PlayerController : MonoBehaviour
         }
         animator.SetFloat("Speed", direction.sqrMagnitude);
         Attack();
-
 
     }
     private void FixedUpdate()
@@ -71,5 +72,11 @@ public class PlayerController : MonoBehaviour
         {
             isAttacking = true;
         }
+    }
+    public void FlipToDirection()
+    {
+        Vector2 flip= chooser.sectorToVector(Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.position);
+        animator.SetFloat("Horizontal", flip.x);
+        animator.SetFloat("Vertical", flip.y);
     }
 }

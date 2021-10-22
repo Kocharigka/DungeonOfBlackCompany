@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d2fa79c2568c1c4385bfa5bb95d878e, type: 3}
-  m_Name: LightningBolt
+  m_Name: ArrowEnemy
   m_EditorClassIdentifier: 
-  sprite: {fileID: -6278663978556736651, guid: 414d0e1f53d4dbc4390e51f0a483050d, type: 3}
+  sprite: {fileID: 7612248872184694477, guid: 1b45438081fa9f642bdf269094d5c269, type: 3}
   speed: 20
-  animator: {fileID: 9100000, guid: 8d30b9ec2674be843bc1f36065d3b951, type: 2}
-  damage: 5
-  element: Elec
-  effectPower: 2
-  resonancePower: 2
+  animator: {fileID: 9100000, guid: 0ddcc9c7eb51c9e4581ad5725675362f, type: 2}
+  damage: 10
+  element: None
+  effectPower: 0
+  resonancePower: 0
   inGameSprite: {fileID: 0}
-  triggerName: Cast1
+  triggerName: Bow
   moneyCost: 0
-  cooldown: 3
-  target: Enemy
+  cooldown: 7
+  target: Player

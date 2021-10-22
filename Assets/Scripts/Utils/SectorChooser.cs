@@ -14,6 +14,13 @@ public class SectorChooser
         {"L",(225,315)}
         //{"RU",(270,360)}
     };
+
+    /// <summary>
+    /// ¬озвращает угол между целью и игроком
+    /// </summary>
+    /// <param name="target"></param>
+    /// <param name="player"></param>
+    /// <returns></returns>
     public float getAngle(Vector2 target,Vector2 player)
     {
         target = new Vector2(target.x - player.x, target.y - player.y);
@@ -53,6 +60,13 @@ public class SectorChooser
         }
         return false;
     }
+
+    /// <summary>
+    /// ¬озвращает вектор направлени€ от цели к игроку
+    /// </summary>
+    /// <param name="target"></param>
+    /// <param name="player"></param>
+    /// <returns></returns>
     public Vector2 sectorToVector(Vector2 target, Vector2 player)
     {
         string sector = getSector(getAngle(target, player));

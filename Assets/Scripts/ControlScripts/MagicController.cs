@@ -22,14 +22,16 @@ public class MagicController : MonoBehaviour
         {
            target = GetComponent<Enemy>();
         }
-        GameObject tmp = (GameObject)Resources.Load("fireEffect");
-        statuses.Add("Fire", tmp.GetComponent<SpriteRenderer>().sprite);
-        tmp = (GameObject)Resources.Load("iceEffect");
-        statuses.Add("Ice", tmp.GetComponent<SpriteRenderer>().sprite);
-        tmp = (GameObject)Resources.Load("waterEffect");
-        statuses.Add("Water", tmp.GetComponent<SpriteRenderer>().sprite);
-        tmp = (GameObject)Resources.Load("elecEffect");
-        statuses.Add("Elec", tmp.GetComponent<SpriteRenderer>().sprite);
+        SpriteRenderer tmp = Resources.Load<SpriteRenderer>("fireEffect");
+        statuses.Add("Fire", tmp.sprite);
+        tmp = Resources.Load<SpriteRenderer>("iceEffect");
+        statuses.Add("Ice", tmp.sprite);
+        tmp = Resources.Load<SpriteRenderer>("waterEffect");
+        statuses.Add("Water", tmp.sprite);
+        tmp = Resources.Load<SpriteRenderer>("elecEffect");
+        statuses.Add("Elec", tmp.sprite);
+        tmp = Resources.Load<SpriteRenderer>("freezeEffect");
+        statuses.Add("Freeze", tmp.sprite);
         effectHolderOffcet = new Vector3(0, 2, 0);
     }
     private void Update()
@@ -142,6 +144,7 @@ public class MagicController : MonoBehaviour
     {
         freeze(effect);
         yield return new WaitForSeconds(2 + effect.resonancePower);
+        currentStatus = null;
         effectHolder.gameObject.SetActive(false);
     }
     IEnumerator WaterElec(MagicEffect effect)
@@ -242,8 +245,8 @@ public class MagicController : MonoBehaviour
     }
     void freeze(MagicEffect effect)
     {
-        //effectHolder.sprite = statuses["Freeze"];
-        effectHolder.sprite = statuses["Ice"];
+        effectHolder.sprite = statuses["Freeze"];
+        effectHolder.gameObject.SetActive(true);
         lastStatusName = "Freeze";
         target.BroadcastMessage("GetStun", 2 + effect.resonancePower);
     }
