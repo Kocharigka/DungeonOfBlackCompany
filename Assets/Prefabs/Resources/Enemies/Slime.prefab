@@ -571,7 +571,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 2902670587446202203}
   rb: {fileID: 0}
+  objLayer:
+    serializedVersion: 2
+    m_Bits: 1
   active: 1
+  nearWall: 0
 --- !u!61 &2902670588370328969
 BoxCollider2D:
   m_ObjectHideFlags: 0

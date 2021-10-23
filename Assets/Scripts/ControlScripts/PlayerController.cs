@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     public Animator animator;
     private float attackRange = 1f;  
-    private int maxHealth=100;
+    private int maxHealth=1000;
     private int currentHealth;
     public Transform projectileHolder;
     public bool isAttacking = false;
@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     public bool canFlip;
     public bool isCast = false;
     public MagicController magic;
+    bool isDead = false;
 
 
     public float AttackRange
@@ -63,9 +64,34 @@ public class PlayerController : MonoBehaviour
     
     public void GetDamage(int damage)
     {
+        if (isDead)
+        {
+            return;
+        }
         currentHealth -= damage;
         Debug.Log(currentHealth);
+        if (currentHealth<=0)
+        {
+            isDead = true;
+            enabled = false;
+            animator.SetTrigger("Die");
+            var enemies=FindObjectsOfType<Enemy>();
+            foreach (Enemy enemy in enemies)
+            {
+                enemy.active = false;
+            }
+            StartCoroutine(WaitForDeath());
+            enabled = false;
+        }
     }
+
+    IEnumerator WaitForDeath()
+    {
+        magic.effectHolder.gameObject.SetActive(false);
+        yield return new WaitForSeconds(2f);
+        gameObject.SetActive(false);
+    }
+
     void Attack()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0) && !isAttacking)
