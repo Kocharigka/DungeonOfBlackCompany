@@ -11,22 +11,23 @@ public class SpellControl : MonoBehaviour
     [SerializeField] private SpellData spell;
     private float cooldown;
     private float timer;
-    private Slider slider;
+    [SerializeField]private Slider slider;
     private MagicController magic;
     [SerializeField] private Image fill;
     [SerializeField] private Image spellImage;
     [SerializeField] private KeyCode key;
     float nextIter = 0;
+    bool shoot = false;
+    float target;
 
     void Start()
     {
-        slider = GetComponent<Slider>();
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        player = GetComponent<PlayerController>();
         shooter = player.GetComponent<Shooter>();
         cooldown = spell.cooldown;
         timer = cooldown;
         spellImage.sprite = spell.sprite;
-        magic = player.GetComponent<MagicController>();
+        magic = GetComponent<MagicController>();
 
     }
 
@@ -44,13 +45,25 @@ public class SpellControl : MonoBehaviour
             fill.color = new Color(0, 0, 0, 0);
             slider.value = 0;
         }
-        if (Input.GetKeyDown(key))
+        if (Input.GetKeyDown(key)&&!player.isCast)
         {
-            timer = 0-magic.WaterStatus();
-            nextIter = cooldown - timer;
-            slider.maxValue = nextIter;
-            fill.color = new Color(0.22f, 0.22f, 0.22f, a: 0.7f);
-            shooter.Shoot(player.transform.position, chooser.getAngle(Camera.main.ScreenToWorldPoint(Input.mousePosition), player.transform.position), spell);
+            player.isCast = true;
+            player.animator.SetTrigger(spell.triggerName);
+            shoot = true;
+            target = chooser.getAngle(Camera.main.ScreenToWorldPoint(Input.mousePosition), player.transform.position);
         }
+    }
+    public void Cast()
+    {
+        if (!shoot)
+        {
+            return;
+        }
+        timer = 0 - magic.WaterStatus();
+        nextIter = cooldown - timer;
+        slider.maxValue = nextIter;
+        fill.color = new Color(0.22f, 0.22f, 0.22f, a: 0.7f);
+        shooter.Shoot(player.transform.position, target, spell);
+        shoot = false;
     }
 }

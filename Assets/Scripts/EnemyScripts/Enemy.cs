@@ -24,6 +24,8 @@ public class Enemy : MonoBehaviour
     public Rigidbody2D rb;
     public SectorChooser chooser = new SectorChooser();
     private bool isImpulse = false;
+    private Room room;
+    public LayerMask objLayer;
     #endregion privateStatic
     #region publicFields
 
@@ -93,22 +95,29 @@ public class Enemy : MonoBehaviour
         set { attackRadius = value; }
     }
 
+    public Room Room
+    {
+        get { return room; }
+        set { room = value; }
+    }
+
     #endregion publicFields
     #region bools
     private bool isDead = false;
     private bool isStunned = false;
     public bool active;
+    public bool nearWall = false;
     #endregion bools
 
     void Start()
     {
+        room = GetComponentInParent<Room>();
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         currentHealth = maxHealth;
         healthBar.maxValue = MaxHealth;
         healthBar.value = healthBar.maxValue;
-        moveSpeed = defaultMoveSpeed;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         magic = GetComponent<MagicController>();
         animator.SetTrigger("Spawn");
@@ -132,6 +141,7 @@ public class Enemy : MonoBehaviour
         }
         if (!active)
         {
+            Animator.SetBool("CanMove", false);
             return;
         }
 
@@ -154,14 +164,6 @@ public class Enemy : MonoBehaviour
         {
             GetDamage(100);
         }
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            rb.AddForce(-getPlayerPosition(),ForceMode2D.Impulse);
-        }
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            rb.velocity = new Vector2(0, 0);
-        }
     }
 
     #region utils
@@ -182,7 +184,7 @@ public class Enemy : MonoBehaviour
     }
     void setSpawnDuration()
     {
-        spawnDuration = animator.GetCurrentAnimatorClipInfo(0)[0].clip.length - 0.2f;
+        spawnDuration = animator.GetCurrentAnimatorClipInfo(0)[0].clip.length;
     }
     #endregion utils
 

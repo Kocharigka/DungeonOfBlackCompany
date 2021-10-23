@@ -10,15 +10,16 @@ public class Room : MonoBehaviour
     public List<GameObject> enemiesCurrent= new List<GameObject>();
     public Dictionary<int,Dictionary<string,int>> enemiesToSpawn;
     public bool passed=false;
-    Bounds bounds;
+    public Bounds bounds;
+
     private void Start()
     {
         waves = enemiesToSpawn.Keys.Count;
-        bounds=transform.Find("Floor").GetComponent<Tilemap>().localBounds;
+        bounds=GetComponent<Collider2D>().bounds;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player" && !passed && currentWave == 0 && InBounds(collision.transform.position))
+        if (collision.tag == "Player" && !passed && currentWave == 0)
         {
             barsControl(false);
             spawnNextWave();
@@ -41,11 +42,16 @@ public class Room : MonoBehaviour
     public bool InBounds(Vector3 obj)
     {       
         if (bounds.max.x>obj.x && bounds.max.y > obj.y &&
-            bounds.min.x< obj.x & bounds.min.y<obj.y)
+            bounds.min.x< obj.x && bounds.min.y<obj.y)
         {
+            Debug.Log("InBounds");
             return true;
         }
         return false;
+    }
+    public List<Vector2> getCorners()
+    {
+        return new List<Vector2>() { bounds.max,bounds.min,new Vector2(bounds.max.x,bounds.min.y), new Vector2(bounds.min.x,bounds.max.y)};
     }
     public void checkEnemies()
     {

@@ -5,32 +5,29 @@ using UnityEngine;
 public class EnemyArcher : Enemy
 {
     private Shooter shooter;
-    private float cooldown = 3f;
+    private float cooldown;
     private float cdTimer;
     private float dangerRadius = 10f;
     private SpellData spell;
+    Vector2 run;
     void Awake()
     {
-        EnemyName = "Sceleton-archer";
+        EnemyName = "Skeleton-archer";
         MaxHealth = 20;
         HealhBarOffset = new Vector3(0, 2f, 0);
         DefaultMoveSpeed = 3;
         shooter = GetComponent<Shooter>();
-        spell = Resources.Load<SpellData>("Spells/Arrow");
+        spell = Resources.Load<SpellData>("Spells/ArrowEnemy");
         cooldown = spell.cooldown;
     }
 
     public override void FollowPlayer(Vector2 playerPosition)
     {
-        if (!IsStunned && active && Vector2.Distance(transform.position, playerPosition) <= dangerRadius)
+        if (Vector2.Distance(transform.position, playerPosition) <= dangerRadius&&!nearWall)
         {
+            run = ((Vector2)transform.position - playerPosition).normalized;
             Animator.SetBool("CanMove", true);
-        }
-        if (Vector2.Distance(transform.position, playerPosition) <= dangerRadius)
-        {
-            Vector2 run = (Vector2)transform.position - playerPosition;
-            //transform.position = Vector2.MoveTowards(transform.position, (Vector2)transform.position + run, MoveSpeed * Time.deltaTime);
-            rb.MovePosition(rb.position + run.normalized * MoveSpeed * Time.deltaTime * 10);
+            rb.MovePosition(rb.position + run * MoveSpeed * Time.deltaTime * 10);
 
         }
         else
@@ -60,4 +57,24 @@ public class EnemyArcher : Enemy
     {
        shooter.Shoot(transform.position, chooser.getAngle(getPlayerPosition(), transform.position), spell);
     }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.name == "Walls"&&Physics2D.Raycast(transform.position, run,Mathf.Infinity,objLayer).transform.gameObject.name == "Walls")
+        {
+            nearWall = true;
+        }
+        else
+        {
+            nearWall = false;
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.name == "Walls")
+        {
+            nearWall = false;
+        }
+    }
 }
+

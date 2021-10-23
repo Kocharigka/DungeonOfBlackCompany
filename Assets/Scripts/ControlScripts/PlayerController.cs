@@ -5,14 +5,24 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    SectorChooser chooser = new SectorChooser();
     private Rigidbody2D rb;
-    private Vector2 direction;
-    private float moveSpeed = 5f;
-    private Animator animator;
+    public Vector2 direction;
+    public float moveSpeed;
+    public Animator animator;
     private float attackRange = 1f;  
-    private int maxHealth=100;
+    private int maxHealth=1000;
     private int currentHealth;
     public Transform projectileHolder;
+    public bool isAttacking = false;
+    public static PlayerController instance;
+    public float defaultMoveSpeed;
+    public bool canFlip;
+    public bool isCast = false;
+    public MagicController magic;
+    bool isDead = false;
+
+
     public float AttackRange
     {
         get { return attackRange; }
@@ -23,6 +33,10 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        magic = GetComponent<MagicController>();
+        instance = this;
+        moveSpeed = defaultMoveSpeed;
+        canFlip = true;
         currentHealth = maxHealth;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -33,21 +47,62 @@ public class PlayerController : MonoBehaviour
     {
         direction.x = Input.GetAxisRaw("Horizontal");
         direction.y = Input.GetAxisRaw("Vertical");
-        animator.SetFloat("Horizontal", direction.x);
-        animator.SetFloat("Vertical", direction.y);
+        if (direction!=new Vector2(0,0) && canFlip)
+        {
+            animator.SetFloat("Horizontal", direction.x);
+            animator.SetFloat("Vertical", direction.y);
+        }
         animator.SetFloat("Speed", direction.sqrMagnitude);
-
+        Attack();
 
     }
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
     }
-
+    
     
     public void GetDamage(int damage)
     {
+        if (isDead)
+        {
+            return;
+        }
         currentHealth -= damage;
         Debug.Log(currentHealth);
+        if (currentHealth<=0)
+        {
+            isDead = true;
+            enabled = false;
+            animator.SetTrigger("Die");
+            var enemies=FindObjectsOfType<Enemy>();
+            foreach (Enemy enemy in enemies)
+            {
+                enemy.active = false;
+            }
+            StartCoroutine(WaitForDeath());
+            enabled = false;
+        }
+    }
+
+    IEnumerator WaitForDeath()
+    {
+        magic.effectHolder.gameObject.SetActive(false);
+        yield return new WaitForSeconds(2f);
+        gameObject.SetActive(false);
+    }
+
+    void Attack()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !isAttacking)
+        {
+            isAttacking = true;
+        }
+    }
+    public void FlipToDirection()
+    {
+        Vector2 flip= chooser.sectorToVector(Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.position);
+        animator.SetFloat("Horizontal", flip.x);
+        animator.SetFloat("Vertical", flip.y);
     }
 }

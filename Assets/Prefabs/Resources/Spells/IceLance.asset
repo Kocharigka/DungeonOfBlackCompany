@@ -20,7 +20,7 @@ MonoBehaviour:
   effectPower: 2
   resonancePower: 2
   inGameSprite: {fileID: 0}
-  triggerName: 
+  triggerName: Cast1
   moneyCost: 0
-  cooldown: 1
+  cooldown: 3
   target: Enemy

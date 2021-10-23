@@ -511,7 +511,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 5727793966479660608}
   rb: {fileID: 0}
+  objLayer:
+    serializedVersion: 2
+    m_Bits: 1
   active: 1
+  nearWall: 0
 --- !u!114 &5727793966165166581
 MonoBehaviour:
   m_ObjectHideFlags: 0
