@@ -199,7 +199,10 @@ public class Enemy : MonoBehaviour
     {
         moveSpeed = 0;
         isStunned = true;
-        animator.Rebind();
+        if (currentHealth>0)
+        {
+            animator.Rebind();
+        }
         animator.SetBool("Stunned", true);
         animator.SetBool("CanMove", false);
         sprite.color = Color.black;

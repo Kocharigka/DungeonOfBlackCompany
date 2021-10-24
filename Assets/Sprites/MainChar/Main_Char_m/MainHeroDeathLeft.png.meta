@@ -79,7 +79,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 128
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -163,10 +163,10 @@ TextureImporter:
       name: MainHeroDeathLeft_0
       rect:
         serializedVersion: 2
-        x: 37
-        y: 13
-        width: 5
-        height: 5
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,10 +184,10 @@ TextureImporter:
       name: MainHeroDeathLeft_1
       rect:
         serializedVersion: 2
-        x: 96
-        y: 10
-        width: 15
-        height: 9
+        x: 64
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,10 +205,10 @@ TextureImporter:
       name: MainHeroDeathLeft_2
       rect:
         serializedVersion: 2
-        x: 156
-        y: 7
-        width: 24
-        height: 14
+        x: 128
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,10 +226,10 @@ TextureImporter:
       name: MainHeroDeathLeft_3
       rect:
         serializedVersion: 2
-        x: 220
-        y: 7
-        width: 24
-        height: 16
+        x: 192
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,10 +247,10 @@ TextureImporter:
       name: MainHeroDeathLeft_4
       rect:
         serializedVersion: 2
-        x: 284
-        y: 7
-        width: 24
-        height: 25
+        x: 256
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,10 +268,10 @@ TextureImporter:
       name: MainHeroDeathLeft_5
       rect:
         serializedVersion: 2
-        x: 346
-        y: 7
-        width: 26
-        height: 33
+        x: 320
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -289,10 +289,10 @@ TextureImporter:
       name: MainHeroDeathLeft_6
       rect:
         serializedVersion: 2
-        x: 410
-        y: 7
-        width: 26
-        height: 42
+        x: 384
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -310,10 +310,10 @@ TextureImporter:
       name: MainHeroDeathLeft_7
       rect:
         serializedVersion: 2
-        x: 473
-        y: 7
-        width: 27
-        height: 48
+        x: 448
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -331,10 +331,10 @@ TextureImporter:
       name: MainHeroDeathLeft_8
       rect:
         serializedVersion: 2
-        x: 537
-        y: 9
-        width: 28
-        height: 46
+        x: 512
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -352,10 +352,10 @@ TextureImporter:
       name: MainHeroDeathLeft_9
       rect:
         serializedVersion: 2
-        x: 601
-        y: 11
-        width: 28
-        height: 44
+        x: 576
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -373,10 +373,10 @@ TextureImporter:
       name: MainHeroDeathLeft_10
       rect:
         serializedVersion: 2
-        x: 665
-        y: 12
-        width: 28
-        height: 43
+        x: 640
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -26,6 +26,15 @@ TextureImporter:
   - first:
       213: -2172446599588454090
     second: MainHeroMagicaAttackRight1_11
+  - first:
+      213: -1957444399764150040
+    second: MainHeroMagicaAttackRight1_0
+  - first:
+      213: -3845401725773993172
+    second: MainHeroMagicaAttackRight1_1
+  - first:
+      213: -8921934293153532276
+    second: MainHeroMagicaAttackRight1_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -70,7 +79,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 128
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -154,10 +163,10 @@ TextureImporter:
       name: MainHeroMagicaAttackRight1_3
       rect:
         serializedVersion: 2
-        x: 0
+        x: 192
         y: 0
-        width: 28
-        height: 43
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,10 +184,10 @@ TextureImporter:
       name: MainHeroMagicaAttackRight1_4
       rect:
         serializedVersion: 2
-        x: 64
+        x: 256
         y: 0
-        width: 39
-        height: 43
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,10 +205,10 @@ TextureImporter:
       name: MainHeroMagicaAttackRight1_5
       rect:
         serializedVersion: 2
-        x: 128
+        x: 320
         y: 0
-        width: 33
-        height: 43
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,10 +226,10 @@ TextureImporter:
       name: MainHeroMagicaAttackRight1_6
       rect:
         serializedVersion: 2
-        x: 192
+        x: 384
         y: 0
-        width: 40
-        height: 43
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,10 +247,10 @@ TextureImporter:
       name: MainHeroMagicaAttackRight1_7
       rect:
         serializedVersion: 2
-        x: 256
+        x: 448
         y: 0
-        width: 50
-        height: 43
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,13 +265,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainHeroMagicaAttackRight1_8
+      name: MainHeroMagicaAttackRight1_0
       rect:
         serializedVersion: 2
-        x: 320
+        x: 0
         y: 0
         width: 64
-        height: 43
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -270,20 +279,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a6f714e22d8f9350800000000000000
-      internalID: 6025690007440193187
+      spriteID: 8e8ea7c70b2c5d4e0800000000000000
+      internalID: -1957444399764150040
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainHeroMagicaAttackRight1_9
+      name: MainHeroMagicaAttackRight1_1
       rect:
         serializedVersion: 2
-        x: 384
+        x: 64
         y: 0
-        width: 63
-        height: 56
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -291,20 +300,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18815b12b34f17160800000000000000
-      internalID: 7021661828853078145
+      spriteID: c2b2194118362aac0800000000000000
+      internalID: -3845401725773993172
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainHeroMagicaAttackRight1_11
+      name: MainHeroMagicaAttackRight1_2
       rect:
         serializedVersion: 2
-        x: 448
+        x: 128
         y: 0
-        width: 62
-        height: 53
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -312,8 +321,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 631660ae35be9d1e0800000000000000
-      internalID: -2172446599588454090
+      spriteID: c863533e70cee2480800000000000000
+      internalID: -8921934293153532276
       vertices: []
       indices: 
       edges: []

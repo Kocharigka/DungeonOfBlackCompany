@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     public bool isCast = false;
     public MagicController magic;
     bool isDead = false;
+    public float damage=10;
 
 
     public float AttackRange
@@ -53,7 +54,7 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("Vertical", direction.y);
         }
         animator.SetFloat("Speed", direction.sqrMagnitude);
-        Attack();
+
 
     }
     private void FixedUpdate()
@@ -90,14 +91,6 @@ public class PlayerController : MonoBehaviour
         magic.effectHolder.gameObject.SetActive(false);
         yield return new WaitForSeconds(2f);
         gameObject.SetActive(false);
-    }
-
-    void Attack()
-    {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && !isAttacking)
-        {
-            isAttacking = true;
-        }
     }
     public void FlipToDirection()
     {

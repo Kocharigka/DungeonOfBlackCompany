@@ -90,7 +90,6 @@ public class EnemyMage : Enemy
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
-        Debug.Log(Physics2D.Raycast(transform.position, run, Mathf.Infinity, objLayer).transform.gameObject.name);
         if (collision.gameObject.name == "Walls" && Physics2D.Raycast(transform.position, run,Mathf.Infinity,objLayer).transform.gameObject.name == "Walls")
         {
             nearWall = true;
