@@ -1628,9 +1628,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wavesData:
-  - {fileID: 11400000, guid: 46ff1abffc795264b8b53ec1b815fef0, type: 2}
-  - {fileID: 11400000, guid: 46ff1abffc795264b8b53ec1b815fef0, type: 2}
-  - {fileID: 11400000, guid: 46ff1abffc795264b8b53ec1b815fef0, type: 2}
+  - {fileID: 11400000, guid: 406f52fc85ff29f4fa97a2abac6e08a9, type: 2}
+  - {fileID: 11400000, guid: 406f52fc85ff29f4fa97a2abac6e08a9, type: 2}
+  - {fileID: 11400000, guid: 406f52fc85ff29f4fa97a2abac6e08a9, type: 2}
 --- !u!1 &796327447
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,8 +11,8 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     public Animator animator;
     private float attackRange = 1f;  
-    private int maxHealth=1000;
-    private int currentHealth;
+    private float maxHealth=1000;
+    private float currentHealth;
     public Transform projectileHolder;
     public bool isAttacking = false;
     public static PlayerController instance;
@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
     }
     
     
-    public void GetDamage(int damage)
+    public void GetDamage(float damage)
     {
         if (isDead)
         {
