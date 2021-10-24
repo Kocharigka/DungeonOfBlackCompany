@@ -5,16 +5,16 @@ using UnityEngine.Tilemaps;
 
 public class Room : MonoBehaviour
 {
-    public int waves;
+    private int waves;
     private int currentWave = 0;
-    public List<GameObject> enemiesCurrent= new List<GameObject>();
-    public Dictionary<int,Dictionary<string,int>> enemiesToSpawn;
-    public bool passed=false;
-    public Bounds bounds;
+    private List<GameObject> enemiesCurrent= new List<GameObject>();
+    public List<WaveData> wavesData;
+    private bool passed=false;
+    private Bounds bounds;
 
     private void Start()
     {
-        waves = enemiesToSpawn.Keys.Count;
+        waves = wavesData.Count;
         bounds=GetComponent<Collider2D>().bounds;
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -27,16 +27,15 @@ public class Room : MonoBehaviour
         }
     }
     private void spawnNextWave()
-    {
+    {        
+        var wave = wavesData[currentWave].enemies;
         currentWave++;
-        foreach (KeyValuePair<string, int> enemy in enemiesToSpawn[currentWave])
+        foreach (var enemy in wave)
         {
-            for (int i = 0; i < enemy.Value; i++)
-            {
-                GameObject tmp = Instantiate(Resources.Load<GameObject>("Enemies/"+enemy.Key),  new Vector3(transform.position.x+Random.Range(-3,3),transform.position.y+Random.Range(-3,3),0), Quaternion.identity, gameObject.transform);
-                enemiesCurrent.Add(tmp);
-            }
+            GameObject tmp = Instantiate(enemy,new Vector3(transform.position.x+Random.Range(-3,3),transform.position.y+Random.Range(-3,3),0), Quaternion.identity, gameObject.transform);
+            enemiesCurrent.Add(tmp);
         }
+        
     }
 
     public bool InBounds(Vector3 obj)

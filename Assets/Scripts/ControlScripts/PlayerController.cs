@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     public MagicController magic;
     bool isDead = false;
     public float damage=10;
+    public List<Collider2D> damagedEnemies=new List<Collider2D>();
 
 
     public float AttackRange

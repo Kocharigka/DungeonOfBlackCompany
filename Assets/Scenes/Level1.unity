@@ -1390,6 +1390,7 @@ MonoBehaviour:
   isCast: 0
   magic: {fileID: 0}
   damage: 5
+  damagedEnemies: []
 --- !u!95 &554194946
 Animator:
   serializedVersion: 3
@@ -1623,15 +1624,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 653631183}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c0c977f56498704494645a087c46fa5, type: 3}
+  m_Script: {fileID: 11500000, guid: 03f73b869c579d5418b5ca9362d74308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waves: 0
-  enemiesCurrent: []
-  passed: 0
-  bounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
+  wavesData:
+  - {fileID: 11400000, guid: 46ff1abffc795264b8b53ec1b815fef0, type: 2}
+  - {fileID: 11400000, guid: 46ff1abffc795264b8b53ec1b815fef0, type: 2}
+  - {fileID: 11400000, guid: 46ff1abffc795264b8b53ec1b815fef0, type: 2}
 --- !u!1 &796327447
 GameObject:
   m_ObjectHideFlags: 0

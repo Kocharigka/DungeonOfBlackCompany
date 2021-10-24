@@ -18,6 +18,7 @@ public class WeaponScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0) && !player.isAttacking)
         {
+            player.damagedEnemies.Clear();
             player.isAttacking = true;
         }
     }
@@ -26,9 +27,17 @@ public class WeaponScript : MonoBehaviour
         Debug.Log(collision);
         if (collision.tag=="Enemy")
         {
-            collision.GetComponent<Enemy>().GetDamage(player.damage);
-            collision.GetComponent<Enemy>().GetStun();
+            if (player.damagedEnemies.Contains(collision))
+            {
+                return;
+            }
+            else
+            {
+                collision.GetComponent<Enemy>().GetDamage(player.damage);
+                collision.GetComponent<Enemy>().GetStun();
+                player.damagedEnemies.Add(collision);
 
+            }
         }
     }
 }
