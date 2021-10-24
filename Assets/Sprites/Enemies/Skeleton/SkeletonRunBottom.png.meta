@@ -29,6 +29,33 @@ TextureImporter:
   - first:
       213: -3971854549372297749
     second: SkeletonRunBottom_8
+  - first:
+      213: 3652947869760264852
+    second: SkeletonRunBottom_0
+  - first:
+      213: 7185025802342888906
+    second: SkeletonRunBottom_1
+  - first:
+      213: -6950882931288563045
+    second: SkeletonRunBottom_2
+  - first:
+      213: -8994499821389769181
+    second: SkeletonRunBottom_3
+  - first:
+      213: 5473935680453799748
+    second: SkeletonRunBottom_4
+  - first:
+      213: 8044684680181350088
+    second: SkeletonRunBottom_5
+  - first:
+      213: -8809046242452858545
+    second: SkeletonRunBottom_6
+  - first:
+      213: 1186337394449927605
+    second: SkeletonRunBottom_7
+  - first:
+      213: -4395584609033565771
+    second: SkeletonRunBottom_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -50,7 +77,6 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
-  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -82,12 +108,9 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
-  flipbookRows: 1
-  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -157,10 +180,10 @@ TextureImporter:
       name: SkeletonRunBottom_0
       rect:
         serializedVersion: 2
-        x: 14
+        x: 0
         y: 0
-        width: 43
-        height: 39
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,8 +191,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ff4d846457932ea0800000000000000
-      internalID: -5898704698205188107
+      spriteID: 49a9410cbb0e1b230800000000000000
+      internalID: 3652947869760264852
       vertices: []
       indices: 
       edges: []
@@ -178,10 +201,10 @@ TextureImporter:
       name: SkeletonRunBottom_1
       rect:
         serializedVersion: 2
-        x: 80
+        x: 64
         y: 0
-        width: 34
-        height: 39
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,8 +212,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1bdc8d10aa2bd220800000000000000
-      internalID: 2511648084368087835
+      spriteID: ac5f9aa36e656b360800000000000000
+      internalID: 7185025802342888906
       vertices: []
       indices: 
       edges: []
@@ -199,10 +222,10 @@ TextureImporter:
       name: SkeletonRunBottom_2
       rect:
         serializedVersion: 2
-        x: 143
+        x: 128
         y: 0
-        width: 26
-        height: 39
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,8 +233,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afe01b51634fa6440800000000000000
-      internalID: 4930021255239765754
+      spriteID: b9228352dc0898f90800000000000000
+      internalID: -6950882931288563045
       vertices: []
       indices: 
       edges: []
@@ -220,10 +243,10 @@ TextureImporter:
       name: SkeletonRunBottom_3
       rect:
         serializedVersion: 2
-        x: 207
+        x: 192
         y: 0
-        width: 26
-        height: 39
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,8 +254,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aacdf7fda407a1230800000000000000
-      internalID: 3610321518170463402
+      spriteID: 3269fbd311e1d2380800000000000000
+      internalID: -8994499821389769181
       vertices: []
       indices: 
       edges: []
@@ -241,10 +264,10 @@ TextureImporter:
       name: SkeletonRunBottom_4
       rect:
         serializedVersion: 2
-        x: 269
+        x: 256
         y: 0
-        width: 28
-        height: 39
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,8 +275,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e160ee6e7eac0e890800000000000000
-      internalID: -7430716287800703458
+      spriteID: 44fe8cccf7357fb40800000000000000
+      internalID: 5473935680453799748
       vertices: []
       indices: 
       edges: []
@@ -262,10 +285,10 @@ TextureImporter:
       name: SkeletonRunBottom_5
       rect:
         serializedVersion: 2
-        x: 335
+        x: 320
         y: 0
-        width: 26
-        height: 39
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,8 +296,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5597f3d32de1bb1c0800000000000000
-      internalID: -4486958715425031851
+      spriteID: 8ce7c34181674af60800000000000000
+      internalID: 8044684680181350088
       vertices: []
       indices: 
       edges: []
@@ -283,10 +306,10 @@ TextureImporter:
       name: SkeletonRunBottom_6
       rect:
         serializedVersion: 2
-        x: 399
+        x: 384
         y: 0
-        width: 26
-        height: 39
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,8 +317,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2fb1e1618b509c760800000000000000
-      internalID: 7478514944428612594
+      spriteID: f499b946d1bffb580800000000000000
+      internalID: -8809046242452858545
       vertices: []
       indices: 
       edges: []
@@ -304,10 +327,10 @@ TextureImporter:
       name: SkeletonRunBottom_7
       rect:
         serializedVersion: 2
-        x: 464
+        x: 448
         y: 0
-        width: 25
-        height: 39
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,8 +338,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c87d3aa4938033760800000000000000
-      internalID: 7436296451877230476
+      spriteID: 5bd43f32397b67010800000000000000
+      internalID: 1186337394449927605
       vertices: []
       indices: 
       edges: []
@@ -325,10 +348,10 @@ TextureImporter:
       name: SkeletonRunBottom_8
       rect:
         serializedVersion: 2
-        x: 528
+        x: 512
         y: 0
-        width: 25
-        height: 39
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -336,8 +359,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bed1525c45321e8c0800000000000000
-      internalID: -3971854549372297749
+      spriteID: 5b9416e361fbff2c0800000000000000
+      internalID: -4395584609033565771
       vertices: []
       indices: 
       edges: []
