@@ -26,8 +26,15 @@ public class Enemy : MonoBehaviour
     private bool isImpulse = false;
     private Room room;
     public LayerMask objLayer;
+    private float damage;
     #endregion privateStatic
     #region publicFields
+
+    public float Damage
+    {
+        get { return damage; }
+        set { damage = value; }
+    }
 
     public bool IsImpulse
     {

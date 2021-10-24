@@ -9,7 +9,6 @@ public class EnemySlime : Enemy
     private bool preparing=false;
     Vector2 jumpPosition;
     Coroutine jump = null;
-    private int colDamage;
     // Start is called before the first frame update
     void Awake()
     {
@@ -18,7 +17,7 @@ public class EnemySlime : Enemy
         HealhBarOffset = new Vector3(0, 0.5f, 0);
         AttackRadius = 5;
         DefaultMoveSpeed = 2f;
-        colDamage = 10;
+        Damage = 10;
         
     }
 
@@ -44,7 +43,7 @@ public class EnemySlime : Enemy
     {
         if (collision.gameObject.tag == "Player"&&inJump)
         {
-            Player.GetDamage(colDamage);
+            Player.GetDamage(Damage);
         }
     }
     public override void PerformAttack(Vector2 playerPosition)
