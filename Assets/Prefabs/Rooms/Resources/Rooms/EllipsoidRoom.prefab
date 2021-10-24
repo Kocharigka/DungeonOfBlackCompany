@@ -254,7 +254,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 7
 --- !u!66 &1372461192623501407
 CompositeCollider2D:
@@ -2506,7 +2506,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 7
 --- !u!66 &6214880072262091383
 CompositeCollider2D:
@@ -3968,6 +3968,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1916471486806485527}
   - component: {fileID: 2764372654360591872}
+  - component: {fileID: 8962313068834773561}
   m_Layer: 0
   m_Name: EllipsoidRoom
   m_TagString: Untagged
@@ -4007,6 +4008,19 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!114 &8962313068834773561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263416857229895821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f73b869c579d5418b5ca9362d74308, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wavesData: []
 --- !u!1 &1504604672818719725
 GameObject:
   m_ObjectHideFlags: 0
@@ -9074,7 +9088,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 7
 --- !u!66 &6873839411018541498
 CompositeCollider2D:
@@ -9797,7 +9811,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 7
 --- !u!19719996 &5853830053798320082
 TilemapCollider2D:
@@ -10201,7 +10215,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 7
 --- !u!66 &4101899006173258445
 CompositeCollider2D:
@@ -11047,7 +11061,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 7
 --- !u!66 &1340147024799560693
 CompositeCollider2D:
@@ -11454,7 +11468,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 7
 --- !u!66 &7741959733557468851
 CompositeCollider2D:
@@ -12729,7 +12743,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 7
 --- !u!66 &1516142661552251062
 CompositeCollider2D:
@@ -12986,7 +13000,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 7
 --- !u!19719996 &3300966043531374829
 TilemapCollider2D:
