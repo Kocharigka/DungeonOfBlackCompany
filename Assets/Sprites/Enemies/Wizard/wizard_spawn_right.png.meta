@@ -59,6 +59,63 @@ TextureImporter:
   - first:
       213: -1890674690431956749
     second: wizard_spawn_18
+  - first:
+      213: -2180201320687555920
+    second: wizard_spawn_right_0
+  - first:
+      213: -384715318594849407
+    second: wizard_spawn_right_1
+  - first:
+      213: 1882052400299303921
+    second: wizard_spawn_right_2
+  - first:
+      213: 3683162881192794554
+    second: wizard_spawn_right_3
+  - first:
+      213: -5246574343955557247
+    second: wizard_spawn_right_4
+  - first:
+      213: -8358439435881354014
+    second: wizard_spawn_right_5
+  - first:
+      213: 8781550569247540464
+    second: wizard_spawn_right_6
+  - first:
+      213: 8144978339048797419
+    second: wizard_spawn_right_7
+  - first:
+      213: -979963495003475996
+    second: wizard_spawn_right_8
+  - first:
+      213: -4269421854835731373
+    second: wizard_spawn_right_9
+  - first:
+      213: 7426815221034571871
+    second: wizard_spawn_right_10
+  - first:
+      213: 1592829230870547640
+    second: wizard_spawn_right_11
+  - first:
+      213: -7380436188923478438
+    second: wizard_spawn_right_12
+  - first:
+      213: -5658675642508058201
+    second: wizard_spawn_right_13
+  - first:
+      213: -8190894834582452836
+    second: wizard_spawn_right_14
+  - first:
+      213: -7262298642101479452
+    second: wizard_spawn_right_15
+  - first:
+      213: -5250428002136694804
+    second: wizard_spawn_right_16
+  - first:
+      213: 5580962653792592289
+    second: wizard_spawn_right_17
+  - first:
+      213: -1271290572777770889
+    second: wizard_spawn_right_18
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -156,7 +213,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wizard_spawn_0
+      name: wizard_spawn_right_0
       rect:
         serializedVersion: 2
         x: 0
@@ -170,14 +227,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ae9d345c19b54150800000000000000
-      internalID: 5856290421788745376
+      spriteID: 0baa495337e5eb1e0800000000000000
+      internalID: -2180201320687555920
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_spawn_1
+      name: wizard_spawn_right_1
       rect:
         serializedVersion: 2
         x: 32
@@ -191,14 +248,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6edfd439aa8d425e0800000000000000
-      internalID: -1935183712735068698
+      spriteID: 185b08fb47739aaf0800000000000000
+      internalID: -384715318594849407
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_spawn_2
+      name: wizard_spawn_right_2
       rect:
         serializedVersion: 2
         x: 64
@@ -212,14 +269,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d56228d484189a10800000000000000
-      internalID: 1916304202240517589
+      spriteID: 1f3e280cfa46e1a10800000000000000
+      internalID: 1882052400299303921
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_spawn_3
+      name: wizard_spawn_right_3
       rect:
         serializedVersion: 2
         x: 96
@@ -233,14 +290,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f6222564fa0ca430800000000000000
-      internalID: 3795420630751520505
+      spriteID: ab9966f40293d1330800000000000000
+      internalID: 3683162881192794554
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_spawn_4
+      name: wizard_spawn_right_4
       rect:
         serializedVersion: 2
         x: 128
@@ -254,14 +311,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6786fca3c7ddba120800000000000000
-      internalID: 2426276349901498486
+      spriteID: 184d9d48e6c6037b0800000000000000
+      internalID: -5246574343955557247
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_spawn_5
+      name: wizard_spawn_right_5
       rect:
         serializedVersion: 2
         x: 160
@@ -275,14 +332,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27ccf24bfd896a560800000000000000
-      internalID: 7324709930532850802
+      spriteID: 2ececa33e9bd00c80800000000000000
+      internalID: -8358439435881354014
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_spawn_6
+      name: wizard_spawn_right_6
       rect:
         serializedVersion: 2
         x: 192
@@ -296,14 +353,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95348f20e896d7d40800000000000000
-      internalID: 5583735171665380185
+      spriteID: 0f4012157b55ed970800000000000000
+      internalID: 8781550569247540464
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_spawn_7
+      name: wizard_spawn_right_7
       rect:
         serializedVersion: 2
         x: 224
@@ -317,14 +374,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7546d381c6fb9c2e0800000000000000
-      internalID: -2104940879834946473
+      spriteID: be4314a35a6c80170800000000000000
+      internalID: 8144978339048797419
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_spawn_8
+      name: wizard_spawn_right_8
       rect:
         serializedVersion: 2
         x: 256
@@ -338,14 +395,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 720f8f504d53711f0800000000000000
-      internalID: -1074330801355034585
+      spriteID: 4efa773b4687662f0800000000000000
+      internalID: -979963495003475996
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_spawn_9
+      name: wizard_spawn_right_9
       rect:
         serializedVersion: 2
         x: 288
@@ -359,14 +416,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93cb2c0e1e5378850800000000000000
-      internalID: 6379126641448369209
+      spriteID: 3541a328177ffb4c0800000000000000
+      internalID: -4269421854835731373
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_spawn_10
+      name: wizard_spawn_right_10
       rect:
         serializedVersion: 2
         x: 320
@@ -380,14 +437,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1dd008a7bf3584010800000000000000
-      internalID: 1173280042487123409
+      spriteID: f58da363819511760800000000000000
+      internalID: 7426815221034571871
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_spawn_11
+      name: wizard_spawn_right_11
       rect:
         serializedVersion: 2
         x: 352
@@ -401,14 +458,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ac6fa8429cd29ad0800000000000000
-      internalID: -2696850705998713688
+      spriteID: 8bcc5ed0fbdda1610800000000000000
+      internalID: 1592829230870547640
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_spawn_12
+      name: wizard_spawn_right_12
       rect:
         serializedVersion: 2
         x: 384
@@ -422,14 +479,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c5f2b005b6b95610800000000000000
-      internalID: 1610519230278727104
+      spriteID: a5e37cfa36c639990800000000000000
+      internalID: -7380436188923478438
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_spawn_13
+      name: wizard_spawn_right_13
       rect:
         serializedVersion: 2
         x: 416
@@ -443,14 +500,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2a2018466b27c8e0800000000000000
-      internalID: -1673321018249172435
+      spriteID: 7a1e62deb785871b0800000000000000
+      internalID: -5658675642508058201
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_spawn_14
+      name: wizard_spawn_right_14
       rect:
         serializedVersion: 2
         x: 448
@@ -464,14 +521,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7fc13bd3cd6bdaa80800000000000000
-      internalID: -8453899868460344073
+      spriteID: c9581209b88145e80800000000000000
+      internalID: -8190894834582452836
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_spawn_15
+      name: wizard_spawn_right_15
       rect:
         serializedVersion: 2
         x: 480
@@ -485,14 +542,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 783759c481042d3d0800000000000000
-      internalID: -3183411513489263737
+      spriteID: 4e75db0ccd1273b90800000000000000
+      internalID: -7262298642101479452
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_spawn_16
+      name: wizard_spawn_right_16
       rect:
         serializedVersion: 2
         x: 512
@@ -506,14 +563,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de22a90296350d540800000000000000
-      internalID: 5030612494756487917
+      spriteID: cefd0edcc8bb227b0800000000000000
+      internalID: -5250428002136694804
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_spawn_17
+      name: wizard_spawn_right_17
       rect:
         serializedVersion: 2
         x: 544
@@ -527,14 +584,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f40f443f5ae262720800000000000000
-      internalID: 2820993506880057423
+      spriteID: 1a16704e6ff837d40800000000000000
+      internalID: 5580962653792592289
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_spawn_18
+      name: wizard_spawn_right_18
       rect:
         serializedVersion: 2
         x: 576
@@ -548,8 +605,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f84bf2e269f2c5e0800000000000000
-      internalID: -1890674690431956749
+      spriteID: 770374ba5f77b5ee0800000000000000
+      internalID: -1271290572777770889
       vertices: []
       indices: 
       edges: []
