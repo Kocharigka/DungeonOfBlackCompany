@@ -20,6 +20,24 @@ TextureImporter:
   - first:
       213: 4806033664376113666
     second: MainHeroAttackLeftt1_6
+  - first:
+      213: -2754077968309590025
+    second: MainHeroAttackLeft1_0
+  - first:
+      213: 7911086077956884905
+    second: MainHeroAttackLeft1_1
+  - first:
+      213: 8175220042642989867
+    second: MainHeroAttackLeft1_2
+  - first:
+      213: -3219583358956015531
+    second: MainHeroAttackLeft1_3
+  - first:
+      213: -803412302190499419
+    second: MainHeroAttackLeft1_4
+  - first:
+      213: 7453458923763833891
+    second: MainHeroAttackLeft1_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -64,7 +82,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 128
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -145,13 +163,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MainHeroAttackLeftt1_0
+      name: MainHeroAttackLeft1_0
       rect:
         serializedVersion: 2
-        x: 81
+        x: 0
         y: 0
-        width: 32
-        height: 43
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +177,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8d04757ae4233250800000000000000
-      internalID: 5923118524333821325
+      spriteID: 7f76d27fdac87c9d0800000000000000
+      internalID: -2754077968309590025
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainHeroAttackLeftt1_1
+      name: MainHeroAttackLeft1_1
       rect:
         serializedVersion: 2
-        x: 208
+        x: 128
         y: 0
-        width: 47
-        height: 43
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,20 +198,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc4f5bfed63494720800000000000000
-      internalID: 2830867980231242956
+      spriteID: 9a988288fd2d9cd60800000000000000
+      internalID: 7911086077956884905
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainHeroAttackLeftt1_2
+      name: MainHeroAttackLeft1_2
       rect:
         serializedVersion: 2
-        x: 329
+        x: 256
         y: 0
-        width: 55
-        height: 43
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -201,20 +219,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcf1ebeb04f13cb20800000000000000
-      internalID: 3153398527027978189
+      spriteID: b23a36a8057347170800000000000000
+      internalID: 8175220042642989867
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainHeroAttackLeftt1_4
+      name: MainHeroAttackLeft1_3
       rect:
         serializedVersion: 2
-        x: 431
+        x: 384
         y: 0
-        width: 81
-        height: 49
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -222,20 +240,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2650a1a2d33961950800000000000000
-      internalID: 6419480209771857250
+      spriteID: 550faac3efdb153d0800000000000000
+      internalID: -3219583358956015531
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainHeroAttackLeftt1_5
+      name: MainHeroAttackLeft1_4
       rect:
         serializedVersion: 2
-        x: 590
+        x: 512
         y: 0
-        width: 30
-        height: 47
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -243,20 +261,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3763f0668f2a9ce0800000000000000
-      internalID: -1397752480146430149
+      spriteID: 5a9a1cf84c4b9d4f0800000000000000
+      internalID: -803412302190499419
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainHeroAttackLeftt1_6
+      name: MainHeroAttackLeft1_5
       rect:
         serializedVersion: 2
-        x: 720
+        x: 640
         y: 0
-        width: 43
-        height: 43
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -264,8 +282,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20a05bf772672b240800000000000000
-      internalID: 4806033664376113666
+      spriteID: 32c98eaa661007760800000000000000
+      internalID: 7453458923763833891
       vertices: []
       indices: 
       edges: []

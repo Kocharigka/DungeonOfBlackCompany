@@ -113,7 +113,7 @@ public class Enemy : MonoBehaviour
     {
         room = GetComponentInParent<Room>();
         rb = GetComponent<Rigidbody2D>();
-        sprite = GetComponent<SpriteRenderer>();
+        sprite = GetComponentInChildren<SpriteRenderer>();
         animator = GetComponent<Animator>();
         currentHealth = maxHealth;
         healthBar.maxValue = MaxHealth;
@@ -180,7 +180,7 @@ public class Enemy : MonoBehaviour
     }
     private void OnDestroy()
     {
-        GetComponentInParent<Room>().Killed(gameObject);
+        room.Killed(gameObject);
     }
     void setSpawnDuration()
     {
@@ -199,7 +199,10 @@ public class Enemy : MonoBehaviour
     {
         moveSpeed = 0;
         isStunned = true;
-        animator.Rebind();
+        if (currentHealth>0)
+        {
+            animator.Rebind();
+        }
         animator.SetBool("Stunned", true);
         animator.SetBool("CanMove", false);
         sprite.color = Color.black;

@@ -34,17 +34,15 @@ public class EnemySlime : Enemy
         if (!IsStunned){
         Animator.SetTrigger("Attack");
         }
-        MoveSpeed = 30f;
         yield return new WaitForSeconds(0.2f);
         Animator.speed = 1;
         yield return new WaitForSeconds(2f);
-        MoveSpeed = 2f;
         inJump = false;
 
     }
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player"&&inJump)
         {
             Player.GetDamage(colDamage);
         }
