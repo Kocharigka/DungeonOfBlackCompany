@@ -22,8 +22,25 @@ public class Enemy : MonoBehaviour
     private float spawnDuration=10;
     private string effectName;
     public Rigidbody2D rb;
+    public SectorChooser chooser = new SectorChooser();
+    private bool isImpulse = false;
+    private Room room;
+    public LayerMask objLayer;
+    private float damage;
     #endregion privateStatic
     #region publicFields
+
+    public float Damage
+    {
+        get { return damage; }
+        set { damage = value; }
+    }
+
+    public bool IsImpulse
+    {
+        get { return isImpulse; }
+        set { isImpulse = value; }
+    }
     public string EffectName
     {
         get { return effectName; }
@@ -85,22 +102,29 @@ public class Enemy : MonoBehaviour
         set { attackRadius = value; }
     }
 
+    public Room Room
+    {
+        get { return room; }
+        set { room = value; }
+    }
+
     #endregion publicFields
     #region bools
     private bool isDead = false;
     private bool isStunned = false;
     public bool active;
+    public bool nearWall = false;
     #endregion bools
 
     void Start()
     {
+        room = GetComponentInParent<Room>();
         rb = GetComponent<Rigidbody2D>();
-        sprite = GetComponent<SpriteRenderer>();
+        sprite = GetComponentInChildren<SpriteRenderer>();
         animator = GetComponent<Animator>();
         currentHealth = maxHealth;
         healthBar.maxValue = MaxHealth;
         healthBar.value = healthBar.maxValue;
-        moveSpeed = defaultMoveSpeed;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         magic = GetComponent<MagicController>();
         animator.SetTrigger("Spawn");
@@ -112,6 +136,9 @@ public class Enemy : MonoBehaviour
     {
         offset += Time.deltaTime;
         healthBar.transform.position = Camera.main.WorldToScreenPoint(transform.position + healhBarOffset);
+        Vector2 playerDir = chooser.sectorToVector(transform.position, Player.transform.position);
+        Animator.SetFloat("Horizontal", -playerDir.x);
+        Animator.SetFloat("Vertical", -playerDir.y);
         if (offset <= spawnDuration)
         {
             return;
@@ -121,25 +148,28 @@ public class Enemy : MonoBehaviour
         }
         if (!active)
         {
+            Animator.SetBool("CanMove", false);
+            return;
+        }
+
+        if (isImpulse)
+        {
+            GetStun(0.2f);
+            rb.AddForce(((Vector2)transform.position - getPlayerPosition()).normalized*25, ForceMode2D.Force);
             return;
         }
         if (isStunned)
         {
             return;
         }
-        PerformAttack(getPlayerPosition());
+        if (magic.WaterStatus() == 0)
+        {
+            PerformAttack(getPlayerPosition());
+        }
         FollowPlayer(getPlayerPosition());
         if (Input.GetKeyDown(KeyCode.K))
         {
             GetDamage(100);
-        }
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            rb.AddForce(-getPlayerPosition(),ForceMode2D.Impulse);
-        }
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            rb.velocity = new Vector2(0, 0);
         }
     }
 
@@ -157,11 +187,11 @@ public class Enemy : MonoBehaviour
     }
     private void OnDestroy()
     {
-        GetComponentInParent<Room>().Killed(gameObject);
+        room.Killed(gameObject);
     }
     void setSpawnDuration()
     {
-        spawnDuration = animator.GetCurrentAnimatorClipInfo(0)[0].clip.length - 0.2f;
+        spawnDuration = animator.GetCurrentAnimatorClipInfo(0)[0].clip.length;
     }
     #endregion utils
 
@@ -176,7 +206,10 @@ public class Enemy : MonoBehaviour
     {
         moveSpeed = 0;
         isStunned = true;
-        animator.Rebind();
+        if (currentHealth>0)
+        {
+            animator.Rebind();
+        }
         animator.SetBool("Stunned", true);
         animator.SetBool("CanMove", false);
         sprite.color = Color.black;
@@ -204,6 +237,8 @@ public class Enemy : MonoBehaviour
             {
                 isDead = true;
                 animator.SetTrigger("Die");
+                magic.effectHolder.gameObject.SetActive(false);
+                magic.enabled = false;
                 enabled = false;
                 StartCoroutine(WaitForDeath());
             }
@@ -222,10 +257,6 @@ public class Enemy : MonoBehaviour
     #endregion getDamage
 
     #region magic
-    public void ApplyEffect(MagicEffect effect)
-    {
-        magic.ApplyEffect(effect);
-    }
     public void Slow()
     {
         moveSpeed = defaultMoveSpeed / 2;

@@ -6,32 +6,30 @@ public class EnemyDog : Enemy
 {
     private bool inBite = false;
     Coroutine bite = null;
-    SectorChooser chooser = new SectorChooser();
+    GameObject head;
+    float curve;
     // Start is called before the first frame update
     void Awake()
     {
+        curve = Random.Range(-0.5f, 0.5f);
+        head = GetComponentInChildren<Collider2D>().gameObject;
         EnemyName = "Dog";
         MaxHealth = 20;
         DefaultMoveSpeed = 4f;
         HealhBarOffset = new Vector3(0, 1, 0);
         AttackRadius = 1;
+        Damage = 10;
 
     }
     IEnumerator WaitForBite()
     {
-        Animator.SetBool("CanMove", false);
-        MoveSpeed = 0;
         Animator.SetTrigger("Attack");
         yield return new WaitForSeconds(1.35f);
-        MoveSpeed = 4f;
         inBite = false;
 
     }
     public override void PerformAttack(Vector2 playerPosition)
     {
-        Vector2 playerDir = chooser.sectorToVector(transform.position, Player.transform.position);
-        Animator.SetFloat("Horizontal", -playerDir.x);
-        Animator.SetFloat("Vertical", -playerDir.y);
         if (Vector2.Distance(playerPosition, transform.position) <= AttackRadius)
         {
             if (!inBite)
@@ -39,7 +37,6 @@ public class EnemyDog : Enemy
                 inBite = true;
                 bite = StartCoroutine(WaitForBite());
                 return;
-
             }
         }
     }
@@ -51,7 +48,23 @@ public class EnemyDog : Enemy
         }
         if (Vector2.Distance(playerPosition, transform.position) <= 15)
         {
-            transform.position = Vector2.MoveTowards(transform.position, playerPosition, MoveSpeed * Time.deltaTime);
+            Vector2 run = (playerPosition-rb.position).normalized;
+            Debug.Log(run);
+            if (Mathf.Abs(run.x)> Mathf.Abs(run.y))
+            {
+                run.y += curve;
+            }
+            else if (Mathf.Abs(run.x) <= Mathf.Abs(run.y))
+            {
+                run.x += curve;
+            }
+            
+            //else
+            //{
+            //    run.x += Random.Range(-1, 1);
+            //    run.y += Random.Range(-1, 1);
+            //}
+            rb.MovePosition(rb.position + run * MoveSpeed * Time.deltaTime * 10);
         }
     }
 
@@ -63,5 +76,17 @@ public class EnemyDog : Enemy
         }
         MoveSpeed = 4f;
         inBite = false;
+    }
+
+    public void Bite()
+    {
+        var hit = Physics2D.OverlapCircleAll(head.transform.position, 1);
+        foreach (var target in hit)
+        {
+            if (target.tag=="Player")
+            {
+                target.GetComponent<PlayerController>().GetDamage(Damage);
+            }
+        }
     }
 }

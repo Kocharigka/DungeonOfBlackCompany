@@ -9,7 +9,6 @@ public class EnemySlime : Enemy
     private bool preparing=false;
     Vector2 jumpPosition;
     Coroutine jump = null;
-    private int colDamage;
     // Start is called before the first frame update
     void Awake()
     {
@@ -18,7 +17,7 @@ public class EnemySlime : Enemy
         HealhBarOffset = new Vector3(0, 0.5f, 0);
         AttackRadius = 5;
         DefaultMoveSpeed = 2f;
-        colDamage = 10;
+        Damage = 10;
         
     }
 
@@ -28,25 +27,23 @@ public class EnemySlime : Enemy
         Animator.speed = 4;
         yield return new WaitForSeconds(2f);
         jumpPosition =getPlayerPosition();
-        int distance = (int)Vector2.Distance(transform.position, jumpPosition);
+        int distance = (int)Vector2.Distance(transform.position, jumpPosition)>1? (int)Vector2.Distance(transform.position, jumpPosition):1;
         preparing = false;
         Animator.speed = 10 / distance > 1 ? 10 / distance : 1;
         if (!IsStunned){
         Animator.SetTrigger("Attack");
         }
-        MoveSpeed = 30f;
         yield return new WaitForSeconds(0.2f);
         Animator.speed = 1;
         yield return new WaitForSeconds(2f);
-        MoveSpeed = 2f;
         inJump = false;
 
     }
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player"&&inJump)
         {
-            Player.GetDamage(colDamage);
+            Player.GetDamage(Damage);
         }
     }
     public override void PerformAttack(Vector2 playerPosition)
