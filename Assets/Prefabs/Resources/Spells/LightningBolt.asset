@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d2fa79c2568c1c4385bfa5bb95d878e, type: 3}
   m_Name: LightningBolt
   m_EditorClassIdentifier: 
-  sprite: {fileID: -6278663978556736651, guid: 414d0e1f53d4dbc4390e51f0a483050d, type: 3}
+  sprite: {fileID: 21300000, guid: ff69f691c3f649244b44ff09172cfc48, type: 3}
   speed: 20
   animator: {fileID: 9100000, guid: 8d30b9ec2674be843bc1f36065d3b951, type: 2}
   damage: 5
