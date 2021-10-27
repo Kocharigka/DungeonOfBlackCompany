@@ -62,7 +62,7 @@ public class SpellControl : MonoBehaviour
         timer = 0 - magic.WaterStatus();
         nextIter = cooldown - timer;
         slider.maxValue = nextIter;
-        fill.color = new Color(0.22f, 0.22f, 0.22f, a: 0.7f);
+        fill.color = new Color(0.22f, 0.22f, 0.22f, a: 0.9f);
         shooter.Shoot(player.transform.position, target, spell);
         shoot = false;
     }
