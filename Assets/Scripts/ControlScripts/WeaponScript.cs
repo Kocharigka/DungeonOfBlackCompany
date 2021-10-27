@@ -24,7 +24,6 @@ public class WeaponScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision);
         if (collision.tag=="Enemy")
         {
             if (player.damagedEnemies.Contains(collision))

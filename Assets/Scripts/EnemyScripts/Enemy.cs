@@ -226,7 +226,6 @@ public class Enemy : MonoBehaviour
     #region getDamage
     public void GetDamage(float damage)
     {
-        Debug.Log(damage);
         if (!isDead)
         {
             healthBar.gameObject.SetActive(true);
