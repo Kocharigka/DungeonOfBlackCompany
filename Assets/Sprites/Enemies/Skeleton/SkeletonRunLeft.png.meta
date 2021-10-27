@@ -26,6 +26,30 @@ TextureImporter:
   - first:
       213: -5816979500863785689
     second: SkeletonRunLeft_7
+  - first:
+      213: -2584470868332207391
+    second: SkeletonRunLeft_0
+  - first:
+      213: 8774941056643389237
+    second: SkeletonRunLeft_1
+  - first:
+      213: 777488626799863810
+    second: SkeletonRunLeft_2
+  - first:
+      213: 4688818165728636244
+    second: SkeletonRunLeft_3
+  - first:
+      213: 7610979753657953971
+    second: SkeletonRunLeft_4
+  - first:
+      213: -149355623786845063
+    second: SkeletonRunLeft_5
+  - first:
+      213: 6767785520435920051
+    second: SkeletonRunLeft_6
+  - first:
+      213: 5612224461461501497
+    second: SkeletonRunLeft_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -47,7 +71,6 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
-  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -79,12 +102,9 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
-  flipbookRows: 1
-  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -154,10 +174,10 @@ TextureImporter:
       name: SkeletonRunLeft_0
       rect:
         serializedVersion: 2
-        x: 29
+        x: 0
         y: 0
-        width: 35
-        height: 39
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,8 +185,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 706eb95769321c4f0800000000000000
-      internalID: -810327328824760825
+      spriteID: 1e2a6b8307d122cd0800000000000000
+      internalID: -2584470868332207391
       vertices: []
       indices: 
       edges: []
@@ -175,10 +195,10 @@ TextureImporter:
       name: SkeletonRunLeft_1
       rect:
         serializedVersion: 2
-        x: 87
+        x: 64
         y: 0
-        width: 41
-        height: 35
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,8 +206,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5130b5013afb13120800000000000000
-      internalID: 2391903584185418517
+      spriteID: 537583e366ad6c970800000000000000
+      internalID: 8774941056643389237
       vertices: []
       indices: 
       edges: []
@@ -196,10 +216,10 @@ TextureImporter:
       name: SkeletonRunLeft_2
       rect:
         serializedVersion: 2
-        x: 152
+        x: 128
         y: 0
-        width: 40
-        height: 36
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,8 +227,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3353520605d6c44d0800000000000000
-      internalID: -3149021847460956877
+      spriteID: 208ef4969c13aca00800000000000000
+      internalID: 777488626799863810
       vertices: []
       indices: 
       edges: []
@@ -217,10 +237,10 @@ TextureImporter:
       name: SkeletonRunLeft_3
       rect:
         serializedVersion: 2
-        x: 219
+        x: 192
         y: 0
-        width: 37
-        height: 33
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,8 +248,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23fd67684261abc10800000000000000
-      internalID: 2069991324860735282
+      spriteID: 45d67a08747021140800000000000000
+      internalID: 4688818165728636244
       vertices: []
       indices: 
       edges: []
@@ -238,10 +258,10 @@ TextureImporter:
       name: SkeletonRunLeft_4
       rect:
         serializedVersion: 2
-        x: 279
+        x: 256
         y: 0
-        width: 41
-        height: 33
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -249,8 +269,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f10318681e5d3c7f0800000000000000
-      internalID: -593395561281802209
+      spriteID: 3bee871e2c1af9960800000000000000
+      internalID: 7610979753657953971
       vertices: []
       indices: 
       edges: []
@@ -259,10 +279,10 @@ TextureImporter:
       name: SkeletonRunLeft_5
       rect:
         serializedVersion: 2
-        x: 340
+        x: 320
         y: 0
-        width: 44
-        height: 35
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -270,8 +290,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40a547831f1f01830800000000000000
-      internalID: 4039994884087896580
+      spriteID: 97c6afaf9d16dedf0800000000000000
+      internalID: -149355623786845063
       vertices: []
       indices: 
       edges: []
@@ -280,10 +300,10 @@ TextureImporter:
       name: SkeletonRunLeft_6
       rect:
         serializedVersion: 2
-        x: 414
+        x: 384
         y: 0
-        width: 34
-        height: 42
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -291,8 +311,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df6ec5a9a357a1a10800000000000000
-      internalID: 1880944688938936061
+      spriteID: 3bc7d95d2110ced50800000000000000
+      internalID: 6767785520435920051
       vertices: []
       indices: 
       edges: []
@@ -301,10 +321,10 @@ TextureImporter:
       name: SkeletonRunLeft_7
       rect:
         serializedVersion: 2
-        x: 474
+        x: 448
         y: 0
-        width: 38
-        height: 39
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -312,8 +332,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 725f841b6ffe54fa0800000000000000
-      internalID: -5816979500863785689
+      spriteID: 936bb21b960a2ed40800000000000000
+      internalID: 5612224461461501497
       vertices: []
       indices: 
       edges: []

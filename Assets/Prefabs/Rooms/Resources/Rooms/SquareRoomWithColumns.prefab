@@ -254,7 +254,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 7
 --- !u!66 &1323125495185244988
 CompositeCollider2D:
@@ -2526,7 +2526,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 7
 --- !u!66 &6298541300295971092
 CompositeCollider2D:
@@ -3737,6 +3737,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2004089909787318644}
   - component: {fileID: 2813166221697338723}
+  - component: {fileID: 6938225200952723619}
   m_Layer: 0
   m_Name: SquareRoomWithColumns
   m_TagString: Untagged
@@ -3777,6 +3778,19 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!114 &6938225200952723619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215927362223283182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f73b869c579d5418b5ca9362d74308, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wavesData: []
 --- !u!1 &1564495593803487374
 GameObject:
   m_ObjectHideFlags: 0
@@ -9703,7 +9717,7 @@ SpriteRenderer:
   m_SortingLayerID: 1789792699
   m_SortingLayer: 2
   m_SortingOrder: 5
-  m_Sprite: {fileID: 9079729314182247455, guid: 8f3b88e93011a854bb552b37f914b4e2, type: 3}
+  m_Sprite: {fileID: -8455053064008681922, guid: 6b7dbda0875671045b48a5ad7e470b19, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10044,7 +10058,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 7
 --- !u!66 &6787928526978128601
 CompositeCollider2D:
@@ -11225,7 +11239,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 7
 --- !u!19719996 &5794904450908103857
 TilemapCollider2D:
@@ -11661,7 +11675,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 7
 --- !u!66 &4160067010672103854
 CompositeCollider2D:
@@ -12507,7 +12521,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 7
 --- !u!66 &1427202446201700502
 CompositeCollider2D:
@@ -12914,7 +12928,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 7
 --- !u!66 &7649274724572245456
 CompositeCollider2D:
@@ -13212,7 +13226,7 @@ SpriteRenderer:
   m_SortingLayerID: 1789792699
   m_SortingLayer: 2
   m_SortingOrder: 5
-  m_Sprite: {fileID: 9079729314182247455, guid: 8f3b88e93011a854bb552b37f914b4e2, type: 3}
+  m_Sprite: {fileID: -8455053064008681922, guid: 6b7dbda0875671045b48a5ad7e470b19, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -13750,7 +13764,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileSpriteIndex: 6
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -13797,16 +13811,16 @@ Tilemap:
     m_Data: {fileID: -44186214464313893, guid: 7292b22f26bb6fe4eae859226b1534a6, type: 3}
   - m_RefCount: 5
     m_Data: {fileID: 2119372183515607968, guid: 7292b22f26bb6fe4eae859226b1534a6, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -5420887633574922480, guid: 7292b22f26bb6fe4eae859226b1534a6, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 3
     m_Data: {fileID: 4882384208933234153, guid: 7292b22f26bb6fe4eae859226b1534a6, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -5420887633574922480, guid: 7292b22f26bb6fe4eae859226b1534a6, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 16
     m_Data:
@@ -14515,7 +14529,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 7
 --- !u!66 &1467384276959990741
 CompositeCollider2D:
@@ -14772,7 +14786,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 7
 --- !u!19719996 &3213382857082979214
 TilemapCollider2D:

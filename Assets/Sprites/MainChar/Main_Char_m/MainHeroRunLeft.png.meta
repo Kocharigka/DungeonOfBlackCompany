@@ -154,10 +154,10 @@ TextureImporter:
       name: MainHeroRunLeft_0
       rect:
         serializedVersion: 2
-        x: 19
+        x: 0
         y: 0
-        width: 27
-        height: 37
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,10 +175,10 @@ TextureImporter:
       name: MainHeroRunLeft_1
       rect:
         serializedVersion: 2
-        x: 78
+        x: 64
         y: 0
-        width: 39
-        height: 37
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,10 +196,10 @@ TextureImporter:
       name: MainHeroRunLeft_2
       rect:
         serializedVersion: 2
-        x: 142
+        x: 128
         y: 0
-        width: 39
-        height: 34
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,10 +217,10 @@ TextureImporter:
       name: MainHeroRunLeft_3
       rect:
         serializedVersion: 2
-        x: 211
+        x: 192
         y: 0
-        width: 34
-        height: 38
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,10 +238,10 @@ TextureImporter:
       name: MainHeroRunLeft_4
       rect:
         serializedVersion: 2
-        x: 275
+        x: 256
         y: 0
-        width: 27
-        height: 39
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,10 +259,10 @@ TextureImporter:
       name: MainHeroRunLeft_5
       rect:
         serializedVersion: 2
-        x: 339
+        x: 320
         y: 0
-        width: 34
-        height: 38
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -280,10 +280,10 @@ TextureImporter:
       name: MainHeroRunLeft_6
       rect:
         serializedVersion: 2
-        x: 401
+        x: 384
         y: 0
-        width: 36
-        height: 36
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -301,10 +301,10 @@ TextureImporter:
       name: MainHeroRunLeft_7
       rect:
         serializedVersion: 2
-        x: 473
+        x: 448
         y: 0
-        width: 28
-        height: 39
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

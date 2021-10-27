@@ -142,10 +142,10 @@ TextureImporter:
       name: MainHeroDashLeft_0
       rect:
         serializedVersion: 2
-        x: 32
+        x: 0
         y: 0
-        width: 32
-        height: 43
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,10 +163,10 @@ TextureImporter:
       name: MainHeroDashLeft_1
       rect:
         serializedVersion: 2
-        x: 93
+        x: 64
         y: 0
-        width: 35
-        height: 43
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,10 +184,10 @@ TextureImporter:
       name: MainHeroDashLeft_2
       rect:
         serializedVersion: 2
-        x: 157
+        x: 128
         y: 0
-        width: 35
-        height: 43
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,10 +205,10 @@ TextureImporter:
       name: MainHeroDashLeft_3
       rect:
         serializedVersion: 2
-        x: 228
+        x: 192
         y: 0
-        width: 28
-        height: 43
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

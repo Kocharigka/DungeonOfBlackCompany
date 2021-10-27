@@ -175,10 +175,10 @@ TextureImporter:
       name: MainHeroBowAttackRight1_0
       rect:
         serializedVersion: 2
-        x: 11
+        x: 0
         y: 0
-        width: 44
-        height: 42
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,10 +196,10 @@ TextureImporter:
       name: MainHeroBowAttackRight1_1
       rect:
         serializedVersion: 2
-        x: 75
+        x: 64
         y: 0
-        width: 44
-        height: 42
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,10 +217,10 @@ TextureImporter:
       name: MainHeroBowAttackRight1_2
       rect:
         serializedVersion: 2
-        x: 139
+        x: 128
         y: 0
-        width: 42
-        height: 42
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,10 +238,10 @@ TextureImporter:
       name: MainHeroBowAttackRight1_3
       rect:
         serializedVersion: 2
-        x: 203
+        x: 192
         y: 0
-        width: 37
-        height: 42
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,10 +259,10 @@ TextureImporter:
       name: MainHeroBowAttackRight1_4
       rect:
         serializedVersion: 2
-        x: 267
+        x: 256
         y: 0
-        width: 41
-        height: 46
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -280,10 +280,10 @@ TextureImporter:
       name: MainHeroBowAttackRight1_5
       rect:
         serializedVersion: 2
-        x: 331
+        x: 320
         y: 0
-        width: 44
-        height: 47
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -301,10 +301,10 @@ TextureImporter:
       name: MainHeroBowAttackRight1_6
       rect:
         serializedVersion: 2
-        x: 395
+        x: 384
         y: 0
-        width: 46
-        height: 48
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -322,10 +322,10 @@ TextureImporter:
       name: MainHeroBowAttackRight1_7
       rect:
         serializedVersion: 2
-        x: 459
+        x: 448
         y: 0
-        width: 46
-        height: 48
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -343,10 +343,10 @@ TextureImporter:
       name: MainHeroBowAttackRight1_8
       rect:
         serializedVersion: 2
-        x: 523
+        x: 512
         y: 0
-        width: 46
-        height: 48
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -364,10 +364,10 @@ TextureImporter:
       name: MainHeroBowAttackRight1_9
       rect:
         serializedVersion: 2
-        x: 587
+        x: 576
         y: 0
-        width: 46
-        height: 48
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -385,10 +385,10 @@ TextureImporter:
       name: MainHeroBowAttackRight1_10
       rect:
         serializedVersion: 2
-        x: 651
+        x: 640
         y: 0
-        width: 46
-        height: 48
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -406,10 +406,10 @@ TextureImporter:
       name: MainHeroBowAttackRight1_11
       rect:
         serializedVersion: 2
-        x: 715
+        x: 704
         y: 0
-        width: 45
-        height: 48
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -427,10 +427,10 @@ TextureImporter:
       name: MainHeroBowAttackRight1_12
       rect:
         serializedVersion: 2
-        x: 779
+        x: 768
         y: 0
-        width: 39
-        height: 42
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -448,10 +448,10 @@ TextureImporter:
       name: MainHeroBowAttackRight1_13
       rect:
         serializedVersion: 2
-        x: 843
+        x: 832
         y: 0
-        width: 40
-        height: 42
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -469,10 +469,10 @@ TextureImporter:
       name: MainHeroBowAttackRight1_14
       rect:
         serializedVersion: 2
-        x: 907
+        x: 896
         y: 0
-        width: 44
-        height: 42
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
