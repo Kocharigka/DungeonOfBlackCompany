@@ -20,8 +20,11 @@ public class DragonEnemy : MonoBehaviour
     {
         direction.x = Input.GetAxisRaw("Horizontal");
         direction.y = Input.GetAxisRaw("Vertical");
-        animator.SetFloat("Horizontal", direction.x);
-        animator.SetFloat("Vertical", direction.y);
+        if (direction != new Vector2(0, 0))
+        {
+            animator.SetFloat("Horizontal", direction.x);
+            animator.SetFloat("Vertical", direction.y);
+        }
         if (direction.sqrMagnitude != 0) {
         animator.SetBool("CanMove", true);
         }
