@@ -3969,6 +3969,8 @@ GameObject:
   - component: {fileID: 1916471486806485527}
   - component: {fileID: 2764372654360591872}
   - component: {fileID: 8962313068834773561}
+  - component: {fileID: 834134186668492273}
+  - component: {fileID: 6655488955039224851}
   m_Layer: 0
   m_Name: EllipsoidRoom
   m_TagString: Untagged
@@ -4021,6 +4023,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wavesData: []
+--- !u!70 &834134186668492273
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263416857229895821}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.7228909, y: -0.050135706}
+  m_Size: {x: 30.52288, y: 10.076206}
+  m_Direction: 1
+--- !u!70 &6655488955039224851
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263416857229895821}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 16, y: 16}
+  m_Direction: 0
 --- !u!1 &1504604672818719725
 GameObject:
   m_ObjectHideFlags: 0
@@ -8684,6 +8718,7 @@ GameObject:
   - component: {fileID: 5401970573477309486}
   - component: {fileID: 7669935470098126597}
   - component: {fileID: 199925988587731895}
+  - component: {fileID: 7189301322718216395}
   m_Layer: 0
   m_Name: Bars
   m_TagString: Untagged
@@ -8784,6 +8819,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.44589028, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &7189301322718216395
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705687407025055701}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bb79462126297d04e94d9288e3c05176, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1870826105883015273
 GameObject:
   m_ObjectHideFlags: 0
@@ -9215,6 +9269,7 @@ GameObject:
   - component: {fileID: 7425186468136950136}
   - component: {fileID: 38153892954409888}
   - component: {fileID: 7900009658983298358}
+  - component: {fileID: 7527411008657654334}
   m_Layer: 0
   m_Name: Bars
   m_TagString: Untagged
@@ -9315,6 +9370,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.98903936, y: 0.3254966}
   m_EdgeRadius: 0
+--- !u!95 &7527411008657654334
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2874598764298479064}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8147370292b402640819354bf251263e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3094895970984486370
 GameObject:
   m_ObjectHideFlags: 0
@@ -11592,6 +11666,7 @@ GameObject:
   - component: {fileID: 4575123689112055494}
   - component: {fileID: 499461994648994919}
   - component: {fileID: 6633572480127841809}
+  - component: {fileID: 6986008058592018864}
   m_Layer: 0
   m_Name: Bars
   m_TagString: Untagged
@@ -11692,6 +11767,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.32934332}
   m_EdgeRadius: 0
+--- !u!95 &6986008058592018864
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5419919824792556119}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8147370292b402640819354bf251263e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6733684464102257745
 GameObject:
   m_ObjectHideFlags: 0
@@ -11703,6 +11797,7 @@ GameObject:
   - component: {fileID: 9067045817688618244}
   - component: {fileID: 3659863941141917844}
   - component: {fileID: 9213834047370789352}
+  - component: {fileID: 5909230399256927866}
   m_Layer: 0
   m_Name: Bars
   m_TagString: Untagged
@@ -11803,6 +11898,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.37866506, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &5909230399256927866
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6733684464102257745}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bb79462126297d04e94d9288e3c05176, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6932612052651382555
 GameObject:
   m_ObjectHideFlags: 0

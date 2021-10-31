@@ -27,7 +27,8 @@ public class Room : MonoBehaviour
         }
     }
     private void spawnNextWave()
-    {        
+    {
+        Debug.Log(currentWave);
         var wave = wavesData[currentWave].enemies;
         currentWave++;
         foreach (var enemy in wave)

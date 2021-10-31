@@ -431,6 +431,8 @@ GameObject:
   - component: {fileID: 79841005523118499}
   - component: {fileID: 4458013982858657204}
   - component: {fileID: -8474008650915804936}
+  - component: {fileID: 4576574638690232774}
+  - component: {fileID: 4637097080593054344}
   m_Layer: 0
   m_Name: CrossRoom
   m_TagString: Untagged
@@ -483,6 +485,58 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wavesData: []
+--- !u!61 &4576574638690232774
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723817994154240825}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.31137466, y: 0.2594788}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 31.462807, y: 5.463034}
+  m_EdgeRadius: 0
+--- !u!61 &4637097080593054344
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723817994154240825}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.5546303, y: 0.5382285}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 9.239334, y: 14.982131}
+  m_EdgeRadius: 0
 --- !u!1 &876191993177384033
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,6 +548,7 @@ GameObject:
   - component: {fileID: 5869507310263381914}
   - component: {fileID: 8210660242886415537}
   - component: {fileID: 1820947326099208195}
+  - component: {fileID: 4462794999511415804}
   m_Layer: 0
   m_Name: Bars
   m_TagString: Untagged
@@ -594,6 +649,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.44589028, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &4462794999511415804
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876191993177384033}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bb79462126297d04e94d9288e3c05176, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1108562442678724697
 GameObject:
   m_ObjectHideFlags: 0
@@ -9779,6 +9853,7 @@ GameObject:
   - component: {fileID: 8973569118668315340}
   - component: {fileID: 1946828900850747412}
   - component: {fileID: 8512210925173765762}
+  - component: {fileID: 3896789007144173853}
   m_Layer: 0
   m_Name: Bars
   m_TagString: Untagged
@@ -9879,6 +9954,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.98903936, y: 0.3254966}
   m_EdgeRadius: 0
+--- !u!95 &3896789007144173853
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4352634524471748204}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8147370292b402640819354bf251263e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5112095778740205541
 GameObject:
   m_ObjectHideFlags: 0
@@ -9890,6 +9984,7 @@ GameObject:
   - component: {fileID: 7374526126291531440}
   - component: {fileID: 2975041573692289824}
   - component: {fileID: 7231962340543644252}
+  - component: {fileID: 3914725338638817568}
   m_Layer: 0
   m_Name: Bars
   m_TagString: Untagged
@@ -9990,6 +10085,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.37866506, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &3914725338638817568
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5112095778740205541}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bb79462126297d04e94d9288e3c05176, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5815385221611082211
 GameObject:
   m_ObjectHideFlags: 0
@@ -10001,6 +10115,7 @@ GameObject:
   - component: {fileID: 2665304765957369202}
   - component: {fileID: 2120483322473236435}
   - component: {fileID: 5155536729564214693}
+  - component: {fileID: 1466298405390622569}
   m_Layer: 0
   m_Name: Bars
   m_TagString: Untagged
@@ -10101,6 +10216,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.32934332}
   m_EdgeRadius: 0
+--- !u!95 &1466298405390622569
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5815385221611082211}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8147370292b402640819354bf251263e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6789904348460639506
 GameObject:
   m_ObjectHideFlags: 0

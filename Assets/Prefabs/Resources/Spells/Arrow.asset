@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d2fa79c2568c1c4385bfa5bb95d878e, type: 3}
   m_Name: Arrow
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: e764e57ccce87e7439da3d44d23fa712, type: 3}
+  sprite: {fileID: 21300000, guid: 7181ed1eb2277ae40a4e607870763f07, type: 3}
   speed: 20
   animator: {fileID: 9100000, guid: 0ddcc9c7eb51c9e4581ad5725675362f, type: 2}
   damage: 10
@@ -23,4 +23,4 @@ MonoBehaviour:
   triggerName: Bow
   moneyCost: 0
   cooldown: 1
-  target: Player
+  target: Enemy
