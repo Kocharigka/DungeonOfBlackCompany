@@ -13,6 +13,9 @@ public class DragonEnemy : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        animator.SetTrigger("Spawn");
+
+
     }
 
     // Update is called once per frame
