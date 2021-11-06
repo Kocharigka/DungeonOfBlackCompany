@@ -27,9 +27,14 @@ public class Enemy : MonoBehaviour
     private Room room;
     public LayerMask objLayer;
     private float damage;
+    private float runMultiplier=10;
     #endregion privateStatic
     #region publicFields
-
+    public float RunMultiplier
+    {
+        get { return runMultiplier; }
+        set { runMultiplier = value; }
+    }
     public float Damage
     {
         get { return damage; }
@@ -114,6 +119,7 @@ public class Enemy : MonoBehaviour
     private bool isStunned = false;
     public bool active;
     public bool nearWall = false;
+    public bool boss = false;
     #endregion bools
 
     void Start()
@@ -135,7 +141,10 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         offset += Time.deltaTime;
-        healthBar.transform.position = Camera.main.WorldToScreenPoint(transform.position + healhBarOffset);
+        if (!boss)
+        {
+            healthBar.transform.position = Camera.main.WorldToScreenPoint(transform.position + healhBarOffset);
+        }
         Vector2 playerDir = chooser.sectorToVector(transform.position, Player.transform.position);
         Animator.SetFloat("Horizontal", -playerDir.x);
         Animator.SetFloat("Vertical", -playerDir.y);
@@ -198,6 +207,10 @@ public class Enemy : MonoBehaviour
     #region getStun
     public void GetStun(float duration=0.5f)
     {
+        if (boss)
+        {
+            return;
+        }
         SetDefault();
         StartCoroutine(WaitForStunToEnd(duration));
     }
@@ -249,8 +262,11 @@ public class Enemy : MonoBehaviour
         healthBar.gameObject.SetActive(false);
         magic.effectHolder.gameObject.SetActive(false);
         yield return new WaitForSeconds(1f);
-        gameObject.SetActive(false);
-        Destroy(gameObject);
+        if (!boss)
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
 
     }
     #endregion getDamage

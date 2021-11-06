@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyMage : Enemy
 {
     private Shooter shooter;
-    private float cooldown = 5f;
+    private float cooldown;
 
     private float cdTimer;
     private float dangerRadius=10f;
