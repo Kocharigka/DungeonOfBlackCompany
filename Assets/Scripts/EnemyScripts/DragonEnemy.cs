@@ -11,6 +11,8 @@ public class DragonEnemy : Enemy
     private float followRadius = 100f;
     float hardCooldown=3;
     float hardTimer;
+    float flyTimer=0;
+    List<Vector2> directions = new List<Vector2>() { Vector2.up, Vector2.down, Vector2.left, Vector2.right };
 
     Vector2 run;
     private void Awake()
@@ -30,12 +32,24 @@ public class DragonEnemy : Enemy
 
     public override void FollowPlayer(Vector2 playerPosition)
     {
-        if (hardTimer<hardCooldown)
+        if (HealthBar.value > MaxHealth/2)
+        {
+            Follow(playerPosition);
+        }
+        else
+        {
+            Fly();
+        }
+        
+    }
+    void Follow(Vector2 playerPosition)
+    {
+        if (hardTimer < hardCooldown)
         {
             Animator.SetBool("CanMove", false);
             return;
         }
-        if (Vector2.Distance(transform.position, playerPosition) <= followRadius && Vector2.Distance(transform.position, playerPosition)>AttackRadius-1)
+        if (Vector2.Distance(transform.position, playerPosition) <= followRadius && Vector2.Distance(transform.position, playerPosition) > AttackRadius - 1)
         {
             run = (playerPosition - (Vector2)transform.position).normalized;
             Animator.SetBool("CanMove", true);
@@ -46,7 +60,35 @@ public class DragonEnemy : Enemy
             Animator.SetBool("CanMove", false);
         }
     }
+
+    void Fly()
+    {
+        if (flyTimer < 30)
+        {
+            Animator.SetBool("Fly", true);
+        }
+        else 
+        {
+            Animator.SetBool("Fly", false);
+        }
+        
+        var direction = directions[Random.Range(0, 4)];
+        Animator.SetFloat("Horizontal", direction.x);
+        Animator.SetFloat("Vertical", direction.y);
+
+    }
     public override void PerformAttack(Vector2 playerPosition)
+    {
+        if (HealthBar.value > MaxHealth / 2)
+        {
+            Attack(playerPosition);
+        }
+        else
+        {
+            FlyAttack();
+        }
+    }
+    void Attack(Vector2 playerPosition)
     {
         if (hardTimer > hardCooldown)
         {
@@ -66,12 +108,16 @@ public class DragonEnemy : Enemy
             {
                 cdTimer += Time.deltaTime;
             }
-           
+
         }
         else
         {
-            hardTimer+=Time.deltaTime;
+            hardTimer += Time.deltaTime;
         }
+    }
+    void FlyAttack()
+    {
+
     }
     public override void SetDefault()
     {
