@@ -11,7 +11,8 @@ public class DragonEnemy : Enemy
     private float followRadius = 100f;
     float hardCooldown=3;
     float hardTimer;
-    float flyTimer=0;
+    float flyCount=6;
+    bool fly = false;
     List<Vector2> directions = new List<Vector2>() { Vector2.up, Vector2.down, Vector2.left, Vector2.right };
 
     Vector2 run;
@@ -63,19 +64,25 @@ public class DragonEnemy : Enemy
 
     void Fly()
     {
-        if (flyTimer < 30)
-        {
-            Animator.SetBool("Fly", true);
-        }
-        else 
-        {
-            Animator.SetBool("Fly", false);
-        }
+        Animator.SetBool("Fly", true);
+        StartCoroutine(_fly());
         
-        var direction = directions[Random.Range(0, 4)];
-        Animator.SetFloat("Horizontal", direction.x);
-        Animator.SetFloat("Vertical", direction.y);
+        //var direction = directions[Random.Range(0, 4)];
+        //Animator.SetFloat("Horizontal", direction.x);
+        //Animator.SetFloat("Vertical", direction.y);
 
+    }
+
+    IEnumerator _fly()
+    {
+        InvokeRepeating("flyUp", 0, 0.03f);
+        yield return new WaitForSeconds(3f);
+        CancelInvoke("flyUp");
+        Animator.SetBool("Fly", true);
+    }
+    void flyUp()
+    {
+        rb.MovePosition(rb.position + Vector2.up * MoveSpeed * Time.deltaTime * RunMultiplier);
     }
     public override void PerformAttack(Vector2 playerPosition)
     {
