@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: add00b6f63b2f9f4eb16f56f2b82f08e, type: 3}
+  m_Name: stout_shield
+  m_EditorClassIdentifier: 
+  image: {fileID: 21300000, guid: 9ef8636a638c40244bf405b203a6fd3b, type: 3}
+  itemName: stout sheild
+  Attribute: armor
+  power: 0.1
