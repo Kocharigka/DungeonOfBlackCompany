@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d2fa79c2568c1c4385bfa5bb95d878e, type: 3}
+  m_Name: ArcLightning
+  m_EditorClassIdentifier: 
+  sprite: {fileID: -4533215517885657983, guid: d0b0d6bf16fe928428826f8345f7b80b, type: 3}
+  speed: 20
+  animator: {fileID: 0}
+  damage: 7
+  element: Elec
+  effectPower: 2
+  resonancePower: 2
+  inGameSprite: {fileID: 0}
+  triggerName: Cast1
+  moneyCost: 0
+  cooldown: 0
+  target: Enemy
