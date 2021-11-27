@@ -120,6 +120,7 @@ public class Enemy : MonoBehaviour
     public bool active;
     public bool nearWall = false;
     public bool boss = false;
+    public bool FacePlayer = true;
     #endregion bools
 
     void Start()
@@ -145,9 +146,12 @@ public class Enemy : MonoBehaviour
         {
             healthBar.transform.position = Camera.main.WorldToScreenPoint(transform.position + healhBarOffset);
         }
-        Vector2 playerDir = chooser.sectorToVector(transform.position, Player.transform.position);
-        Animator.SetFloat("Horizontal", -playerDir.x);
-        Animator.SetFloat("Vertical", -playerDir.y);
+        if (FacePlayer)
+        {
+            Vector2 playerDir = chooser.sectorToVector(transform.position, Player.transform.position);
+            Animator.SetFloat("Horizontal", -playerDir.x);
+            Animator.SetFloat("Vertical", -playerDir.y);
+        }
         if (offset <= spawnDuration)
         {
             return;
@@ -262,6 +266,7 @@ public class Enemy : MonoBehaviour
         healthBar.gameObject.SetActive(false);
         magic.effectHolder.gameObject.SetActive(false);
         yield return new WaitForSeconds(1f);
+        animator.enabled = false;
         if (!boss)
         {
             gameObject.SetActive(false);

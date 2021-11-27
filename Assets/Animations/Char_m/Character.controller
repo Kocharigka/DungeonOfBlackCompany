@@ -241,16 +241,16 @@ AnimatorStateMachine:
     m_Position: {x: 380, y: -100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2776992978679209325}
-    m_Position: {x: 500, y: 10, z: 0}
+    m_Position: {x: 490, y: -10, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5033586381905432226}
-    m_Position: {x: 250, y: -240, z: 0}
+    m_Position: {x: 280, y: -230, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1531604760301438852}
     m_Position: {x: 470, y: -360, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2665278645242294618}
-    m_Position: {x: 760, y: -370, z: 0}
+    m_Position: {x: 650, y: -310, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6348154794059950853}
     m_Position: {x: 1020, y: -370, z: 0}
@@ -1222,7 +1222,7 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0.14
   m_TransitionOffset: 0
   m_ExitTime: 0.75
   m_HasExitTime: 0
@@ -1238,7 +1238,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Dash
-  m_Speed: 4
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1451133676434633468}

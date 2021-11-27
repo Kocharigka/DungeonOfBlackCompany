@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     public Animator animator;
     private float attackRange = 1f;  
-    private float maxHealth=1000;
+    private float maxHealth=100000;
     private float currentHealth;
     public Transform projectileHolder;
     public bool isAttacking = false;
@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     bool isDead = false;
     public float damage=10;
     public List<Collider2D> damagedEnemies=new List<Collider2D>();
+    public Collider2D hurtBox;
 
 
     public float AttackRange
@@ -63,7 +64,19 @@ public class PlayerController : MonoBehaviour
         rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
     }
     
-    
+    public void Invincivle(float dur=1f)
+    {
+        StartCoroutine(makeInvinsible(dur));
+    }
+    IEnumerator makeInvinsible(float dur)
+    {
+        hurtBox.enabled = false;
+        Debug.Log(hurtBox.isActiveAndEnabled);
+        yield return new WaitForSeconds(dur);
+        hurtBox.enabled = true;
+
+    }
+
     public void GetDamage(float damage)
     {
         if (isDead)
