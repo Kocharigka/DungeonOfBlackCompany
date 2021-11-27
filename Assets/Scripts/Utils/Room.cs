@@ -10,7 +10,7 @@ public class Room : MonoBehaviour
     private List<GameObject> enemiesCurrent= new List<GameObject>();
     public List<WaveData> wavesData;
     private bool passed=false;
-    private Bounds bounds;
+    public Bounds bounds;
 
     private void Start()
     {

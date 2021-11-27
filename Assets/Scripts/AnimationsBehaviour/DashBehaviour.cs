@@ -8,6 +8,7 @@ public class DashBehaviour : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         PlayerController.instance.moveSpeed = 30;
+        PlayerController.instance.Invincivle();
         
     }
 
@@ -21,6 +22,7 @@ public class DashBehaviour : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         PlayerController.instance.moveSpeed = PlayerController.instance.defaultMoveSpeed;
+
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
