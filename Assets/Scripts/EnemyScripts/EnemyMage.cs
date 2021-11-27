@@ -5,13 +5,14 @@ using UnityEngine;
 public class EnemyMage : Enemy
 {
     private Shooter shooter;
-    private float cooldown = 5f;
+    private float cooldown;
 
     private float cdTimer;
     private float dangerRadius=10f;
     private float tpCooldown=20;
     private float tpTimer;
     private SpellData spell;
+    GameObject staff;
     Vector2 run;
     void Awake()
     {
@@ -19,7 +20,8 @@ public class EnemyMage : Enemy
         MaxHealth = 40;
         HealhBarOffset = new Vector3(0, 1.3f, 0);
         DefaultMoveSpeed = 2;
-        shooter = GetComponent<Shooter>();
+        shooter = GetComponentInChildren<Shooter>();
+        staff = shooter.gameObject;
         tpTimer = tpCooldown;
         spell = Resources.Load<SpellData>("Spells/ArcaneBolt");
         cooldown = spell.cooldown;
@@ -66,7 +68,7 @@ public class EnemyMage : Enemy
 
     public void ShootProjectile()
     {
-       shooter.Shoot(transform.position, chooser.getAngle(getPlayerPosition(), transform.position),spell);
+       shooter.Shoot(staff.transform.position, chooser.getAngle(getPlayerPosition(), transform.position),spell);
     }
 
     public void Teleport()
