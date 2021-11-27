@@ -6,8 +6,8 @@ namespace Edgar.Unity.Examples.Resources
     public class MyCustomPostProcess : DungeonGeneratorPostProcessBase
     {
         public override void Run(GeneratedLevel level, LevelDescription levelDescription)
-        { 
-            // Implement the logic here
+        {
+            GameObject.Find("Player").transform.position = level.GetRoomInstances()[0].Position;
         }
     }
 }

@@ -12,6 +12,7 @@ public class MagicController : MonoBehaviour
     private Coroutine currentStatus;
     private string lastStatusName;
     private float waterPower;
+    public bool holderFreeze = false;
     void Start()
     {
         if (gameObject.tag == "Player")
@@ -36,7 +37,10 @@ public class MagicController : MonoBehaviour
     }
     private void Update()
     {
-        effectHolder.transform.position = Camera.main.WorldToScreenPoint(transform.position + effectHolderOffcet);
+        if (!holderFreeze)
+        {
+            effectHolder.transform.position = Camera.main.WorldToScreenPoint(transform.position + effectHolderOffcet);
+        }
     }
 
     public void ApplyEffect(MagicEffect effect)
@@ -195,7 +199,7 @@ public class MagicController : MonoBehaviour
         conductor(effect);
         yield return null;
     }
-    IEnumerator ElectWater(MagicEffect effect)
+    IEnumerator ElecWater(MagicEffect effect)
     {
         effectHolder.sprite = statuses["Elec"];
         effectHolder.gameObject.SetActive(true);

@@ -91,9 +91,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4809824348929035206}
+  - component: {fileID: 5509000011206960828}
   m_Layer: 7
   m_Name: Staff
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,6 +113,18 @@ Transform:
   m_Father: {fileID: 4809824349701217959}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5509000011206960828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4809824348929035205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eefa0f8a07894e419b97fff5f859d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4809824349701217956
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,7 +137,6 @@ GameObject:
   - component: {fileID: 4809824349701217957}
   - component: {fileID: 4809824349701217976}
   - component: {fileID: 4809824349701217977}
-  - component: {fileID: 4809824349701217978}
   - component: {fileID: 4809824349701217979}
   - component: {fileID: 5856192595809969646}
   - component: {fileID: 1410514369547446349}
@@ -190,6 +202,8 @@ MonoBehaviour:
     m_Bits: 1
   active: 1
   nearWall: 0
+  boss: 0
+  FacePlayer: 1
 --- !u!61 &4809824349701217977
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -216,18 +230,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.53289795, y: 0.54718685}
   m_EdgeRadius: 0
---- !u!114 &4809824349701217978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4809824349701217956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5eefa0f8a07894e419b97fff5f859d9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4809824349701217979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,6 +244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   effectHolder: {fileID: 4809824350015237495}
+  holderFreeze: 0
 --- !u!50 &5856192595809969646
 Rigidbody2D:
   serializedVersion: 4
