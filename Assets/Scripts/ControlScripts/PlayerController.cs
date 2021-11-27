@@ -31,13 +31,16 @@ public class PlayerController : MonoBehaviour
         get { return attackRange; }
         set { attackRange = value; }
     }
+    private void Awake()
+    {
+        instance = this;
 
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         magic = GetComponent<MagicController>();
-        instance = this;
         moveSpeed = defaultMoveSpeed;
         canFlip = true;
         currentHealth = maxHealth;
@@ -71,7 +74,6 @@ public class PlayerController : MonoBehaviour
     IEnumerator makeInvinsible(float dur)
     {
         hurtBox.enabled = false;
-        Debug.Log(hurtBox.isActiveAndEnabled);
         yield return new WaitForSeconds(dur);
         hurtBox.enabled = true;
 
@@ -84,7 +86,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
         currentHealth -= damage;
-        Debug.Log(currentHealth);
+      //  Debug.Log(currentHealth);
         if (currentHealth<=0)
         {
             isDead = true;

@@ -28,6 +28,8 @@ public class Enemy : MonoBehaviour
     public LayerMask objLayer;
     private float damage;
     private float runMultiplier=10;
+    private GameObject itemPrefab;
+    private ItemData[] itemDatas;
     #endregion privateStatic
     #region publicFields
     public float RunMultiplier
@@ -125,6 +127,8 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
+        itemPrefab = Resources.Load<GameObject>("Item");
+        itemDatas = Resources.LoadAll<ItemData>("Items/");
         room = GetComponentInParent<Room>();
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponentInChildren<SpriteRenderer>();
@@ -201,6 +205,14 @@ public class Enemy : MonoBehaviour
     private void OnDestroy()
     {
         room.Killed(gameObject);
+        if (Random.Range(0, 100)<5)
+        {
+            Random.InitState(Random.Range(0, 200));
+            var tmp = Instantiate(itemPrefab,transform.position,Quaternion.identity,room.transform);
+            tmp.GetComponent<ItemScript>().data = itemDatas[Random.Range(0, itemDatas.Length)];
+        }
+        Random.InitState(Random.Range(0, 200));
+
     }
     void setSpawnDuration()
     {

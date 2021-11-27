@@ -96,8 +96,10 @@ public class DragonEnemy : Enemy
 
             var seed = Random.Range(0, 1000);
             Random.InitState(seed);
-            var mult = Room.bounds.center.y > 0 ? 1 : -1;
-            var start = new Vector2(-flydir.x, -flydir.y*mult);
+            var multY = Room.bounds.center.y > 0 ? 1 : -1;
+            var multX = Room.bounds.center.x > 0 ? 1 : -1;
+
+            var start = new Vector2(-flydir.x*multX, -flydir.y*multY);
             rb.position = (Vector2)Room.bounds.center + Room.bounds.max*2 * start;
             var endPos= (Vector2)Room.bounds.center + new Vector2(Mathf.Abs(Room.bounds.max.x),Mathf.Abs(Room.bounds.max.y))* flydir;
             InvokeRepeating("flyDir", 0, 0.03f);
