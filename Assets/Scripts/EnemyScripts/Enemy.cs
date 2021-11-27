@@ -18,8 +18,8 @@ public class Enemy : MonoBehaviour
     private float attackRadius;
     private float currentHealth;
     private MagicController magic;
-    private float offset=0;
-    private float spawnDuration=10;
+    private float offset = 0;
+    private float spawnDuration = 10;
     private string effectName;
     public Rigidbody2D rb;
     public SectorChooser chooser = new SectorChooser();
@@ -27,9 +27,10 @@ public class Enemy : MonoBehaviour
     private Room room;
     public LayerMask objLayer;
     private float damage;
-    private float runMultiplier=10;
+    private float runMultiplier = 10;
     private GameObject itemPrefab;
     private ItemData[] itemDatas;
+    public SpellData spell;
     #endregion privateStatic
     #region publicFields
     public float RunMultiplier

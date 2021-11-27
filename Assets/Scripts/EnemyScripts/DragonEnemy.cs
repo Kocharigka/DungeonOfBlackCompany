@@ -5,7 +5,6 @@ using UnityEngine;
 public class DragonEnemy : Enemy
 {
     private Shooter shooter;
-    private SpellData spell;
     private float cooldown;
     private float cdTimer;
     private float followRadius = 100f;
