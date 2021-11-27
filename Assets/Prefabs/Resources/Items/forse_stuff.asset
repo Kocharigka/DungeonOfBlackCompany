@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 21300000, guid: 080b299a7b32481469e3b16f08a5e8c3, type: 3}
   itemName: force stuff
-  Attribute: magic damage
+  Attribute: magicDamage
   power: 0.2
+  description: 
+  cost: 0
