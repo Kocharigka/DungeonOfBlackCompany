@@ -498,7 +498,7 @@ Animator:
   m_GameObject: {fileID: 2902670588370328973}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: c3a87b3ea2df57c4ba44814a43097593, type: 2}
+  m_Controller: {fileID: 9100000, guid: 79ad32758ae6feb4392268f310f01e0f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -526,6 +526,8 @@ MonoBehaviour:
     m_Bits: 1
   active: 1
   nearWall: 0
+  boss: 0
+  FacePlayer: 1
 --- !u!114 &2902670588370328983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -540,6 +542,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   effectHolder: {fileID: 2902670587411719478}
+  holderFreeze: 0
 --- !u!50 &3302807201676418386
 Rigidbody2D:
   serializedVersion: 4
