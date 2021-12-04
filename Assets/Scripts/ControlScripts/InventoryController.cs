@@ -5,8 +5,15 @@ using UnityEngine;
 public class InventoryController : MonoBehaviour
 {
     private Stack<ItemData> items=new Stack<ItemData>();
-    Dictionary<string, float> powerUps = new Dictionary<string, float>();
-    Dictionary<ItemData, int> inventory = new Dictionary<ItemData, int>();
+    public Dictionary<string, float> powerUps = new Dictionary<string, float>() 
+    {
+        {"damage",1 },
+        {"speed",1},
+        {"health",1},
+        { "magicDamage",1},
+        {"armor",1 }
+    };
+    public Dictionary<ItemData, int> inventory = new Dictionary<ItemData, int>();
     public static InventoryController instance;
 
     private void Start()
@@ -16,15 +23,12 @@ public class InventoryController : MonoBehaviour
     public void Take(ItemData item)
     {
         items.Push(item);
-
-        if (powerUps.ContainsKey(item.Attribute))
+        powerUps[item.Attribute] += item.power;
+        if (item.Attribute=="health")
         {
-            powerUps[item.Attribute] += item.power;
+            PlayerController.instance.UpdateHealth(item.power+1);
         }
-        else
-        {
-            powerUps.Add(item.Attribute, item.power);
-        }
+        
         if (inventory.ContainsKey(item))
         {
             inventory[item] ++;
