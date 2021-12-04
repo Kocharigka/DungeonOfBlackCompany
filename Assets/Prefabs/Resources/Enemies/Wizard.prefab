@@ -200,6 +200,7 @@ MonoBehaviour:
   objLayer:
     serializedVersion: 2
     m_Bits: 1
+  spell: {fileID: 11400000, guid: 4d4d0055373e9e14ca3ea7e7bb4cfa5c, type: 2}
   active: 1
   nearWall: 0
   boss: 0

@@ -16,3 +16,5 @@ MonoBehaviour:
   itemName: boots of speed
   Attribute: speed
   power: 0.15
+  description: 
+  cost: 0
