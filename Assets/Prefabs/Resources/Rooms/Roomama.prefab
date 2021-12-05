@@ -11,6 +11,10 @@ GameObject:
   - component: {fileID: 5803954273171894862}
   - component: {fileID: 6831923353395846477}
   - component: {fileID: 5553644359343607536}
+  - component: {fileID: 9078399591332835004}
+  - component: {fileID: 3316882281183598479}
+  - component: {fileID: 5683003073490507278}
+  - component: {fileID: 957457464927343960}
   m_Layer: 0
   m_Name: Roomama
   m_TagString: Untagged
@@ -88,6 +92,100 @@ MonoBehaviour:
       Margin1: 1
       Margin2: 1
       Enabled: 1
+--- !u!114 &9078399591332835004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314825835201206275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f73b869c579d5418b5ca9362d74308, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wavesData: []
+  bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+--- !u!61 &3316882281183598479
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314825835201206275}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 3.0790682, y: 12.4841175}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 10.150877, y: 43.349148}
+  m_EdgeRadius: 0
+--- !u!61 &5683003073490507278
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314825835201206275}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 15.50856, y: 12.014898}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16.849407, y: 13.781834}
+  m_EdgeRadius: 0
+--- !u!61 &957457464927343960
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314825835201206275}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 20.773468, y: 11.585159}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 30.173721, y: 5.001301}
+  m_EdgeRadius: 0
 --- !u!1 &3777155848529557374
 GameObject:
   m_ObjectHideFlags: 0
@@ -1357,7 +1455,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4847912127122737273}
-  m_BodyType: 2
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1368,8 +1466,8 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_CollisionDetection: 1
+  m_Constraints: 7
 --- !u!66 &8270449167924143669
 CompositeCollider2D:
   m_ObjectHideFlags: 0
@@ -1430,38 +1528,22 @@ CompositeCollider2D:
         Y: 70000000
       - X: 20000000
         Y: 70000000
-    - - X: 120000100
-        Y: 59999959
-      - X: 120000100
-        Y: 98437545
-      - X: 120000041
-        Y: 98437604
-      - X: 109999959
-        Y: 98437604
-      - X: 109999900
-        Y: 98437545
-      - X: 109999900
-        Y: 59999959
-      - X: 109999959
-        Y: 59999900
-      - X: 120000041
-        Y: 59999900
-    - - X: 220000100
-        Y: 59999959
-      - X: 220000100
-        Y: 98437545
-      - X: 220000041
-        Y: 98437604
-      - X: 209999959
-        Y: 98437604
-      - X: 209999900
-        Y: 98437545
-      - X: 209999900
-        Y: 59999959
-      - X: 209999959
-        Y: 59999900
-      - X: 220000041
-        Y: 59999900
+    - - X: 220000000
+        Y: 98437504
+      - X: 210000000
+        Y: 98437504
+      - X: 210000000
+        Y: 60000000
+      - X: 220000000
+        Y: 60000000
+    - - X: 120000000
+        Y: 98437504
+      - X: 110000000
+        Y: 98437504
+      - X: 110000000
+        Y: 60000000
+      - X: 120000000
+        Y: 60000000
   m_CompositePaths:
     m_Paths:
     - - {x: 17.999971, y: 15}
@@ -1484,14 +1566,14 @@ CompositeCollider2D:
       - {x: 1.9999708, y: 17}
       - {x: -3, y: 16.999971}
       - {x: -2.999971, y: 7}
-    - - {x: 11.999974, y: 5.99999}
-      - {x: 11.999974, y: 9.8437605}
-      - {x: 10.99999, y: 9.843725}
-      - {x: 11.000026, y: 5.99999}
-    - - {x: 21.999975, y: 5.99999}
-      - {x: 21.999975, y: 9.8437605}
-      - {x: 20.99999, y: 9.843725}
-      - {x: 21.000027, y: 5.99999}
+    - - {x: 21.999971, y: 6}
+      - {x: 21.999971, y: 9.843751}
+      - {x: 21, y: 9.843721}
+      - {x: 21.000029, y: 6}
+    - - {x: 11.99997, y: 6}
+      - {x: 11.99997, y: 9.843751}
+      - {x: 11, y: 9.843721}
+      - {x: 11.00003, y: 6}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!1 &6091714778122237871
@@ -4675,7 +4757,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6091714778122237871}
-  m_BodyType: 2
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -4686,8 +4768,8 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_CollisionDetection: 1
+  m_Constraints: 7
 --- !u!66 &5980880504462280301
 CompositeCollider2D:
   m_ObjectHideFlags: 0
