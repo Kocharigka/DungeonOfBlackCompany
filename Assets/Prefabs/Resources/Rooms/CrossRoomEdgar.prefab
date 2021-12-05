@@ -75,16 +75,14 @@ MonoBehaviour:
       To: {x: -12, y: -5, z: 0}
     - From: {x: 20, y: -7, z: 0}
       To: {x: 20, y: -5, z: 0}
-    - From: {x: -2, y: -18, z: 0}
-      To: {x: 0, y: -18, z: 0}
-    - From: {x: 7, y: -18, z: 0}
-      To: {x: 9, y: -18, z: 0}
-    - From: {x: 3, y: 7, z: 0}
-      To: {x: 5, y: 7, z: 0}
-    - From: {x: 8, y: 7, z: 0}
-      To: {x: 10, y: 7, z: 0}
-    - From: {x: -2, y: 7, z: 0}
-      To: {x: 0, y: 7, z: 0}
+    - From: {x: 0, y: -18, z: 0}
+      To: {x: 2, y: -18, z: 0}
+    - From: {x: 5, y: -18, z: 0}
+      To: {x: 7, y: -18, z: 0}
+    - From: {x: 0, y: 7, z: 0}
+      To: {x: 2, y: 7, z: 0}
+    - From: {x: 5, y: 7, z: 0}
+      To: {x: 7, y: 7, z: 0}
   SimpleDoorModeData:
     DistanceFromCorners: 1
     DoorLength: 1
