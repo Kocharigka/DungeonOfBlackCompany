@@ -18,8 +18,8 @@ public class Enemy : MonoBehaviour
     private float attackRadius;
     private float currentHealth;
     private MagicController magic;
-    private float offset=0;
-    private float spawnDuration=10;
+    private float offset = 0;
+    private float spawnDuration = 10;
     private string effectName;
     public Rigidbody2D rb;
     public SectorChooser chooser = new SectorChooser();
@@ -27,7 +27,10 @@ public class Enemy : MonoBehaviour
     private Room room;
     public LayerMask objLayer;
     private float damage;
-    private float runMultiplier=10;
+    private float runMultiplier = 10;
+    private GameObject itemPrefab;
+    private ItemData[] itemDatas;
+    public SpellData spell;
     #endregion privateStatic
     #region publicFields
     public float RunMultiplier
@@ -125,6 +128,8 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
+        itemPrefab = Resources.Load<GameObject>("Item");
+        itemDatas = Resources.LoadAll<ItemData>("Items/");
         room = GetComponentInParent<Room>();
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponentInChildren<SpriteRenderer>();
@@ -201,6 +206,14 @@ public class Enemy : MonoBehaviour
     private void OnDestroy()
     {
         room.Killed(gameObject);
+        if (Random.Range(0, 100)<5)
+        {
+            Random.InitState(Random.Range(0, 200));
+            var tmp = Instantiate(itemPrefab,transform.position,Quaternion.identity,room.transform);
+            tmp.GetComponent<ItemScript>().data = itemDatas[Random.Range(0, itemDatas.Length)];
+        }
+        Random.InitState(Random.Range(0, 200));
+
     }
     void setSpawnDuration()
     {

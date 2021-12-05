@@ -7,7 +7,7 @@ public class DashBehaviour : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        PlayerController.instance.moveSpeed = 30;
+        PlayerController.instance.moveSpeed = 30/PlayerController.instance.direction.sqrMagnitude;
         PlayerController.instance.Invincivle();
         
     }

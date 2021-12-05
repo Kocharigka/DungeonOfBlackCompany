@@ -8,7 +8,6 @@ public class EnemyArcher : Enemy
     private float cooldown;
     private float cdTimer;
     private float dangerRadius = 10f;
-    private SpellData spell;
     Vector2 run;
     void Awake()
     {

@@ -49,7 +49,6 @@ public class EnemyDog : Enemy
         if (Vector2.Distance(playerPosition, transform.position) <= 15)
         {
             Vector2 run = (playerPosition-rb.position).normalized;
-            Debug.Log(run);
             if (Mathf.Abs(run.x)> Mathf.Abs(run.y))
             {
                 run.y += curve;
