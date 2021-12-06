@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 21300000, guid: d5c9b51c33c065841971d6b9d9c9c2a5, type: 3}
   itemName: iron branche
-  Attribute: hp
+  Attribute: health
   power: 0.05
   description: 
   cost: 0

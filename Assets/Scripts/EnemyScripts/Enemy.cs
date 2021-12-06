@@ -259,9 +259,29 @@ public class Enemy : MonoBehaviour
         if (!isDead)
         {
             healthBar.gameObject.SetActive(true);
-            currentHealth -= damage;
+            currentHealth -= damage*InventoryController.instance.powerUps["damage"];
             healthBar.value = currentHealth;
         
+            if (currentHealth <= 0)
+            {
+                isDead = true;
+                animator.SetTrigger("Die");
+                magic.effectHolder.gameObject.SetActive(false);
+                magic.enabled = false;
+                enabled = false;
+                StartCoroutine(WaitForDeath());
+            }
+        }
+    }
+
+    public void GetMagicDamage(float damage)
+    {
+        if (!isDead)
+        {
+            healthBar.gameObject.SetActive(true);
+            currentHealth -= damage * InventoryController.instance.powerUps["magicDamage"];
+            healthBar.value = currentHealth;
+
             if (currentHealth <= 0)
             {
                 isDead = true;

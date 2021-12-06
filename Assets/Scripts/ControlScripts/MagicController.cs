@@ -76,7 +76,7 @@ public class MagicController : MonoBehaviour
         effectHolder.gameObject.SetActive(true);
         for (int i = 0; i < effect.power; i++)
         {
-            target.BroadcastMessage("GetDamage", 2*effect.power);
+            target.BroadcastMessage("GetMagicDamage", 2*effect.power);
             yield return new WaitForSeconds(1);
         }
         effectHolder.gameObject.SetActive(false);
@@ -239,13 +239,13 @@ public class MagicController : MonoBehaviour
     {
         effectHolder.gameObject.SetActive(false);
         currentStatus = null;
-        target.BroadcastMessage("GetDamage", effect.damage * (1 + (float)effect.resonancePower / 2));
+        target.BroadcastMessage("GetMagicDamage", effect.damage * (1 + (float)effect.resonancePower / 2));
     }
     void conductor(MagicEffect effect)
     {
         effectHolder.gameObject.SetActive(false);
         currentStatus = null;
-        target.BroadcastMessage("GetDamage", effect.damage * (2 + (float)effect.resonancePower / 2));
+        target.BroadcastMessage("GetMagicDamage", effect.damage * (2 + (float)effect.resonancePower / 2));
     }
     void freeze(MagicEffect effect)
     {
