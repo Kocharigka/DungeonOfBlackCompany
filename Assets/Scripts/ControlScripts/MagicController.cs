@@ -23,15 +23,15 @@ public class MagicController : MonoBehaviour
         {
            target = GetComponent<Enemy>();
         }
-        SpriteRenderer tmp = Resources.Load<SpriteRenderer>("fireEffect");
+        SpriteRenderer tmp = Resources.Load<SpriteRenderer>("MagicEffects/fireEffect");
         statuses.Add("Fire", tmp.sprite);
-        tmp = Resources.Load<SpriteRenderer>("iceEffect");
+        tmp = Resources.Load<SpriteRenderer>("MagicEffects/iceEffect");
         statuses.Add("Ice", tmp.sprite);
-        tmp = Resources.Load<SpriteRenderer>("waterEffect");
+        tmp = Resources.Load<SpriteRenderer>("MagicEffects/waterEffect");
         statuses.Add("Water", tmp.sprite);
-        tmp = Resources.Load<SpriteRenderer>("elecEffect");
+        tmp = Resources.Load<SpriteRenderer>("MagicEffects/elecEffect");
         statuses.Add("Elec", tmp.sprite);
-        tmp = Resources.Load<SpriteRenderer>("freezeEffect");
+        tmp = Resources.Load<SpriteRenderer>("MagicEffects/freezeEffect");
         statuses.Add("Freeze", tmp.sprite);
         effectHolderOffcet = new Vector3(0, 2, 0);
     }
