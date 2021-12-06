@@ -12,6 +12,8 @@ public class WeaponScript : MonoBehaviour
     {
         player = GetComponentInParent<PlayerController>();
         player.animator.SetFloat("Weapon", currentWeapon.weaponAnim);
+        weaponSlider.sprite = currentWeapon.icon;
+
 
     }
     void Update()
