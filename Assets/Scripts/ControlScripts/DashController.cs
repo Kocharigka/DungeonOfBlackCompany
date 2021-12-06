@@ -26,8 +26,9 @@ public class DashController : MonoBehaviour
             fill.color = new Color(0, 0, 0, 0);
             slider.value = 0;
         }
-        if (Input.GetKeyDown(KeyCode.Space) && timer > cooldown && PlayerController.instance.direction != new Vector2(0, 0))
+        if (Input.GetKeyDown(KeyCode.Space) && timer > cooldown && PlayerController.instance.direction != new Vector2(0, 0)&& PlayerController.instance.moveSpeed != 0)
         {
+            
             timer = 0 - PlayerController.instance.magic.WaterStatus();
             nextIter = cooldown - timer;
             slider.maxValue = nextIter;
