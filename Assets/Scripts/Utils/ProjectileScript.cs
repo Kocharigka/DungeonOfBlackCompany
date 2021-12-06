@@ -44,7 +44,16 @@ public class ProjectileScript : MonoBehaviour
     {
         if (collider.gameObject.tag == target)
         {
-            collider.gameObject.BroadcastMessage("GetDamage", effect.damage);
+            if (effect.power==0)
+            {
+                collider.gameObject.BroadcastMessage("GetDamage", effect.damage);
+
+            }
+            else
+            {
+                collider.gameObject.BroadcastMessage("GetMagicDamage", effect.damage);
+
+            }
             collider.gameObject.GetComponent<MagicController>().ApplyEffect(effect);
             Destroy(gameObject);
         }
