@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: FireHawk
   m_EditorClassIdentifier: 
   sprite: {fileID: -637806499189323872, guid: 73f4f32a85659cb42b85d12a9dccac59, type: 3}
-  speed: 20
-  animator: {fileID: 0}
+  speed: 0
+  animator: {fileID: 9100000, guid: 2fb67747d46b5b246b21637e0f2de624, type: 2}
   damage: 7
   element: Fire
   effectPower: 2
@@ -22,5 +22,5 @@ MonoBehaviour:
   inGameSprite: {fileID: 0}
   triggerName: Cast1
   moneyCost: 0
-  cooldown: 4
+  cooldown: 6
   target: Enemy

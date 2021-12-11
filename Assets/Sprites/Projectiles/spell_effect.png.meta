@@ -1,34 +1,34 @@
 fileFormatVersion: 2
-guid: d0b0d6bf16fe928428826f8345f7b80b
+guid: cbf7db79ffdcf8143bd2027f42d62037
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4533215517885657983
-    second: spell_electro_effect_0
+      213: -8530845180033902074
+    second: spell_effect_0
   - first:
-      213: -3415786645281804233
-    second: spell_electro_effect_1
+      213: 3189640095747328170
+    second: spell_effect_1
   - first:
-      213: 3521467696530323711
-    second: spell_electro_effect_2
+      213: 5085431147164642235
+    second: spell_effect_2
   - first:
-      213: 1475902459660015682
-    second: spell_electro_effect_3
+      213: -5355067248607425057
+    second: spell_effect_3
   - first:
-      213: -2649578728867185290
-    second: spell_electro_effect_4
+      213: -411035489163640012
+    second: spell_effect_4
   - first:
-      213: 303808579073696709
-    second: spell_electro_effect_5
+      213: -760790730839183826
+    second: spell_effect_5
   - first:
-      213: 671968081562443502
-    second: spell_electro_effect_6
+      213: -1708094526971205717
+    second: spell_effect_6
   - first:
-      213: 5246821007001309385
-    second: spell_electro_effect_7
+      213: 5385665942907734719
+    second: spell_effect_7
   - first:
-      213: 664465612704499969
-    second: spell_electro_effect_8
+      213: 5415766365887292130
+    second: spell_effect_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -118,7 +118,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spell_electro_effect_0
+      name: spell_effect_0
       rect:
         serializedVersion: 2
         x: 0
@@ -132,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18c03262188c611c0800000000000000
-      internalID: -4533215517885657983
+      spriteID: 60ad932d1895c9980800000000000000
+      internalID: -8530845180033902074
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spell_electro_effect_1
+      name: spell_effect_1
       rect:
         serializedVersion: 2
         x: 32
@@ -153,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 730747bc420b890d0800000000000000
-      internalID: -3415786645281804233
+      spriteID: aa8cc5484c0e34c20800000000000000
+      internalID: 3189640095747328170
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spell_electro_effect_2
+      name: spell_effect_2
       rect:
         serializedVersion: 2
         x: 64
@@ -174,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff8f3b36634ced030800000000000000
-      internalID: 3521467696530323711
+      spriteID: bbba4704fa4139640800000000000000
+      internalID: 5085431147164642235
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spell_electro_effect_3
+      name: spell_effect_3
       rect:
         serializedVersion: 2
         x: 96
@@ -195,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2481927a7757b7410800000000000000
-      internalID: 1475902459660015682
+      spriteID: fdd0d62b5bafea5b0800000000000000
+      internalID: -5355067248607425057
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spell_electro_effect_4
+      name: spell_effect_4
       rect:
         serializedVersion: 2
         x: 128
@@ -216,14 +216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67db0752f2eca3bd0800000000000000
-      internalID: -2649578728867185290
+      spriteID: 433825e7665bb4af0800000000000000
+      internalID: -411035489163640012
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spell_electro_effect_5
+      name: spell_effect_5
       rect:
         serializedVersion: 2
         x: 160
@@ -237,14 +237,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c367630b48573400800000000000000
-      internalID: 303808579073696709
+      spriteID: e2eabe37cd02175f0800000000000000
+      internalID: -760790730839183826
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spell_electro_effect_6
+      name: spell_effect_6
       rect:
         serializedVersion: 2
         x: 192
@@ -258,14 +258,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eee1ee1f86f435900800000000000000
-      internalID: 671968081562443502
+      spriteID: ba7a71dd311ab48e0800000000000000
+      internalID: -1708094526971205717
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spell_electro_effect_7
+      name: spell_effect_7
       rect:
         serializedVersion: 2
         x: 224
@@ -279,14 +279,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c0de5238e370d840800000000000000
-      internalID: 5246821007001309385
+      spriteID: fba4fedf3aabdba40800000000000000
+      internalID: 5385665942907734719
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spell_electro_effect_8
+      name: spell_effect_8
       rect:
         serializedVersion: 2
         x: 256
@@ -300,8 +300,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 109c6ba44f7a83900800000000000000
-      internalID: 664465612704499969
+      spriteID: 2e26839d0daa82b40800000000000000
+      internalID: 5415766365887292130
       vertices: []
       indices: 
       edges: []
