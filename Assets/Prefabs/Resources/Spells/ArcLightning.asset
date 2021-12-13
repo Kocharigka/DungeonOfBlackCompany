@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d2fa79c2568c1c4385bfa5bb95d878e, type: 3}
   m_Name: ArcLightning
   m_EditorClassIdentifier: 
-  sprite: {fileID: -4533215517885657983, guid: d0b0d6bf16fe928428826f8345f7b80b, type: 3}
+  sprite: {fileID: -8530845180033902074, guid: cbf7db79ffdcf8143bd2027f42d62037, type: 3}
   speed: 20
-  animator: {fileID: 0}
+  animator: {fileID: 9100000, guid: fc123ef8c85479e488bff0e4153b9580, type: 2}
   damage: 7
   element: Elec
   effectPower: 2
@@ -22,5 +22,5 @@ MonoBehaviour:
   inGameSprite: {fileID: 0}
   triggerName: Cast1
   moneyCost: 0
-  cooldown: 0
+  cooldown: 5
   target: Enemy
