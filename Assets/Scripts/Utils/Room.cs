@@ -16,7 +16,6 @@ public class Room : MonoBehaviour
     private void Start()
     {
         dungeonHolder = GameObject.Find("Generated Level");
-        Debug.Log(waves);
         bounds=GetComponent<Collider2D>().bounds;
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -31,7 +30,6 @@ public class Room : MonoBehaviour
     }
     private void spawnNextWave()
     {
-        Debug.Log(currentWave);
         var wave = wavesData[currentWave].enemies;
         currentWave++;
         foreach (var enemy in wave)
@@ -47,7 +45,6 @@ public class Room : MonoBehaviour
         if (bounds.max.x>obj.x && bounds.max.y > obj.y &&
             bounds.min.x< obj.x && bounds.min.y<obj.y)
         {
-            Debug.Log("InBounds");
             return true;
         }
         return false;

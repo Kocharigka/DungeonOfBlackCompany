@@ -22,6 +22,11 @@ public class InventoryController : MonoBehaviour
     }
     public void Take(ItemData item)
     {
+        if (item.Attribute=="heal")
+        {
+            PlayerController.instance.RestoreHealth(item.power);
+            return;
+        }
         items.Push(item);
         powerUps[item.Attribute] += item.power;
         if (item.Attribute=="health")

@@ -143,4 +143,8 @@ public class PlayerController : MonoBehaviour
         currentHealth *= up;
 
     }
+    public void RestoreHealth(float hp)
+    {
+        currentHealth = currentHealth + hp > maxHealth ? maxHealth : currentHealth + hp;
+    }
 }
