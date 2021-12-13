@@ -27,23 +27,42 @@ public class PostGen : MonoBehaviour
             }
             else
             {
-                var rm=child.GetComponent<Room>();
-                if (Regex.IsMatch(child.name, ".*BossRoom.*"))
+                if (Regex.IsMatch(child.name, ".*Room.*"))
                 {
-                    rm.wavesData.Add(bosses[Random.Range(0, bosses.Length-1)]);
-                }
-                else
-                {
-                    var wavesCount = Random.Range(1, 4);
-                    for (int i = 0; i <= wavesCount; i++)
-                    {
-                        rm.wavesData.Add(waves[Random.Range(0, waves.Length-1)]);
 
+                    var rm = child.GetComponent<Room>();
+                    if (Regex.IsMatch(child.name, ".*BossRoom.*"))
+                    {
+                        rm.wavesData.Add(bosses[Random.Range(0, bosses.Length - 1)]);
                     }
-                }
+                    else
+                    {
+                        var wavesCount = Random.Range(1, 4);
+                        for (int i = 0; i <= wavesCount; i++)
+                        {
+                            rm.wavesData.Add(waves[Random.Range(0, waves.Length - 1)]);
+
+                        }
+                    } }
                 
             }
 
+        }
+    }
+    public void BarsCtrl(bool state)
+    {
+        foreach(Transform child in transform)
+        {
+            if (child.name=="Rooms")
+            {
+                foreach (Transform room in child)
+                {
+                    if (Regex.IsMatch(room.name, ".*Corridor.*"))
+                    {
+                        room.GetComponentInChildren<Animator>().SetBool("Opened", state);
+                    }
+                }
+            }
         }
     }
 }

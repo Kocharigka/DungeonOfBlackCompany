@@ -11,7 +11,6 @@ public class EnemyMage : Enemy
     private float dangerRadius=10f;
     private float tpCooldown=20;
     private float tpTimer;
-    private SpellData spell;
     GameObject staff;
     Vector2 run;
     void Awake()
@@ -23,7 +22,6 @@ public class EnemyMage : Enemy
         shooter = GetComponentInChildren<Shooter>();
         staff = shooter.gameObject;
         tpTimer = tpCooldown;
-        spell = Resources.Load<SpellData>("Spells/ArcaneBolt");
         cooldown = spell.cooldown;
         cdTimer = cooldown;
  

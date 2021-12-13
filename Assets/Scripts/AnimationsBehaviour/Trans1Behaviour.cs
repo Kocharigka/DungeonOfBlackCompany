@@ -22,6 +22,8 @@ public class Trans1Behaviour : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         PlayerController.instance.isAttacking = false;
+        PlayerController.instance.moveSpeed = PlayerController.instance.defaultMoveSpeed;
+        PlayerController.instance.canFlip = true;
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

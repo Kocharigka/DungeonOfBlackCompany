@@ -7,7 +7,7 @@ public class ItemScript : MonoBehaviour
     public ItemData data;
     private SpriteRenderer rend;
     private PlayerController player;
-    private GameObject takeButton;
+    [SerializeField]private GameObject takeButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,15 +21,17 @@ public class ItemScript : MonoBehaviour
     {
         if (takeButton.activeInHierarchy)
         {
+            Debug.Log("active");
             if (Input.GetKeyDown(KeyCode.R))
             {
+                Debug.Log("R");
+
                 player.GetComponent<InventoryController>().Take(data);
                 Destroy(gameObject);
             }
         }
     }
 
-    // Update is called once per frame
     private void FixedUpdate()
     {
         if (Vector2.Distance(transform.position,player.transform.position)<2)

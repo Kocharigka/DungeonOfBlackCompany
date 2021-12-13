@@ -9,4 +9,6 @@ public class ItemData : ScriptableObject
     public string itemName;
     public string Attribute;
     public float power;
+    public string description;
+    public uint cost;
 }

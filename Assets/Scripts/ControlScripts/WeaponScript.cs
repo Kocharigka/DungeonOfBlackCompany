@@ -1,13 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WeaponScript : MonoBehaviour
 {
     PlayerController player;
+    public WeaponData currentWeapon;
+    public Image weaponSlider;
     void Start()
     {
         player = GetComponentInParent<PlayerController>();
+        player.animator.SetFloat("Weapon", currentWeapon.weaponAnim);
+        weaponSlider.sprite = currentWeapon.icon;
+
+
     }
     void Update()
     {
@@ -38,5 +45,15 @@ public class WeaponScript : MonoBehaviour
 
             }
         }
+    }
+
+    public WeaponData ChangeWeapon(WeaponData data)
+    {
+        player.animator.SetFloat("Weapon", data.weaponAnim);
+        var tmp = currentWeapon;
+        currentWeapon = data;
+        weaponSlider.sprite = data.icon;
+        return tmp;
+
     }
 }

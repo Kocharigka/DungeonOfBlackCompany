@@ -11,19 +11,22 @@ public class Room : MonoBehaviour
     public List<WaveData> wavesData;
     private bool passed=false;
     public Bounds bounds;
+    private GameObject dungeonHolder;
 
     private void Start()
     {
-        waves = wavesData.Count;
+        dungeonHolder = GameObject.Find("Generated Level");
+        Debug.Log(waves);
         bounds=GetComponent<Collider2D>().bounds;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        waves = wavesData.Count;
+
         if (collision.tag == "Player" && !passed && currentWave == 0)
         {
-            barsControl(false);
-            spawnNextWave();
-            InvokeRepeating("checkEnemies", 2.0f, 1f);
+            dungeonHolder.GetComponent<PostGen>().BarsCtrl(false);
+            InvokeRepeating("checkEnemies", 0, 1f);
         }
     }
     private void spawnNextWave()
@@ -59,31 +62,19 @@ public class Room : MonoBehaviour
         {
             if (currentWave==waves)
             {
-                barsControl(true);
+                Debug.Log(gameObject.name);
+                dungeonHolder.GetComponent<PostGen>().BarsCtrl(true);
                 passed = true;
+                CancelInvoke("checkEnemies");
             }
             else
             {
-            spawnNextWave();
+                spawnNextWave();
             }
         }
     }
     public void Killed(GameObject obj)
     {
         enemiesCurrent.Remove(obj);
-    }
-    void barsControl(bool state)
-    {
-        foreach (Transform child in transform)
-        {
-            foreach (Transform childChild in child)
-            {
-                if (childChild.name=="Bars")
-                {
-
-                    childChild.GetComponent<Animator>().SetBool("Opened", state);
-                }
-            }
-        }
     }
 }

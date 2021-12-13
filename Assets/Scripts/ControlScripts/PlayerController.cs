@@ -31,13 +31,16 @@ public class PlayerController : MonoBehaviour
         get { return attackRange; }
         set { attackRange = value; }
     }
+    private void Awake()
+    {
+        instance = this;
 
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         magic = GetComponent<MagicController>();
-        instance = this;
         moveSpeed = defaultMoveSpeed;
         canFlip = true;
         currentHealth = maxHealth;
@@ -61,7 +64,7 @@ public class PlayerController : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime*InventoryController.instance.powerUps["speed"]);
     }
     
     public void Invincivle(float dur=1f)
@@ -71,7 +74,6 @@ public class PlayerController : MonoBehaviour
     IEnumerator makeInvinsible(float dur)
     {
         hurtBox.enabled = false;
-        Debug.Log(hurtBox.isActiveAndEnabled);
         yield return new WaitForSeconds(dur);
         hurtBox.enabled = true;
 
@@ -83,14 +85,37 @@ public class PlayerController : MonoBehaviour
         {
             return;
         }
-        currentHealth -= damage;
-        Debug.Log(currentHealth);
+        currentHealth -= damage/InventoryController.instance.powerUps["armor"];
+      //  Debug.Log(currentHealth);
         if (currentHealth<=0)
         {
             isDead = true;
             enabled = false;
             animator.SetTrigger("Die");
             var enemies=FindObjectsOfType<Enemy>();
+            foreach (Enemy enemy in enemies)
+            {
+                enemy.active = false;
+            }
+            StartCoroutine(WaitForDeath());
+            enabled = false;
+        }
+    }
+
+    public void GetMagicDamage(float damage)
+    {
+        if (isDead)
+        {
+            return;
+        }
+        currentHealth -= damage;
+        //  Debug.Log(currentHealth);
+        if (currentHealth <= 0)
+        {
+            isDead = true;
+            enabled = false;
+            animator.SetTrigger("Die");
+            var enemies = FindObjectsOfType<Enemy>();
             foreach (Enemy enemy in enemies)
             {
                 enemy.active = false;
@@ -111,5 +136,11 @@ public class PlayerController : MonoBehaviour
         Vector2 flip= chooser.sectorToVector(Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.position);
         animator.SetFloat("Horizontal", flip.x);
         animator.SetFloat("Vertical", flip.y);
+    }
+    public void UpdateHealth(float up)
+    {
+        maxHealth *= up;
+        currentHealth *= up;
+
     }
 }

@@ -23,15 +23,15 @@ public class MagicController : MonoBehaviour
         {
            target = GetComponent<Enemy>();
         }
-        SpriteRenderer tmp = Resources.Load<SpriteRenderer>("fireEffect");
+        SpriteRenderer tmp = Resources.Load<SpriteRenderer>("MagicEffects/fireEffect");
         statuses.Add("Fire", tmp.sprite);
-        tmp = Resources.Load<SpriteRenderer>("iceEffect");
+        tmp = Resources.Load<SpriteRenderer>("MagicEffects/iceEffect");
         statuses.Add("Ice", tmp.sprite);
-        tmp = Resources.Load<SpriteRenderer>("waterEffect");
+        tmp = Resources.Load<SpriteRenderer>("MagicEffects/waterEffect");
         statuses.Add("Water", tmp.sprite);
-        tmp = Resources.Load<SpriteRenderer>("elecEffect");
+        tmp = Resources.Load<SpriteRenderer>("MagicEffects/elecEffect");
         statuses.Add("Elec", tmp.sprite);
-        tmp = Resources.Load<SpriteRenderer>("freezeEffect");
+        tmp = Resources.Load<SpriteRenderer>("MagicEffects/freezeEffect");
         statuses.Add("Freeze", tmp.sprite);
         effectHolderOffcet = new Vector3(0, 2, 0);
     }
@@ -76,7 +76,7 @@ public class MagicController : MonoBehaviour
         effectHolder.gameObject.SetActive(true);
         for (int i = 0; i < effect.power; i++)
         {
-            target.BroadcastMessage("GetDamage", 2*effect.power);
+            target.BroadcastMessage("GetMagicDamage", 2*effect.power);
             yield return new WaitForSeconds(1);
         }
         effectHolder.gameObject.SetActive(false);
@@ -239,13 +239,13 @@ public class MagicController : MonoBehaviour
     {
         effectHolder.gameObject.SetActive(false);
         currentStatus = null;
-        target.BroadcastMessage("GetDamage", effect.damage * (1 + (float)effect.resonancePower / 2));
+        target.BroadcastMessage("GetMagicDamage", effect.damage * (1 + (float)effect.resonancePower / 2));
     }
     void conductor(MagicEffect effect)
     {
         effectHolder.gameObject.SetActive(false);
         currentStatus = null;
-        target.BroadcastMessage("GetDamage", effect.damage * (2 + (float)effect.resonancePower / 2));
+        target.BroadcastMessage("GetMagicDamage", effect.damage * (2 + (float)effect.resonancePower / 2));
     }
     void freeze(MagicEffect effect)
     {
