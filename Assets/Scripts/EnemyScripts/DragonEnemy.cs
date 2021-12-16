@@ -83,7 +83,7 @@ public class DragonEnemy : Enemy
 
         InvokeRepeating("flyUp", 0, 0.03f);
         yield return new WaitUntil(()=>!Room.InBounds(rb.position));
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(3);
 
         CancelInvoke("flyUp");
         Animator.SetBool("Fly", true);
@@ -99,15 +99,14 @@ public class DragonEnemy : Enemy
             var multX = Room.bounds.center.x > 0 ? 1 : -1;
 
             var start = new Vector2(-flydir.x*multX, -flydir.y*multY);
-            rb.position = (Vector2)Room.bounds.center + Room.bounds.max*2 * start;
+            rb.position = (Vector2)Room.bounds.center + Room.bounds.max * start;
             var endPos= (Vector2)Room.bounds.center + new Vector2(Mathf.Abs(Room.bounds.max.x),Mathf.Abs(Room.bounds.max.y))* flydir;
             InvokeRepeating("flyDir", 0, 0.03f);
             yield return new WaitUntil(() => Room.InBounds(rb.position));
             StartCoroutine(_flyAttack());
             yield return new WaitUntil(() => !Room.InBounds(rb.position));
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(1.5f);
             CancelInvoke("flyDir");
-            yield return new WaitForSeconds(1f);
         }
         Animator.SetBool("Fly", false);
 

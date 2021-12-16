@@ -31,6 +31,7 @@ public class Enemy : MonoBehaviour
     private GameObject itemPrefab;
     private ItemData[] itemDatas;
     public SpellData spell;
+    private ItemData healItem;
     #endregion privateStatic
     #region publicFields
     public float RunMultiplier
@@ -130,6 +131,7 @@ public class Enemy : MonoBehaviour
     {
         itemPrefab = Resources.Load<GameObject>("Item");
         itemDatas = Resources.LoadAll<ItemData>("Items/");
+        healItem = Resources.Load<ItemData>("Consumables/Flask");
         room = GetComponentInParent<Room>();
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponentInChildren<SpriteRenderer>();
@@ -208,9 +210,13 @@ public class Enemy : MonoBehaviour
         room.Killed(gameObject);
         if (Random.Range(0, 100)<5)
         {
-            Random.InitState(Random.Range(0, 200));
             var tmp = Instantiate(itemPrefab,transform.position,Quaternion.identity,room.transform);
             tmp.GetComponent<ItemScript>().data = itemDatas[Random.Range(0, itemDatas.Length)];
+        }
+        else if (Random.Range(0, 100) < 20)
+        {
+            var tmp = Instantiate(itemPrefab, transform.position, Quaternion.identity, room.transform);
+            tmp.GetComponent<ItemScript>().data = healItem;
         }
         Random.InitState(Random.Range(0, 200));
 

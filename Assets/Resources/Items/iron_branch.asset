@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: add00b6f63b2f9f4eb16f56f2b82f08e, type: 3}
+  m_Name: iron_branch
+  m_EditorClassIdentifier: 
+  image: {fileID: 21300000, guid: d5c9b51c33c065841971d6b9d9c9c2a5, type: 3}
+  itemName: iron branche
+  Attribute: health
+  power: 0.05
+  description: 
+  cost: 0
