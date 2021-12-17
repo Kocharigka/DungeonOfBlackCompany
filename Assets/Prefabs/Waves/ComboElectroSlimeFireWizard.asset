@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94ef7868bfae77c49bfd4309234dad31, type: 3}
+  m_Name: ComboElectroSlimeFireWizard
+  m_EditorClassIdentifier: 
+  enemies:
+  - {fileID: 1479569169379525666, guid: f7ad8192e9040b148adca6f258b01833, type: 3}
+  - {fileID: 1479569169379525666, guid: f7ad8192e9040b148adca6f258b01833, type: 3}
+  - {fileID: 1479569169379525666, guid: f7ad8192e9040b148adca6f258b01833, type: 3}
+  - {fileID: 8066803427251565684, guid: 7a5a88011762f6142ab26797a36a7f94, type: 3}
+  - {fileID: 8066803427251565684, guid: 7a5a88011762f6142ab26797a36a7f94, type: 3}
+  - {fileID: 3318740467457461335, guid: cb2d1257bd919c14d919fed1668139f3, type: 3}
