@@ -608,6 +608,7 @@ MonoBehaviour:
   objLayer:
     serializedVersion: 2
     m_Bits: 0
+  spell: {fileID: 0}
   active: 1
   nearWall: 0
   boss: 0
@@ -631,7 +632,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &4798665020627887855
 MonoBehaviour:

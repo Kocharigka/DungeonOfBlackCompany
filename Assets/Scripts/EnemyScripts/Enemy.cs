@@ -273,6 +273,7 @@ public class Enemy : MonoBehaviour
                 isDead = true;
                 animator.SetTrigger("Die");
                 magic.effectHolder.gameObject.SetActive(false);
+                rb.simulated = false;
                 magic.enabled = false;
                 enabled = false;
                 StartCoroutine(WaitForDeath());

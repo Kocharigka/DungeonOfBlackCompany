@@ -16,3 +16,6 @@ MonoBehaviour:
   itemName: stout sheild
   Attribute: armor
   power: 0.1
+  description: 
+  cost: 0
+  key: e

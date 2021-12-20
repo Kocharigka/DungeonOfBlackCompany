@@ -43,7 +43,8 @@ public class EnemySlime : Enemy
     {
         if (collision.gameObject.tag == "Player"&&inJump)
         {
-            Player.GetDamage(Damage);
+            Player.GetDamage(spell.damage);
+            Player.magic.ApplyEffect(new MagicEffect(spell.element, spell.effectPower, spell.resonancePower, spell.damage));
         }
     }
     public override void PerformAttack(Vector2 playerPosition)

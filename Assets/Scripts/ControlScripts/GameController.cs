@@ -5,10 +5,15 @@ using Edgar.Unity;
 
 public class GameController : MonoBehaviour
 {
-    static string seed;
+    public static string seed="";
+    public static int seedId;
+    public static string nick="dsdfsdf";
+    public static int score=2222;
+    public static (string, string)[] leaderbord= new (string, string)[10];
     static List<(int, string, int)> parsedSeed= new List<(int, string, int)>();
-    static int currentLevel=1;
+    public static int currentLevel=1;
     static bool paused = false;
+    NetController server = new NetController();
 
     // Update is called once per frame
     void Update()
@@ -26,6 +31,8 @@ public class GameController : MonoBehaviour
             paused = !paused;
         }
     }
+
+
     public void ParseSeed(string seed)
     {
         GameController.seed = seed;

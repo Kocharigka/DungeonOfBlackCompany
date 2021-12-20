@@ -606,7 +606,7 @@ MonoBehaviour:
   objLayer:
     serializedVersion: 2
     m_Bits: 1
-  spell: {fileID: 0}
+  spell: {fileID: 11400000, guid: 133add012fe431547b8e1d6fd16c3a92, type: 2}
   active: 1
   nearWall: 0
   boss: 0
@@ -645,7 +645,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!58 &278285135710738037
 CircleCollider2D:
