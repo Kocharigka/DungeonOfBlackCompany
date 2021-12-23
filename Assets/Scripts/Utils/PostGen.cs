@@ -22,7 +22,7 @@ public class PostGen : MonoBehaviour
         {
             if (Regex.IsMatch(child.name, ".*StartRoom.*"))
             {
-                GameObject.Find("Player").transform.position = child.position;
+                //GameObject.Find("Player").transform.position = child.position;
             }
             else
             {
