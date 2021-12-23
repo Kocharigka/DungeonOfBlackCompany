@@ -21,10 +21,8 @@ public class ItemScript : MonoBehaviour
     {
         if (takeButton.activeInHierarchy)
         {
-            Debug.Log("active");
             if (Input.GetKeyDown(KeyCode.R))
             {
-                Debug.Log("R");
 
                 player.GetComponent<InventoryController>().Take(data);
                 Destroy(gameObject);

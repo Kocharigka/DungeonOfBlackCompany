@@ -44,4 +44,13 @@ public class InventoryController : MonoBehaviour
         }
 
     }
+    public string GenerateInventorySeed()
+    {
+        var resp = "";
+        foreach (var kvp in inventory)
+        {
+            resp += kvp.Key + kvp.Value.ToString();
+        }
+        return resp;
+    }
 }

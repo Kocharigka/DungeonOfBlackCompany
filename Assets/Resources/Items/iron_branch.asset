@@ -18,3 +18,4 @@ MonoBehaviour:
   power: 0.05
   description: 
   cost: 0
+  key: d

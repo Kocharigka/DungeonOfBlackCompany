@@ -59,8 +59,6 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("Vertical", direction.y);
         }
         animator.SetFloat("Speed", direction.sqrMagnitude);
-
-
     }
     private void FixedUpdate()
     {
@@ -146,5 +144,9 @@ public class PlayerController : MonoBehaviour
     public void RestoreHealth(float hp)
     {
         currentHealth = currentHealth + hp > maxHealth ? maxHealth : currentHealth + hp;
+    }
+    public float getHealthPercents()
+    {
+        return currentHealth / maxHealth;
     }
 }

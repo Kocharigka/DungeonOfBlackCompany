@@ -16,3 +16,6 @@ MonoBehaviour:
   itemName: armlet of morddigian
   Attribute: damage
   power: 0.1
+  description: 
+  cost: 0
+  key: a

@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -498,7 +498,7 @@ Animator:
   m_GameObject: {fileID: 2902670588370328973}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: c3a87b3ea2df57c4ba44814a43097593, type: 2}
+  m_Controller: {fileID: 9100000, guid: 79ad32758ae6feb4392268f310f01e0f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -524,6 +524,7 @@ MonoBehaviour:
   objLayer:
     serializedVersion: 2
     m_Bits: 1
+  spell: {fileID: 11400000, guid: 4d4d0055373e9e14ca3ea7e7bb4cfa5c, type: 2}
   active: 1
   nearWall: 0
   boss: 0
@@ -562,7 +563,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!58 &5884167425018560148
 CircleCollider2D:
