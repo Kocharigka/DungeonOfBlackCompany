@@ -153,6 +153,11 @@ public class Enemy : MonoBehaviour
         {
             healthBar.transform.position = Camera.main.WorldToScreenPoint(transform.position + healhBarOffset);
         }
+        else
+        {
+            healthBar.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width/2, Screen.height-40, 0));
+
+        }
         if (FacePlayer)
         {
             Vector2 playerDir = chooser.sectorToVector(transform.position, Player.transform.position);
