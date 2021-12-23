@@ -8,7 +8,7 @@ public class Entrance : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         {
-            collision.transform.position = GameObject.Find("Room - StartRoomEdgar").transform.position;
+            collision.transform.position = GameObject.Find("Room - StartRoomEdgar").GetComponentInChildren<SpriteRenderer>().transform.position-new Vector3(0,5,0);
         }
     }
 }
