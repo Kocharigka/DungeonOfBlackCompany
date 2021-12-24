@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     public Animator animator;
     private float attackRange = 1f;  
-    private float maxHealth=100000;
+    private float maxHealth=100;
     private float currentHealth;
     public Transform projectileHolder;
     public bool isAttacking = false;
@@ -24,7 +25,13 @@ public class PlayerController : MonoBehaviour
     public float damage=10;
     public List<Collider2D> damagedEnemies=new List<Collider2D>();
     public Collider2D hurtBox;
-
+    public Slider healthbar;
+    public bool minimapOn;
+    public GameObject minimap;
+    public WeaponData weapon;
+    public DashData dash;
+    public Dictionary<int,SpellData> spells = new Dictionary<int,SpellData>();
+    public int money=1000;
 
     public float AttackRange
     {
@@ -34,6 +41,8 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        animator = GetComponent<Animator>();
+
 
     }
 
@@ -44,13 +53,22 @@ public class PlayerController : MonoBehaviour
         moveSpeed = defaultMoveSpeed;
         canFlip = true;
         currentHealth = maxHealth;
+        healthbar.maxValue = maxHealth;
+        healthbar.value = currentHealth;
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (GameController.paused)
+        {
+            return;
+        }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            MinimapContorol();            
+        }
         direction.x = Input.GetAxisRaw("Horizontal");
         direction.y = Input.GetAxisRaw("Vertical");
         if (direction!=new Vector2(0,0) && canFlip)
@@ -59,6 +77,12 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("Vertical", direction.y);
         }
         animator.SetFloat("Speed", direction.sqrMagnitude);
+    }
+
+    public void MinimapContorol()
+    {
+        minimapOn = !minimapOn;
+        minimap.SetActive(minimapOn);
     }
     private void FixedUpdate()
     {
@@ -84,6 +108,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
         currentHealth -= damage/InventoryController.instance.powerUps["armor"];
+        healthbar.value = currentHealth;
       //  Debug.Log(currentHealth);
         if (currentHealth<=0)
         {
@@ -131,6 +156,10 @@ public class PlayerController : MonoBehaviour
     }
     public void FlipToDirection()
     {
+        if (GameController.paused)
+        {
+            return;
+        }
         Vector2 flip= chooser.sectorToVector(Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.position);
         animator.SetFloat("Horizontal", flip.x);
         animator.SetFloat("Vertical", flip.y);
@@ -139,11 +168,14 @@ public class PlayerController : MonoBehaviour
     {
         maxHealth *= up;
         currentHealth *= up;
+        healthbar.maxValue = maxHealth;
+        healthbar.value = currentHealth;
 
     }
     public void RestoreHealth(float hp)
     {
         currentHealth = currentHealth + hp > maxHealth ? maxHealth : currentHealth + hp;
+        healthbar.value = currentHealth;
     }
     public float getHealthPercents()
     {

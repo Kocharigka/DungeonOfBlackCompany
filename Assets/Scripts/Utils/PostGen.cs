@@ -8,21 +8,26 @@ public class PostGen : MonoBehaviour
 {
     WaveData[] waves;
     WaveData[] bosses;
-    void Start()
-    {
+    public bool daily=false;
 
+    public void AfterStart()
+    {
         waves = Resources.LoadAll<WaveData>("Waves/");
         bosses = Resources.LoadAll<WaveData>("WavesBoss/");
-        Invoke("AfterStart", 0.01f);
+        StartCoroutine(Gen());
     }
-
-    void AfterStart()
+    IEnumerator Gen()
     {
+        yield return new WaitUntil(()=>GameObject.Find("Generated Level")!=null);
         foreach (Transform child in GameObject.Find("Rooms").transform)
         {
             if (Regex.IsMatch(child.name, ".*StartRoom.*"))
             {
-                //GameObject.Find("Player").transform.position = child.position;
+                if (daily)
+                {
+                    GameObject.Find("Player").transform.position = child.position;
+
+                }
             }
             else
             {
@@ -42,26 +47,21 @@ public class PostGen : MonoBehaviour
                             rm.wavesData.Add(waves[Random.Range(0, waves.Length - 1)]);
 
                         }
-                    } }
-                
+                    }
+                }
+
             }
 
         }
     }
     public void BarsCtrl(bool state)
     {
-        foreach(Transform child in transform)
+        foreach (Transform room in GameObject.Find("Rooms").transform)
         {
-            if (child.name=="Rooms")
+            if (Regex.IsMatch(room.name, ".*Corridor.*"))
             {
-                foreach (Transform room in child)
-                {
-                    if (Regex.IsMatch(room.name, ".*Corridor.*"))
-                    {
-                        room.GetComponentInChildren<Animator>().SetBool("Opened", state);
-                    }
-                }
+                room.GetComponentInChildren<Animator>().SetBool("Opened", state);
             }
-        }
+        }        
     }
 }

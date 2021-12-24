@@ -8,6 +8,8 @@ public class ItemScript : MonoBehaviour
     private SpriteRenderer rend;
     private PlayerController player;
     [SerializeField]private GameObject takeButton;
+    public int cost;
+    public GameObject costHolder;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +23,7 @@ public class ItemScript : MonoBehaviour
     {
         if (takeButton.activeInHierarchy)
         {
-            if (Input.GetKeyDown(KeyCode.R))
+            if (!GameController.paused&& Input.GetKeyDown(KeyCode.R))
             {
 
                 player.GetComponent<InventoryController>().Take(data);
@@ -35,6 +37,7 @@ public class ItemScript : MonoBehaviour
         if (Vector2.Distance(transform.position,player.transform.position)<2)
         {
             takeButton.SetActive(true);
+            takeButton.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(1, 0.5f, 0));
         }
         else
         {

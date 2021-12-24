@@ -19,6 +19,7 @@ public class SpellControl : MonoBehaviour
     float nextIter = 0;
     bool shoot = false;
     float target;
+    public int counter;
 
     void Start()
     {
@@ -28,6 +29,7 @@ public class SpellControl : MonoBehaviour
         timer = cooldown;
         spellImage.sprite = spell.sprite;
         magic = GetComponent<MagicController>();
+        PlayerController.instance.spells.Add(counter,spell);
 
     }
 
@@ -45,7 +47,7 @@ public class SpellControl : MonoBehaviour
             fill.color = new Color(0, 0, 0, 0);
             slider.value = 0;
         }
-        if (Input.GetKeyDown(key)&&!player.isCast)
+        if (Input.GetKeyDown(key)&&!player.isCast&&!GameController.paused)
         {
             player.isCast = true;
             player.animator.SetTrigger(spell.triggerName);

@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Position: {x: 400, y: 158}
-  Name: Room
+  Name: StartRoom
   IndividualRoomTemplates:
   - {fileID: 2661406462457180413, guid: d4833d886a1e9a045b74deefe4721a7b, type: 3}
   RoomTemplateSets: []

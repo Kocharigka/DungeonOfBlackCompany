@@ -15,14 +15,14 @@ public class Room : MonoBehaviour
 
     private void Start()
     {
-        dungeonHolder = GameObject.Find("Generated Level");
+        dungeonHolder = GameObject.Find("GameController");
         bounds=GetComponent<Collider2D>().bounds;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         waves = wavesData.Count;
 
-        if (collision.tag == "Player" && !passed && currentWave == 0)
+        if (collision.tag == "Player" && !collision.isTrigger&&!passed && currentWave == 0)
         {
             dungeonHolder.GetComponent<PostGen>().BarsCtrl(false);
             InvokeRepeating("checkEnemies", 0, 1f);
