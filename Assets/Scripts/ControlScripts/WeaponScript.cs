@@ -13,7 +13,7 @@ public class WeaponScript : MonoBehaviour
         player = GetComponentInParent<PlayerController>();
         player.animator.SetFloat("Weapon", currentWeapon.weaponAnim);
         weaponSlider.sprite = currentWeapon.icon;
-
+        PlayerController.instance.weapon = currentWeapon;
 
     }
     void Update()
@@ -23,7 +23,7 @@ public class WeaponScript : MonoBehaviour
 
     void Attack()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && !player.isAttacking)
+        if (!GameController.paused&& Input.GetKeyDown(KeyCode.Mouse0) && !player.isAttacking)
         {
             player.damagedEnemies.Clear();
             player.isAttacking = true;
@@ -31,7 +31,7 @@ public class WeaponScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag=="Enemy")
+        if (collision.tag=="Enemy"&&collision.isTrigger)
         {
             if (player.damagedEnemies.Contains(collision))
             {
@@ -53,6 +53,7 @@ public class WeaponScript : MonoBehaviour
         var tmp = currentWeapon;
         currentWeapon = data;
         weaponSlider.sprite = data.icon;
+        PlayerController.instance.weapon = currentWeapon;
         return tmp;
 
     }

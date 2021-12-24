@@ -63,6 +63,10 @@ public class NetController : MonoBehaviour
         var responseString = await client.GetStringAsync("http://" + server + "/api/v1/daily/leaderbord/");
         responseString = "{ \"leaderbord\":[" + responseString.Trim('[', ']') + "]}";
         var b = JsonUtility.FromJson<Leaderbord>(responseString);
+        foreach (LeaderbordRecord item in b.leaderbord)
+        {
+            GameController.leaderbord.Add((item.name,item.score));
+        }
         Debug.Log(b.leaderbord[0].name);
     }
     public async void GetSave()
