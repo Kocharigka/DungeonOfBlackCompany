@@ -225,6 +225,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   spell: {fileID: 0}
+  particles: {fileID: 0}
   active: 1
   nearWall: 0
   boss: 0

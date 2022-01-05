@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d2fa79c2568c1c4385bfa5bb95d878e, type: 3}
-  m_Name: ArcaneBolt
+  m_Name: ArrowEnemy
   m_EditorClassIdentifier: 
-  sprite: {fileID: -6337454245738838097, guid: bd2d9624e18d55341843ae9670286fd8, type: 3}
+  sprite: {fileID: 7612248872184694477, guid: 1b45438081fa9f642bdf269094d5c269, type: 3}
   speed: 20
-  animator: {fileID: 9100000, guid: 624f7360144a27148acafaa691e99d40, type: 2}
-  damage: 5
+  animator: {fileID: 9100000, guid: 0ddcc9c7eb51c9e4581ad5725675362f, type: 2}
+  damage: 10
   element: None
-  effectPower: 2
-  resonancePower: 2
-  inGameSprite: {fileID: 0}
-  triggerName: Cast1
+  effectPower: 0
+  resonancePower: 0
+  inGameSprite: {fileID: 7612248872184694477, guid: 1b45438081fa9f642bdf269094d5c269, type: 3}
+  triggerName: Bow
   moneyCost: 0
-  cooldown: 3
+  cooldown: 7
   target: Player

@@ -32,6 +32,7 @@ public class Enemy : MonoBehaviour
     private ItemData[] itemDatas;
     public SpellData spell;
     private ItemData healItem;
+    public ParticleSystem particles;
     #endregion privateStatic
     #region publicFields
     public float RunMultiplier
@@ -219,6 +220,7 @@ public class Enemy : MonoBehaviour
             tmp.GetComponent<ItemScript>().data = healItem;
         }
         Random.InitState(Random.Range(0, 200));
+        PlayerController.instance.AddMoney();
 
     }
     void setSpawnDuration()
@@ -267,6 +269,12 @@ public class Enemy : MonoBehaviour
             healthBar.gameObject.SetActive(true);
             currentHealth -= damage*InventoryController.instance.powerUps["damage"];
             healthBar.value = currentHealth;
+            if (particles!=null)
+            {
+                Debug.Log(name);
+                particles.Play();
+
+            }
         
             if (currentHealth <= 0)
             {
