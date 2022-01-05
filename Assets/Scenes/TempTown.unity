@@ -10663,7 +10663,7 @@ PrefabInstance:
       objectReference: {fileID: 1718389583}
     - target: {fileID: 7817380648946943555, guid: 2a5b0f8bdf5ec634caea75835890b651, type: 3}
       propertyPath: rerollCount
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a5b0f8bdf5ec634caea75835890b651, type: 3}
