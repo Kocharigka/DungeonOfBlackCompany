@@ -19,8 +19,8 @@ MonoBehaviour:
   element: Elec
   effectPower: 2
   resonancePower: 2
-  inGameSprite: {fileID: 0}
+  inGameSprite: {fileID: -8530845180033902074, guid: cbf7db79ffdcf8143bd2027f42d62037, type: 3}
   triggerName: Cast1
-  moneyCost: 0
+  moneyCost: 300
   cooldown: 5
   target: Enemy

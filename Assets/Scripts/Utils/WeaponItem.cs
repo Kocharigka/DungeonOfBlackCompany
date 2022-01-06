@@ -11,6 +11,7 @@ public class WeaponItem : MonoBehaviour
     public int cost = 0;
     [SerializeField] private GameObject takeButton;
     public GameObject costHolder;
+    private GameObject reroll;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,8 @@ public class WeaponItem : MonoBehaviour
         rend = GetComponent<SpriteRenderer>();
         rend.sprite = data.inGameSprite;
         costHolder.GetComponentInChildren<Text>().text = cost.ToString();
+        reroll = GameObject.Find("rerollWeapon");
+
     }
 
 
@@ -31,6 +34,7 @@ public class WeaponItem : MonoBehaviour
                 cost = 0;
                 data=player.GetComponentInChildren<WeaponScript>().ChangeWeapon(data);
                 rend.sprite = data.inGameSprite;
+                DestroyImmediate(reroll);
             }
         }
     }

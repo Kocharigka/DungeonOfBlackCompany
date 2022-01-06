@@ -19,8 +19,8 @@ MonoBehaviour:
   element: Ice
   effectPower: 2
   resonancePower: 2
-  inGameSprite: {fileID: 0}
+  inGameSprite: {fileID: 21300000, guid: a9c0f3f7166b62d4b826db18e783599f, type: 3}
   triggerName: Cast1
-  moneyCost: 0
+  moneyCost: 100
   cooldown: 3
   target: Enemy

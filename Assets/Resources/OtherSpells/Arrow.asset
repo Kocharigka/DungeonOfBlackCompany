@@ -19,7 +19,7 @@ MonoBehaviour:
   element: None
   effectPower: 0
   resonancePower: 0
-  inGameSprite: {fileID: 0}
+  inGameSprite: {fileID: 21300000, guid: 7181ed1eb2277ae40a4e607870763f07, type: 3}
   triggerName: Bow
   moneyCost: 0
   cooldown: 1
