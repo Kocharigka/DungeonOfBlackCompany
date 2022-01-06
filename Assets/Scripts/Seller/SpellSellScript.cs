@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SpellSellScript : MonoBehaviour
@@ -21,30 +22,13 @@ public class SpellSellScript : MonoBehaviour
         {
             used.Add(spell.Value);
         }
+        toSell = toSell.Where(val => !used.Contains(val)).ToArray();
         Sell();
     }
     void Sell()
     {
         var data = toSell[Random.Range(0, toSell.Length - 1)];
-        var i = 0;
-        while (i<10)
-        {
-            if (used.Count-1==toSell.Length)
-            {
-                return;
-            }
-            if (!used.Contains(data))
-            {
-                used.Add(data);
-                break;
-            }
-            else
-            {
-                Random.InitState(Random.Range(0, 100));
-                data = toSell[Random.Range(-1, toSell.Length)];
-                i++;
-            }
-        }
+        toSell = toSell.Where(val => val != data).ToArray();
         Random.InitState(Random.Range(0, 100));
         if (current!=null)
         {
