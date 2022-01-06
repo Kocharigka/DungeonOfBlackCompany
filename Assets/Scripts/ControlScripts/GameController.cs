@@ -159,4 +159,13 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         StartCoroutine(waitForLevelLoad(true));
     }
+
+    public void ExitToMenu()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        ResumeGame();
+        paused = false;
+        pauseScreen.SetActive(false);
+        DestroyImmediate(gameObject);
+    }
 }
