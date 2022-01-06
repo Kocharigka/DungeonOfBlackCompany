@@ -25,7 +25,8 @@ public class WeaponSellScript : MonoBehaviour
         var data = toSell[Random.Range(0, toSell.Length - 1)];
         Debug.Log(used.Count);
         Debug.Log(toSell.Length);
-        while (true)
+        var i = 0;
+        while (i<10)
         {
             if (used.Count == toSell.Length)
             {
@@ -40,6 +41,8 @@ public class WeaponSellScript : MonoBehaviour
             {
                 Random.InitState(Random.Range(0, 100));
                 data = toSell[Random.Range(-1, toSell.Length)];
+                Debug.Log(data);
+                i++;
             }
         }
         Debug.Log(data.name);

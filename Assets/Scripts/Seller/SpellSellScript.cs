@@ -26,7 +26,8 @@ public class SpellSellScript : MonoBehaviour
     void Sell()
     {
         var data = toSell[Random.Range(0, toSell.Length - 1)];
-        while (true)
+        var i = 0;
+        while (i<10)
         {
             if (used.Count-1==toSell.Length)
             {
@@ -41,6 +42,7 @@ public class SpellSellScript : MonoBehaviour
             {
                 Random.InitState(Random.Range(0, 100));
                 data = toSell[Random.Range(-1, toSell.Length)];
+                i++;
             }
         }
         Random.InitState(Random.Range(0, 100));
