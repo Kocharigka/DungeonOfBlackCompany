@@ -14,6 +14,8 @@ public class WeaponScript : MonoBehaviour
         player.animator.SetFloat("Weapon", currentWeapon.weaponAnim);
         weaponSlider.sprite = currentWeapon.icon;
         PlayerController.instance.weapon = currentWeapon;
+        player.damage = currentWeapon.damage;
+
 
     }
     void Update()
@@ -50,6 +52,7 @@ public class WeaponScript : MonoBehaviour
     public WeaponData ChangeWeapon(WeaponData data)
     {
         player.animator.SetFloat("Weapon", data.weaponAnim);
+        player.damage = data.damage;
         var tmp = currentWeapon;
         currentWeapon = data;
         weaponSlider.sprite = data.icon;

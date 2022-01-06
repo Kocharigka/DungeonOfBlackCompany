@@ -19,8 +19,8 @@ MonoBehaviour:
   element: Fire
   effectPower: 2
   resonancePower: 2
-  inGameSprite: {fileID: 0}
+  inGameSprite: {fileID: -6607481912129624618, guid: be5bb43d07f351f42a00cd85cb89da15, type: 3}
   triggerName: Cast1
-  moneyCost: 0
+  moneyCost: 100
   cooldown: 3
   target: Enemy

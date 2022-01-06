@@ -19,6 +19,7 @@ public class EnemyDog : Enemy
         HealhBarOffset = new Vector3(0, 1, 0);
         AttackRadius = 1;
         Damage = 10;
+        
 
     }
     IEnumerator WaitForBite()

@@ -16,7 +16,7 @@ public class EnemyArcher : Enemy
         HealhBarOffset = new Vector3(0, 2f, 0);
         DefaultMoveSpeed = 3;
         shooter = GetComponent<Shooter>();
-        spell = Resources.Load<SpellData>("Spells/ArrowEnemy");
+        spell = Resources.Load<SpellData>("OtherSpells/ArrowEnemy");
         cooldown = spell.cooldown;
     }
 

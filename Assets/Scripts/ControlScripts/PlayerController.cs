@@ -8,30 +8,31 @@ public class PlayerController : MonoBehaviour
 {
     SectorChooser chooser = new SectorChooser();
     private Rigidbody2D rb;
-    public Vector2 direction;
-    public float moveSpeed;
-    public Animator animator;
+    [HideInInspector]public Vector2 direction;
+    [HideInInspector]public float moveSpeed;
+    [HideInInspector]public Animator animator;
     private float attackRange = 1f;  
     private float maxHealth=100;
     private float currentHealth;
-    public Transform projectileHolder;
-    public bool isAttacking = false;
-    public static PlayerController instance;
-    public float defaultMoveSpeed;
-    public bool canFlip;
-    public bool isCast = false;
-    public MagicController magic;
+    [HideInInspector]public Transform projectileHolder;
+    [HideInInspector]public bool isAttacking = false;
+    [HideInInspector]public static PlayerController instance;
+    [HideInInspector]public float defaultMoveSpeed;
+    [HideInInspector]public bool canFlip;
+    [HideInInspector]public bool isCast = false;
+    [HideInInspector]public MagicController magic;
     bool isDead = false;
-    public float damage=10;
-    public List<Collider2D> damagedEnemies=new List<Collider2D>();
+    [HideInInspector]public float damage=10;
+    [HideInInspector]public List<Collider2D> damagedEnemies=new List<Collider2D>();
     public Collider2D hurtBox;
     public Slider healthbar;
     public bool minimapOn;
     public GameObject minimap;
-    public WeaponData weapon;
-    public DashData dash;
-    public Dictionary<int,SpellData> spells = new Dictionary<int,SpellData>();
+    [HideInInspector]public WeaponData weapon;
+    [HideInInspector]public DashData dash;
+    public Dictionary<int, SpellData> spells;
     public int money=1000;
+    public bool bying = false;
 
     public float AttackRange
     {
@@ -40,10 +41,9 @@ public class PlayerController : MonoBehaviour
     }
     private void Awake()
     {
+        spells = new Dictionary<int, SpellData>();
         instance = this;
         animator = GetComponent<Animator>();
-
-
     }
 
     // Start is called before the first frame update
@@ -113,6 +113,7 @@ public class PlayerController : MonoBehaviour
         if (currentHealth<=0)
         {
             isDead = true;
+            GetComponentInChildren<Canvas>().gameObject.SetActive(false);
             enabled = false;
             animator.SetTrigger("Die");
             var enemies=FindObjectsOfType<Enemy>();
@@ -180,5 +181,20 @@ public class PlayerController : MonoBehaviour
     public float getHealthPercents()
     {
         return currentHealth / maxHealth;
+    }
+    public void AddMoney()
+    {
+        money += 30;
+    }
+    public SpellData TakeSpell(SpellData spell,KeyCode key)
+    {
+        foreach (var component in GetComponents<SpellControl>())
+        {
+            if (component.key==key)
+            {
+                return component.ChangeSpell(spell);
+            }
+        }
+        return null;
     }
 }
