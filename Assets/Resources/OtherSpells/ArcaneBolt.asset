@@ -17,8 +17,8 @@ MonoBehaviour:
   animator: {fileID: 9100000, guid: 624f7360144a27148acafaa691e99d40, type: 2}
   damage: 5
   element: None
-  effectPower: 0
-  resonancePower: 0
+  effectPower: 2
+  resonancePower: 2
   inGameSprite: {fileID: -6337454245738838097, guid: bd2d9624e18d55341843ae9670286fd8, type: 3}
   triggerName: Cast1
   moneyCost: 0

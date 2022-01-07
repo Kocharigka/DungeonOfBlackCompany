@@ -157,11 +157,8 @@ public class Enemy : MonoBehaviour
         if (FacePlayer)
         {
             Vector2 playerDir = chooser.sectorToVector(transform.position, Player.transform.position);
-            if (name.Substring(0,5)!= "Slime")
-            {
-                Animator.SetFloat("Horizontal", -playerDir.x);
-                Animator.SetFloat("Vertical", -playerDir.y);
-            }
+            Animator.SetFloat("Horizontal", -playerDir.x);
+            Animator.SetFloat("Vertical", -playerDir.y);
         }
         if (offset <= spawnDuration)
         {
