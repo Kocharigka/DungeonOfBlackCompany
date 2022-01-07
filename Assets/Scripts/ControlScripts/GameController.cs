@@ -7,13 +7,13 @@ using System.Text.RegularExpressions;
 using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
-    public static string seed="";
+    public static string seed = "";
     public static int seedId;
-    public static string nick="dsdfsdf";
-    public static int score=2222;
-    public static List<(string, int)> leaderbord= new List<(string, int)>();
-    static List<(int, string, int)> parsedSeed= new List<(int, string, int)>();
-    public static int currentLevel=1;
+    public static string nick = "Unnamed";
+    public static int score = 2222;
+    public static List<(string, int)> leaderbord = new List<(string, int)>();
+    static List<(int, string, int)> parsedSeed = new List<(int, string, int)>();
+    public static int currentLevel = 1;
     public static bool paused = false;
     NetController server = new NetController();
     public GameObject pauseScreen;
@@ -32,7 +32,7 @@ public class GameController : MonoBehaviour
         }
     }
     public void Pause()
-    {        
+    {
         if (paused)
         {
             ResumeGame();
@@ -45,7 +45,7 @@ public class GameController : MonoBehaviour
         pauseScreen.SetActive(!paused);
         paused = !paused;
         PlayerController.instance.isAttacking = false;
-        
+
     }
 
 
@@ -63,7 +63,7 @@ public class GameController : MonoBehaviour
     {
         var generator = GameObject.Find("Generator").GetComponent<DungeonGenerator>();
         var level = GetComponent<PostGen>();
-        var currentLevelSeed = parsedSeed[currentLevel-1];
+        var currentLevelSeed = parsedSeed[currentLevel - 1];
         Debug.Log(currentLevelSeed);
         generator.RandomGeneratorSeed = currentLevelSeed.Item1;
         generator.UseRandomSeed = false;
@@ -104,6 +104,7 @@ public class GameController : MonoBehaviour
     }
     public void StartGame()
     {
+
         GenerateSeed();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         StartCoroutine(waitForLevelLoad(false));
@@ -136,7 +137,7 @@ public class GameController : MonoBehaviour
     {
         leaderbord = new List<(string, int)>();
         seed = "";
-        yield return new WaitUntil(()=>seed!="");
+        yield return new WaitUntil(() => seed != "");
 
         window.transform.Find("Loading").gameObject.SetActive(false);
         window.transform.Find("Title").gameObject.SetActive(true);
@@ -167,5 +168,38 @@ public class GameController : MonoBehaviour
         paused = false;
         pauseScreen.SetActive(false);
         DestroyImmediate(gameObject);
+    }
+    public void changeNick()
+    {
+        nick = GameObject.Find("NickField").GetComponent<InputField>().text;
+    }
+    public void Faid(bool faidTIme,Image img)
+    {
+        StartCoroutine(FadeImage(faidTIme, img));
+    }
+    IEnumerator FadeImage(bool fadeAway,Image img)
+    {
+        // fade from opaque to transparent
+        if (fadeAway)
+        {
+            // loop over 1 second backwards
+            for (float i = 1; i >= 0; i -= Time.deltaTime)
+            {
+                // set color with i as alpha
+                img.color = new Color(0, 0, 0, i);
+                yield return null;
+            }
+        }
+        // fade from transparent to opaque
+        else
+        {
+            // loop over 1 second
+            for (float i = 0; i <= 1; i += Time.deltaTime)
+            {
+                // set color with i as alpha
+                img.color = new Color(0, 0, 0, i);
+                yield return null;
+            }
+        }
     }
 }
