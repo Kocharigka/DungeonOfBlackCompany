@@ -212,6 +212,7 @@ public class Enemy : MonoBehaviour
     private void OnDestroy()
     {
         room.Killed(gameObject);
+        GameController.enemiesCount++;
         if (Random.Range(0, 100)<5)
         {
             var tmp = Instantiate(itemPrefab,transform.position,Quaternion.identity,room.transform);

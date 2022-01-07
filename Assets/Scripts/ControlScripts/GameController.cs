@@ -18,6 +18,8 @@ public class GameController : MonoBehaviour
     NetController server = new NetController();
     public GameObject pauseScreen;
     public Image fader;
+    public static int enemiesCount;
+    public static int seconds;
 
 
     private void Awake()
@@ -76,22 +78,22 @@ public class GameController : MonoBehaviour
         level.daily = daily;
         level.AfterStart();
         Faid(true, GameObject.Find("Fader").GetComponent<Image>());
-        if (daily)
-        {
-            StartCoroutine(countScore());
-        }
-
+        StartCoroutine(countScore(daily));
     }
 
-    IEnumerator countScore()
+    IEnumerator countScore(bool daily)
     {
         score = 2000;
         while (!PlayerController.instance.isDead)
         {
             score--;
             yield return new WaitForSeconds(1);
+            seconds++;
         }
-        server.PostLeaderbord();
+        if (daily)
+        {
+            server.PostLeaderbord();
+        }
     }
 
     void PauseGame()
@@ -226,5 +228,10 @@ public class GameController : MonoBehaviour
                 yield return null;
             }
         }
+    }
+    public void Replay()
+    {
+        ExitToMenu();
+        StartGame();
     }
 }
