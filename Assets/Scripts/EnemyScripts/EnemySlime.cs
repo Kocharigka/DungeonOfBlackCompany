@@ -39,8 +39,8 @@ public class EnemySlime : Enemy
         inJump = false;
 
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {  
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
         if (collision.gameObject.tag == "Player"&&inJump)
         {
             Player.GetDamage(spell.damage);

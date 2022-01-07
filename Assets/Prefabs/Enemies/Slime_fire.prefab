@@ -155,8 +155,7 @@ MonoBehaviour:
   objLayer:
     serializedVersion: 2
     m_Bits: 1
-  spell: {fileID: 11400000, guid: 91676da92f847634baecdd8b8a1713ef, type: 2}
-  particles: {fileID: 0}
+  spell: {fileID: 11400000, guid: 640e8a56b02a59243847c0b4094a2639, type: 2}
   active: 1
   nearWall: 0
   boss: 0
