@@ -15,3 +15,6 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 96ac53c7ac63ba74ba8e15d666b2df25, type: 3}
   inGameSprite: {fileID: 21300000, guid: 96ac53c7ac63ba74ba8e15d666b2df25, type: 3}
   weaponAnim: -1
+  damage: 10
+  speed: 2
+  cost: 200

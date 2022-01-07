@@ -32,6 +32,7 @@ public class Enemy : MonoBehaviour
     private ItemData[] itemDatas;
     public SpellData spell;
     private ItemData healItem;
+    public ParticleSystem particles;
     #endregion privateStatic
     #region publicFields
     public float RunMultiplier
@@ -156,8 +157,11 @@ public class Enemy : MonoBehaviour
         if (FacePlayer)
         {
             Vector2 playerDir = chooser.sectorToVector(transform.position, Player.transform.position);
-            Animator.SetFloat("Horizontal", -playerDir.x);
-            Animator.SetFloat("Vertical", -playerDir.y);
+            if (name.Substring(0,5)!= "Slime")
+            {
+                Animator.SetFloat("Horizontal", -playerDir.x);
+                Animator.SetFloat("Vertical", -playerDir.y);
+            }
         }
         if (offset <= spawnDuration)
         {
@@ -189,7 +193,7 @@ public class Enemy : MonoBehaviour
         FollowPlayer(getPlayerPosition());
         if (Input.GetKeyDown(KeyCode.K))
         {
-            GetDamage(100);
+            DestroyImmediate(gameObject);
         }
     }
 
@@ -219,6 +223,8 @@ public class Enemy : MonoBehaviour
             tmp.GetComponent<ItemScript>().data = healItem;
         }
         Random.InitState(Random.Range(0, 200));
+        PlayerController.instance.AddMoney();
+        GameController.score += 20;
 
     }
     void setSpawnDuration()
@@ -267,12 +273,19 @@ public class Enemy : MonoBehaviour
             healthBar.gameObject.SetActive(true);
             currentHealth -= damage*InventoryController.instance.powerUps["damage"];
             healthBar.value = currentHealth;
+            if (particles!=null)
+            {
+                Debug.Log(name);
+                particles.Play();
+
+            }
         
             if (currentHealth <= 0)
             {
                 isDead = true;
                 animator.SetTrigger("Die");
                 magic.effectHolder.gameObject.SetActive(false);
+                rb.simulated = false;
                 magic.enabled = false;
                 enabled = false;
                 StartCoroutine(WaitForDeath());

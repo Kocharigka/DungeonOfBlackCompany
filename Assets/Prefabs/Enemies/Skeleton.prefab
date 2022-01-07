@@ -416,7 +416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -545,8 +545,11 @@ MonoBehaviour:
   objLayer:
     serializedVersion: 2
     m_Bits: 1
+  spell: {fileID: 0}
   active: 1
   nearWall: 0
+  boss: 0
+  FacePlayer: 1
 --- !u!114 &5727793966165166581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -573,6 +576,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   effectHolder: {fileID: 5727793964846517640}
+  holderFreeze: 0
 --- !u!50 &5727793966165166577
 Rigidbody2D:
   serializedVersion: 4
@@ -592,7 +596,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &5727793966165166576
 BoxCollider2D:

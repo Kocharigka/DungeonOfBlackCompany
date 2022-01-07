@@ -32,7 +32,7 @@ public class EnemyMage : Enemy
         if (Vector2.Distance(transform.position, playerPosition) <= 4&&tpTimer>tpCooldown&&cdTimer>2)
         {
             tpTimer = 0;
-            Animator.SetTrigger("Teleport");
+            //Animator.SetTrigger("Teleport");
         }
         if (Vector2.Distance(transform.position, playerPosition) <= dangerRadius&&!nearWall)
         {

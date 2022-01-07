@@ -39,11 +39,12 @@ public class EnemySlime : Enemy
         inJump = false;
 
     }
-    public void OnCollisionEnter2D(Collision2D collision)
-    {
+    private void OnTriggerEnter2D(Collider2D collision)
+    {  
         if (collision.gameObject.tag == "Player"&&inJump)
         {
-            Player.GetDamage(Damage);
+            Player.GetDamage(spell.damage);
+            Player.magic.ApplyEffect(new MagicEffect(spell.element, spell.effectPower, spell.resonancePower, spell.damage));
         }
     }
     public override void PerformAttack(Vector2 playerPosition)
