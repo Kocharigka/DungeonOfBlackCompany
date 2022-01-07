@@ -157,8 +157,11 @@ public class Enemy : MonoBehaviour
         if (FacePlayer)
         {
             Vector2 playerDir = chooser.sectorToVector(transform.position, Player.transform.position);
-            Animator.SetFloat("Horizontal", -playerDir.x);
-            Animator.SetFloat("Vertical", -playerDir.y);
+            if (name.Substring(0,5)!= "Slime")
+            {
+                Animator.SetFloat("Horizontal", -playerDir.x);
+                Animator.SetFloat("Vertical", -playerDir.y);
+            }
         }
         if (offset <= spawnDuration)
         {
@@ -190,7 +193,7 @@ public class Enemy : MonoBehaviour
         FollowPlayer(getPlayerPosition());
         if (Input.GetKeyDown(KeyCode.K))
         {
-            GetDamage(100);
+            DestroyImmediate(gameObject);
         }
     }
 
@@ -221,6 +224,7 @@ public class Enemy : MonoBehaviour
         }
         Random.InitState(Random.Range(0, 200));
         PlayerController.instance.AddMoney();
+        GameController.score += 20;
 
     }
     void setSpawnDuration()

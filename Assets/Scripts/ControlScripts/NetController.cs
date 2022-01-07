@@ -11,7 +11,7 @@ public class NetController : MonoBehaviour
     [Serializable] 
     public class Seed
     {
-        public int seedId;
+        public int id;
         public string seed;
     }
     [Serializable]
@@ -39,7 +39,7 @@ public class NetController : MonoBehaviour
         var responseString = await client.GetStringAsync("http://"+server+"/api/v1/daily/today/");
         var a = JsonUtility.FromJson<Seed>(responseString.Trim('[', ']'));
         GameController.seed = a.seed;
-        GameController.seedId = a.seedId;
+        GameController.seedId = a.id;
     }
     public async void GetLeaderbord()
     {
@@ -56,10 +56,12 @@ public class NetController : MonoBehaviour
     {
         var values = new Dictionary<string, string>
         {
-            { "seed", "4" },
+            { "seed", GameController.seedId.ToString() },
             { "name", GameController.nick },
             {"score",GameController.score.ToString() }
         };
+
+        Debug.Log(values["seed"]);
 
         var content = new FormUrlEncodedContent(values);
 

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 1e217a73b1a7aeb4fbfe9d7c9a549ca5, type: 3}
   speed: 20
-  animator: {fileID: 22100000, guid: 80168ea126f6ea74089daab0d696ff45, type: 2}
+  animator: {fileID: 9100000, guid: 14c33e692c3427142998071f8baee851, type: 2}
   damage: 5
   element: Ice
   effectPower: 2
