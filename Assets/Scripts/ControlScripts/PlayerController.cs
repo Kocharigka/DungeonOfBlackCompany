@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
     public Dictionary<int, SpellData> spells;
     public int money=1000;
     public bool bying = false;
+    public bool blockInput=false;
 
     public float AttackRange
     {
@@ -61,7 +62,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameController.paused)
+        if (GameController.paused||blockInput)
         {
             return;
         }
@@ -86,6 +87,7 @@ public class PlayerController : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        healthbar.value = currentHealth;
         rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime*InventoryController.instance.powerUps["speed"]);
     }
     
@@ -108,7 +110,6 @@ public class PlayerController : MonoBehaviour
             return;
         }
         currentHealth -= damage/InventoryController.instance.powerUps["armor"];
-        healthbar.value = currentHealth;
         Debug.Log(currentHealth);
       //  Debug.Log(currentHealth);
         if (currentHealth<=0)
