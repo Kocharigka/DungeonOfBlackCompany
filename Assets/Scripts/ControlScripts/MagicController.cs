@@ -87,7 +87,10 @@ public class MagicController : MonoBehaviour
         effectHolder.sprite = statuses["Ice"];
 
         effectHolder.gameObject.SetActive(true);
-        target.BroadcastMessage("Slow");
+        if (gameObject.tag!="Player")
+        {
+            target.BroadcastMessage("Slow");
+        }
         yield return new WaitForSeconds(effect.power);
         currentStatus = null;
         target.BroadcastMessage("setDefaultSpeed");
@@ -129,12 +132,17 @@ public class MagicController : MonoBehaviour
     }
     IEnumerator FireElec(MagicEffect effect)
     {
-        target.BroadcastMessage("set_IsImpulse", true);
-        yield return new WaitForSeconds(0.1f);
-        effectHolder.gameObject.SetActive(false);
-        currentStatus = null;
-        target.BroadcastMessage("set_IsImpulse", false);
-
+        if (gameObject.tag != "Player")
+        {
+            target.BroadcastMessage("set_IsImpulse", true);
+        }
+            yield return new WaitForSeconds(0.1f);
+            effectHolder.gameObject.SetActive(false);
+            currentStatus = null;
+        if (gameObject.tag != "Player")
+        {
+            target.BroadcastMessage("set_IsImpulse", false);
+        }
     }
     #endregion fireResonance
 
@@ -188,11 +196,17 @@ public class MagicController : MonoBehaviour
     #region elecResonance
     IEnumerator ElecFire(MagicEffect effect)
     {
-        target.BroadcastMessage("set_IsImpulse", true);
+        if (gameObject.tag != "Player")
+        {
+            target.BroadcastMessage("set_IsImpulse", true);
+        }
         yield return new WaitForSeconds(0.1f);
         effectHolder.gameObject.SetActive(false);
         currentStatus = null;
-        target.BroadcastMessage("set_IsImpulse", false);
+        if (gameObject.tag != "Player")
+        {
+            target.BroadcastMessage("set_IsImpulse", false);
+        }
     }
     IEnumerator ElecIce(MagicEffect effect)
     {

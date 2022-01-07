@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]public float moveSpeed;
     [HideInInspector]public Animator animator;
     private float attackRange = 1f;  
-    private float maxHealth=100;
+    private float maxHealth=50;
     private float currentHealth;
     [HideInInspector]public Transform projectileHolder;
     [HideInInspector]public bool isAttacking = false;
@@ -34,6 +34,8 @@ public class PlayerController : MonoBehaviour
     public int money=1000;
     public bool bying = false;
     public bool blockInput=false;
+    public Canvas UI;
+    public Canvas DeathMenu;
 
     public float AttackRange
     {
@@ -110,11 +112,12 @@ public class PlayerController : MonoBehaviour
             return;
         }
         currentHealth -= damage/InventoryController.instance.powerUps["armor"];
-      //  Debug.Log(currentHealth);
         if (currentHealth<=0)
         {
             isDead = true;
-            GetComponentInChildren<Canvas>().gameObject.SetActive(false);
+            UI.gameObject.SetActive(false);
+            UpdateDeathScreen();
+            DeathMenu.gameObject.SetActive(true);
             enabled = false;
             animator.SetTrigger("Die");
             var enemies=FindObjectsOfType<Enemy>();
@@ -140,6 +143,9 @@ public class PlayerController : MonoBehaviour
             isDead = true;
             enabled = false;
             animator.SetTrigger("Die");
+            UI.gameObject.SetActive(false);
+            UpdateDeathScreen();
+            DeathMenu.gameObject.SetActive(true);
             var enemies = FindObjectsOfType<Enemy>();
             foreach (Enemy enemy in enemies)
             {
@@ -154,7 +160,7 @@ public class PlayerController : MonoBehaviour
     {
         magic.effectHolder.gameObject.SetActive(false);
         yield return new WaitForSeconds(2f);
-        gameObject.SetActive(false);
+        GetComponentInChildren<SpriteRenderer>().gameObject.SetActive(false);
     }
     public void FlipToDirection()
     {
@@ -197,5 +203,36 @@ public class PlayerController : MonoBehaviour
             }
         }
         return null;
+    }
+
+    void UpdateDeathScreen()
+    {
+        foreach (Transform child in DeathMenu.GetComponentInChildren<Image>().transform)
+        {
+            foreach (Transform cchild in child)
+            {
+
+                if (child.name == "enemies")
+                {
+                    cchild.GetComponentInChildren<Text>().text = GameController.enemiesCount.ToString();
+                }
+                if (child.name == "time")
+                {
+                    cchild.GetComponentInChildren<Text>().text = GameController.seconds.ToString();
+                }
+                if (child.name == "score")
+                {
+                    cchild.GetComponentInChildren<Text>().text = GameController.score.ToString();
+                } 
+            }
+        }
+    }
+    public void GoToMenu()
+    {
+        GameObject.Find("GameController").GetComponent<GameController>().ExitToMenu();
+    }
+    public void Replay()
+    {
+        GameObject.Find("GameController").GetComponent<GameController>().Replay();
     }
 }
