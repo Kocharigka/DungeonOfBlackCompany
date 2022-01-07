@@ -27,7 +27,7 @@ public class DragonEnemy : Enemy
         DefaultMoveSpeed = 2;
         shooter = GetComponentInChildren<Shooter>();
         head = shooter.gameObject.transform;
-        spell = Resources.Load<SpellData>("Spells/FireballDragon");
+        spell = Resources.Load<SpellData>("OtherSpells/FireballDragon");
         cooldown = spell.cooldown;
         cdTimer = cooldown;
         AttackRadius = 4;
@@ -95,16 +95,13 @@ public class DragonEnemy : Enemy
 
             var seed = Random.Range(0, 1000);
             Random.InitState(seed);
-            var multY = Room.bounds.center.y > 0 ? 1 : -1;
-            var multX = Room.bounds.center.x > 0 ? 1 : -1;
 
-            var start = new Vector2(-flydir.x*multX, -flydir.y*multY);
-            rb.position = (Vector2)Room.bounds.center + Room.bounds.max * start;
-            var endPos= (Vector2)Room.bounds.center + new Vector2(Mathf.Abs(Room.bounds.max.x),Mathf.Abs(Room.bounds.max.y))* flydir;
+            var start = new Vector2(-flydir.x, -flydir.y);
+            rb.position = (Vector2)Room.transform.position + Room.bounds.max * start;
             InvokeRepeating("flyDir", 0, 0.03f);
-            yield return new WaitUntil(() => Room.InBounds(rb.position));
+            yield return new WaitUntil(() => Vector2.Distance(transform.position,PlayerController.instance.transform.position)<20|| Vector2.Distance(transform.position, PlayerController.instance.transform.position) >50);
             StartCoroutine(_flyAttack());
-            yield return new WaitUntil(() => !Room.InBounds(rb.position));
+            yield return new WaitUntil(() => Vector2.Distance(transform.position, PlayerController.instance.transform.position) > 30);
             yield return new WaitForSeconds(1.5f);
             CancelInvoke("flyDir");
         }

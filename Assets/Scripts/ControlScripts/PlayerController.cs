@@ -21,8 +21,8 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]public bool canFlip;
     [HideInInspector]public bool isCast = false;
     [HideInInspector]public MagicController magic;
-    bool isDead = false;
-    [HideInInspector]public float damage=10;
+    public bool isDead = false;
+    [HideInInspector]public float damage;
     [HideInInspector]public List<Collider2D> damagedEnemies=new List<Collider2D>();
     public Collider2D hurtBox;
     public Slider healthbar;
@@ -110,7 +110,6 @@ public class PlayerController : MonoBehaviour
             return;
         }
         currentHealth -= damage/InventoryController.instance.powerUps["armor"];
-        Debug.Log(currentHealth);
       //  Debug.Log(currentHealth);
         if (currentHealth<=0)
         {

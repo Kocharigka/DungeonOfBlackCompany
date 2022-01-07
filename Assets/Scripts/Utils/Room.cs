@@ -41,9 +41,9 @@ public class Room : MonoBehaviour
     }
 
     public bool InBounds(Vector3 obj)
-    {       
-        if (bounds.max.x>obj.x && bounds.max.y > obj.y &&
-            bounds.min.x< obj.x && bounds.min.y<obj.y)
+    {
+        if (bounds.max.x + transform.position.x>obj.x && bounds.max.y+ transform.position.y > obj.y &&
+            bounds.min.x+ transform.position.x < obj.x && bounds.min.y+ transform.position.y < obj.y)
         {
             return true;
         }
@@ -51,7 +51,7 @@ public class Room : MonoBehaviour
     }
     public List<Vector2> getCorners()
     {
-        return new List<Vector2>() { bounds.max,bounds.min,new Vector2(bounds.max.x,bounds.min.y), new Vector2(bounds.min.x,bounds.max.y)};
+        return new List<Vector2>() { transform.position+bounds.max, transform.position+bounds.min, (Vector2)transform.position + new Vector2(bounds.max.x,bounds.min.y), (Vector2)transform.position+new Vector2(bounds.min.x,bounds.max.y)};
     }
     public void checkEnemies()
     {

@@ -10,13 +10,14 @@ public class GameController : MonoBehaviour
     public static string seed = "";
     public static int seedId;
     public static string nick = "Unnamed";
-    public static int score = 2222;
+    public static int score = 0;
     public static List<(string, int)> leaderbord = new List<(string, int)>();
     static List<(int, string, int)> parsedSeed = new List<(int, string, int)>();
     public static int currentLevel = 1;
     public static bool paused = false;
     NetController server = new NetController();
     public GameObject pauseScreen;
+    public Image fader;
 
 
     private void Awake()
@@ -74,6 +75,23 @@ public class GameController : MonoBehaviour
         generator.Generate();
         level.daily = daily;
         level.AfterStart();
+        Faid(true, GameObject.Find("Fader").GetComponent<Image>());
+        if (daily)
+        {
+            StartCoroutine(countScore());
+        }
+
+    }
+
+    IEnumerator countScore()
+    {
+        score = 2000;
+        while (!PlayerController.instance.isDead)
+        {
+            score--;
+            yield return new WaitForSeconds(1);
+        }
+        server.PostLeaderbord();
     }
 
     void PauseGame()
@@ -105,6 +123,13 @@ public class GameController : MonoBehaviour
     public void StartGame()
     {
 
+        StartCoroutine(startGame());
+    }
+    IEnumerator startGame()
+    {
+        fader.gameObject.SetActive(true);
+        Faid(false,fader);
+        yield return new WaitForSeconds(1f);
         GenerateSeed();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         StartCoroutine(waitForLevelLoad(false));

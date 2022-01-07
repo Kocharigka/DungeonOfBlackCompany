@@ -193,7 +193,7 @@ public class Enemy : MonoBehaviour
         FollowPlayer(getPlayerPosition());
         if (Input.GetKeyDown(KeyCode.K))
         {
-            GetDamage(100);
+            DestroyImmediate(gameObject);
         }
     }
 
@@ -224,6 +224,7 @@ public class Enemy : MonoBehaviour
         }
         Random.InitState(Random.Range(0, 200));
         PlayerController.instance.AddMoney();
+        GameController.score += 20;
 
     }
     void setSpawnDuration()
