@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f44f1f4a7b26c643adeadf63d37ea50, type: 3}
-  m_Name: Spear
+  m_Name: Mace
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 178a41c2771be1d4c8b5c28b83e7d8e3, type: 3}
-  inGameSprite: {fileID: 21300000, guid: 25cba5a69dcbe2c40a7a97cd76bd0fba, type: 3}
-  weaponAnim: 1
-  damage: 5
-  speed: 5
+  icon: {fileID: 21300000, guid: 2ae0cdb677455cb4591892aa4627ffd2, type: 3}
+  inGameSprite: {fileID: 21300000, guid: 6f87589ca25eef342ad31a8bb74eabe2, type: 3}
+  weaponAnim: 3
+  damage: 20
+  speed: 1
   cost: 500

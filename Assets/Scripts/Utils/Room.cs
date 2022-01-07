@@ -59,7 +59,6 @@ public class Room : MonoBehaviour
         {
             if (currentWave==waves)
             {
-                Debug.Log(gameObject.name);
                 dungeonHolder.GetComponent<PostGen>().BarsCtrl(true);
                 passed = true;
                 CancelInvoke("checkEnemies");

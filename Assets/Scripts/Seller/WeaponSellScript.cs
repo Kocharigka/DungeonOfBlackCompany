@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class WeaponSellScript : MonoBehaviour
@@ -17,32 +18,13 @@ public class WeaponSellScript : MonoBehaviour
     }
     void UpdateAssortiment()
     {
-        used.Add(PlayerController.instance.gameObject.GetComponentInChildren<WeaponScript>().currentWeapon);
+        toSell = toSell.Where(val => val != PlayerController.instance.gameObject.GetComponentInChildren<WeaponScript>().currentWeapon).ToArray();
         Sell();
     }
     void Sell()
     {
-        var data = toSell[Random.Range(0, toSell.Length - 1)];
-        Debug.Log(used.Count);
-        Debug.Log(toSell.Length);
-        while (true)
-        {
-            if (used.Count == toSell.Length)
-            {
-                return;
-            }
-            if (!used.Contains(data))
-            {
-                used.Add(data);
-                break;
-            }
-            else
-            {
-                Random.InitState(Random.Range(0, 100));
-                data = toSell[Random.Range(-1, toSell.Length)];
-            }
-        }
-        Debug.Log(data.name);
+        var data = toSell[Random.Range(0, toSell.Length)];
+        toSell = toSell.Where(val => val != data).ToArray(); 
         Random.InitState(Random.Range(0, 100));
         if (current != null)
         {

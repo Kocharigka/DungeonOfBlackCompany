@@ -109,6 +109,7 @@ public class PlayerController : MonoBehaviour
         }
         currentHealth -= damage/InventoryController.instance.powerUps["armor"];
         healthbar.value = currentHealth;
+        Debug.Log(currentHealth);
       //  Debug.Log(currentHealth);
         if (currentHealth<=0)
         {

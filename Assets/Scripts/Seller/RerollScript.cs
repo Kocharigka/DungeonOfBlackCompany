@@ -41,5 +41,6 @@ public class RerollScript : MonoBehaviour
             takeButton.SetActive(false);
         }
         costHolder.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(-1, 0.5f, 0));
+        costHolder.SetActive(true);
     }
 }

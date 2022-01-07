@@ -121,7 +121,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2970851211100796872}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7398398840610534004}
+        m_TargetAssemblyTypeName: InventoryController, Assembly-CSharp
+        m_MethodName: GetSprite
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 1
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8705399559896018912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,7 +270,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3223282289302037740}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7398398840610534004}
+        m_TargetAssemblyTypeName: InventoryController, Assembly-CSharp
+        m_MethodName: GetSprite
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 5
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1420710193092654714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -568,7 +592,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5e9b835d8f57a3548873242563fefa91, type: 3}
+  m_Sprite: {fileID: -1209650764025248279, guid: afae12e4190c3044783973cd4a842f9b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1993,7 +2017,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6367507116429278202}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7398398840610534004}
+        m_TargetAssemblyTypeName: InventoryController, Assembly-CSharp
+        m_MethodName: GetSprite
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 2
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2098723121339717626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2284,7 +2320,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5949641122651017534}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7398398840610534004}
+        m_TargetAssemblyTypeName: InventoryController, Assembly-CSharp
+        m_MethodName: GetSprite
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 3
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2830833289570251862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3795,7 +3843,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1421030238035768296}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7398398840610534004}
+        m_TargetAssemblyTypeName: InventoryController, Assembly-CSharp
+        m_MethodName: GetSprite
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: weapon
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &666557496206040817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4387,6 +4447,10 @@ MonoBehaviour:
   healthbar: {fileID: 7398398842376519237}
   minimapOn: 0
   minimap: {fileID: 7398398840532232276}
+  weapon: {fileID: 0}
+  dash: {fileID: 0}
+  money: 1000
+  bying: 0
 --- !u!50 &7398398840610534007
 Rigidbody2D:
   serializedVersion: 4
@@ -4504,6 +4568,7 @@ MonoBehaviour:
   fill: {fileID: 7398398841161042073}
   spellImage: {fileID: 7398398840609093412}
   key: 324
+  counter: 5
 --- !u!114 &7398398840610534000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4521,6 +4586,7 @@ MonoBehaviour:
   fill: {fileID: 7398398841315464677}
   spellImage: {fileID: 7398398841261097189}
   key: 113
+  counter: 1
 --- !u!114 &7398398840610534001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4538,6 +4604,7 @@ MonoBehaviour:
   fill: {fileID: 7398398841697093883}
   spellImage: {fileID: 7398398840350461443}
   key: 101
+  counter: 2
 --- !u!114 &7398398840610534002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4555,6 +4622,7 @@ MonoBehaviour:
   fill: {fileID: 7398398841972320763}
   spellImage: {fileID: 7398398841830286002}
   key: 102
+  counter: 3
 --- !u!114 &7398398840610534014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4569,6 +4637,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 7398398841464212469}
   fill: {fileID: 7398398842025902715}
+  data: {fileID: 11400000, guid: c9f7ec08ea287274f9d94e8e02205a89, type: 2}
 --- !u!114 &7398398840610534004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7759,7 +7828,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5408246549528782823}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7398398840610534004}
+        m_TargetAssemblyTypeName: InventoryController, Assembly-CSharp
+        m_MethodName: GetSprite
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: dash
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7441661276626833040
 MonoBehaviour:
   m_ObjectHideFlags: 0
